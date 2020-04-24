@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2821185538055456417}
   - component: {fileID: 2821185538055456418}
   - component: {fileID: 2821185538055456419}
-  - component: {fileID: 2821185538055456416}
+  - component: {fileID: 1496813568332487758}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -76,9 +76,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 2
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 22.5, y: 15}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 9.791872
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -114,7 +115,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2821185538055456420}
   m_Enabled: 1
---- !u!114 &2821185538055456416
+--- !u!114 &1496813568332487758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,9 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544fb994b587757419aad57fa3261472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 4
-  smoothing: 1
+  sensitivity: 5
+  smoothing: 2
   character: {fileID: 0}
+  verticalMax: 50
 --- !u!1 &2821185538883484769
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +189,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -198,6 +201,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -252,5 +256,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4a6a7665250c48bbaca9bef1509c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  sprintSpeed: 1000
+  speed: 5
+  sprintSpeed: 10

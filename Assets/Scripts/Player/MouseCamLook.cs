@@ -1,14 +1,4 @@
-﻿/* 
- * author : jiankaiwang
- * description : The script provides you with basic operations 
- *               of first personal camera look on mouse moving.
- * platform : Unity
- * date : 2017/12
- */
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MouseCamLook : MonoBehaviour {
 
@@ -23,6 +13,9 @@ public class MouseCamLook : MonoBehaviour {
     // smooth the mouse moving
     private Vector2 smoothV;
 
+	// 
+    public float verticalMax = 50f; 
+
 	// Use this for initialization
 	void Start () {
         character = this.transform.parent.gameObject;
@@ -33,11 +26,18 @@ public class MouseCamLook : MonoBehaviour {
         // md is mosue delta
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
+
         // the interpolated float result between the two float values
         smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
         smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
+
         // incrementally add to the camera look
         mouseLook += smoothV;
+		
+		if (Mathf.Abs(mouseLook.y) > verticalMax)
+		{
+            mouseLook.y = Mathf.Sign(mouseLook.y) * verticalMax;
+        }
 
         // vector3.right means the x-axis
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);

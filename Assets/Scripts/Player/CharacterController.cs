@@ -1,18 +1,9 @@
-﻿/* 
- * author : jiankaiwang
- * description : The script provides you with basic operations of first personal control.
- * platform : Unity
- * date : 2017/12
- */
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterController : MonoBehaviour {
 
-    public float speed = 10.0f;
-    public float sprintSpeed = 1000f;
+    public float speed = 5.0f;
+    public float sprintSpeed = 10f;
     private float translation;
     private float straffe;
 
