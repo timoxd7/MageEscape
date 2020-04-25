@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class CharacterController : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
     public float speed = 5.0f;
     public float sprintSpeed = 10f;
@@ -8,17 +9,20 @@ public class CharacterController : MonoBehaviour {
     private float straffe;
 
     // Use this for initialization
-    void Start () {
-        // turn off the cursor
-        Cursor.lockState = CursorLockMode.Locked;		
-        }
-	// Update is called once per frame
-	void Update () {
-                    
-            float speedModifier = 1;
-        if (Input.GetKey(KeyCode.LeftShift)) {
+    void Start()
+    {
+        
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        float speedModifier = 1;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
             speedModifier = sprintSpeed;
-        } else {
+        }
+        else
+        {
             speedModifier = speed;
         }
         // Input.GetAxis() is used to get the user's input
@@ -26,10 +30,5 @@ public class CharacterController : MonoBehaviour {
         translation = Input.GetAxis("Vertical") * speedModifier * Time.deltaTime;
         straffe = Input.GetAxis("Horizontal") * speedModifier * Time.deltaTime;
         transform.Translate(straffe, 0, translation);
-
-        if (Input.GetKeyDown("escape")) {
-            // turn on the cursor
-            Cursor.lockState = CursorLockMode.None;
-        }
     }
 }
