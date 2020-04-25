@@ -6,10 +6,10 @@
 
 public class Timer
 {
-    private float timeAtStart;
-    private float timeAtStop;
-    private bool running;
-    private bool paused;
+    private float timeAtStart = 0.0f;
+    private float timeAtStop = 0.0f;
+    private bool running = false;
+    private bool paused = false;
     
     public Timer()
     {
@@ -72,6 +72,11 @@ public class Timer
     {
         Reset();
         Start();
+    }
+
+    public void Subtract(float subtractionAmount)
+    {
+        timeAtStart += subtractionAmount;
     }
 
     public float Get()
