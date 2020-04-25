@@ -1,0 +1,3 @@
+[submodule "Assets/Import/Scripts/MyBox"]
+	path = Assets/Import/Scripts/MyBox
+	url = https://github.com/Deadcows/MyBox.git
