@@ -1,10 +1,5 @@
 ﻿using UnityEngine;
 
-/**
- * Hiermit kommunizieren wir mit dem Interface IIteractable
- */
-
-
 [CreateAssetMenu(fileName = "InteractionData", menuName = "InteractionSystem/InteractionData")]
 public class InteractionData : ScriptableObject
 {

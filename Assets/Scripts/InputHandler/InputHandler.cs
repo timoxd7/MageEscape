@@ -22,12 +22,10 @@ public class InputHandler : MonoBehaviour
     {
         interactionInputData.InteractClicked = Input.GetKeyDown(KeyCode.E);
         interactionInputData.InteractReleased = Input.GetKeyUp(KeyCode.E);
-        //Debug.Log(interactionInputData.InteractClicked);
     }
 
     private void GetMovementInput()
     {
         movementInputData.Movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        //Debug.Log(movementInputData.Movement);
     }
 }

@@ -12,7 +12,12 @@ public class InteractionController : MonoBehaviour
     public float raySphereRadius;
     public LayerMask interactableLayer;
 
+
+    // Private
     private Camera cam;
+
+    bool interactingNow;
+    float interactingTimer;
 
     // Builtin Methods
 
@@ -69,6 +74,45 @@ public class InteractionController : MonoBehaviour
 
     void CheckForInteractableInput()
     {
+        if (interactionData.IsEmpty())
+        {
+            return;
+        }
 
+        if (interactionInputData.InteractClicked)
+        {
+            interactingNow = true;
+            interactingTimer = 0f;
+        }
+
+        if (interactionInputData.InteractReleased)
+        {
+            interactingNow = false;
+            interactingTimer = 0f;
+        }
+
+        if (interactingNow)
+        {
+            if (!interactionData.Interactable.IsInteractable)
+            {
+                return;
+            }
+
+            if (interactionData.Interactable.HoldToInteract)
+            {
+                interactingTimer += Time.deltaTime;
+
+                if (interactingTimer > interactionData.Interactable.HoldDuration)
+                {
+                    interactionData.Interact();
+                    interactingNow = false;
+                }
+            }
+            else
+            {
+                interactionData.Interact();
+                interactingNow = false;
+            }
+        }
     }
 }
