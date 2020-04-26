@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "InteractionInputData", menuName = "InputData/MovementInput")]
+[CreateAssetMenu(fileName = "InteractionInputData", menuName = "InteractionSystem/InteractionInputData")]
 public class InteractionInputData : ScriptableObject
 {
     private bool interactClicked;

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class InteractableBase : MonoBehaviour, IInteractable
+public class BaseInteractable : MonoBehaviour, IInteractable
 {
 
     // Variables
