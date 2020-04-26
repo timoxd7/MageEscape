@@ -3,8 +3,20 @@
 [CreateAssetMenu(fileName = "InteractionInputData", menuName = "InputData/MovementInput")]
 public class InteractionInputData : ScriptableObject
 {
-    public bool InteractClicked { get; set; }
-    public bool InteractReleased { get; set; }
+    private bool interactClicked;
+    private bool interactReleased;
+
+    public bool InteractClicked
+    {
+        get => interactClicked;
+        set => interactClicked = value;
+    }
+
+    public bool InteractReleased
+    {
+        get => interactReleased;
+        set => interactReleased = value;
+    }
 
     public void ResetInput()
     {
