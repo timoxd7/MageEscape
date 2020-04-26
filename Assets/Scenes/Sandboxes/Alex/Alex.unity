@@ -418,7 +418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementInputData: {fileID: 11400000, guid: 40d27082ecae64c3b90e943cf275787a, type: 2}
-  interactionInputData: {fileID: 0}
+  interactionInputData: {fileID: 11400000, guid: 80c20a69afa384232b4dd0cd7ef4062d,
+    type: 2}
 --- !u!4 &455620921
 Transform:
   m_ObjectHideFlags: 0
@@ -746,7 +747,6 @@ GameObject:
   - component: {fileID: 1328621840}
   - component: {fileID: 1328621839}
   - component: {fileID: 1328621838}
-  - component: {fileID: 1328621843}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
@@ -763,9 +763,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1328621837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a375e5b01a806489f88c3d7d246edd8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 60cd26c8a8c604279a4b23d712dfe64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdDuration: 0.5
+  holdToInteract: 1
+  mutipleUse: 0
+  isInteractable: 1
 --- !u!65 &1328621839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -840,22 +844,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1328621843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328621837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdDuration: 0
-  holdToInteract: 0
-  mutipleUse: 0
-  isInteractable: 1
 --- !u!4 &1552223564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134089011529595561, guid: bb51cc1ba95470d4b8f8db300be8879e,

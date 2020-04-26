@@ -1,18 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class InteractableObjectExample : MonoBehaviour
+﻿public class InteractableObjectExample : BaseInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnInteract()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gameObject.transform.Rotate(20f, 20f, 20f);
     }
 }
