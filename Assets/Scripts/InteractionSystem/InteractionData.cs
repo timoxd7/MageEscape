@@ -31,7 +31,7 @@ public class InteractionData : ScriptableObject
         interactable = null;
     }
 
-    public bool isEmpty()
+    public bool IsEmpty()
     {
         return interactable == null;
     }
