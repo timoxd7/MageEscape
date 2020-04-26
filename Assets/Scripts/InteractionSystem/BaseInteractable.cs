@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BaseInteractable : MonoBehaviour, IInteractable
+public abstract class BaseInteractable : MonoBehaviour, IInteractable
 {
 
     // Variables
@@ -18,10 +18,5 @@ public class BaseInteractable : MonoBehaviour, IInteractable
     public bool MultipleUse => mutipleUse;
     public bool IsInteractable => isInteractable;
 
-    // Methods
-
-    public void OnInteract()
-    {
-        Debug.Log("INTERACTED: " + gameObject.name);
-    }
+    public abstract void OnInteract();
 }
