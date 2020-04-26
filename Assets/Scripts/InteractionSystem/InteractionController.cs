@@ -50,14 +50,9 @@ public class InteractionController : MonoBehaviour
                 else
                 {
                     // Wenn der Slot nicht leer ist wollen wir wissen ob das gefundene Objekt nicht ohnehin schon unser aktuelles ist
-                    if (interactionData.IsSameInteractable(interactable))
+                    if (!interactionData.IsSameInteractable(interactable))
                     {
-                        // Wenn so, dann können wir raus
-                        return;
-                    }
-                    else
-                    {
-                        // Ansonsten ist das gefundene Objekt unser neues Interactable
+                        // Wenn nicht, dann jetzt schon
                         interactionData.Interactable = interactable;
                     }
                 }
