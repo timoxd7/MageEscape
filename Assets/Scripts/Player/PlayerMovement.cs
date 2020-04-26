@@ -8,11 +8,6 @@ public class PlayerMovement : MonoBehaviour
     private float translation;
     private float straffe;
 
-    // Use this for initialization
-    void Start()
-    {
-        
-    }
     // Update is called once per frame
     void Update()
     {

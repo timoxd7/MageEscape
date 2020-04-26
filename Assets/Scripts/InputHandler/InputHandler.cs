@@ -2,10 +2,32 @@
 
 public class InputHandler : MonoBehaviour
 {
-    public Vector2 movementInput { get; private set;}
+    public MovementInputData movementInputData;
+    public InteractionInputData interactionInputData;
+
+
+    private void Start()
+    {
+        movementInputData.ResetInput();
+        interactionInputData.ResetInput();
+    }
 
     void Update()
     {
-        movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        GetMovementInput();
+        GetInteractionInput();
+    }
+
+    private void GetInteractionInput()
+    {
+        interactionInputData.InteractClicked = Input.GetKeyDown(KeyCode.E);
+        interactionInputData.InteractReleased = Input.GetKeyUp(KeyCode.E);
+        //Debug.Log(interactionInputData.InteractClicked);
+    }
+
+    private void GetMovementInput()
+    {
+        movementInputData.Movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        //Debug.Log(movementInputData.Movement);
     }
 }
