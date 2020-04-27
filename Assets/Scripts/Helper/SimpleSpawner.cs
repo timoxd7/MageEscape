@@ -19,6 +19,8 @@ public class SimpleSpawner : MonoBehaviour
     [MyBox.ConditionalField("useCustomSpawnLocation")]
     public Vector3 customSpawnLocation;
 
+    public bool enableOnSpawn = false;
+
     
 
     private Timer startTimer;
@@ -78,6 +80,11 @@ public class SimpleSpawner : MonoBehaviour
         if (addRigidbodyAtSpawn)
         {
             spawnedObject.AddComponent<Rigidbody>();
+        }
+
+        if (enableOnSpawn)
+        {
+            spawnedObject.SetActive(true);
         }
     }
 
