@@ -1,29 +1,92 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("References")]
+    public CharacterController characterController;
+    public Transform character;
+    public Transform groundCheck;
 
-    public float speed = 5.0f;
-    public float sprintSpeed = 10f;
-    private float translation;
-    private float straffe;
+    [Header("Player Movement Settings")]
+    public float movementSpeed = 5f;
+    public float sprintMultiplyer = 2f;
 
-    // Update is called once per frame
+    [Header("Grounding")]
+    public LayerMask groundMask;
+    public float gravity = -9.81f;
+    public float groundDistance = 0.55f;
+    public float forcedYVelocity = -2f;
+
+    [Header("Jump")]
+    public float jumpHeight = 1.0f;
+
+    private Vector2 horizontalSpeed;
+    private float yVelocity = 0f;
+    private bool isGrounded;
+    private bool sprinting = false;
+
+
     void Update()
     {
-        float speedModifier = 1;
-        if (Input.GetKey(KeyCode.LeftShift))
+        // Add horizontal movement speed
+        Vector3 move = character.right * horizontalSpeed.x + character.forward * horizontalSpeed.y;
+        move *= movementSpeed;
+
+        if (sprinting)
         {
-            speedModifier = sprintSpeed;
+            move *= sprintMultiplyer;
         }
-        else
+
+
+        // Add gravity
+        CheckGrounding();
+
+        if (isGrounded && yVelocity < forcedYVelocity)
         {
-            speedModifier = speed;
+            yVelocity = forcedYVelocity;
         }
-        // Input.GetAxis() is used to get the user's input
-        // You can furthor set it on Unity. (Edit, Project Settings, Input)
-        translation = Input.GetAxis("Vertical") * speedModifier * Time.deltaTime;
-        straffe = Input.GetAxis("Horizontal") * speedModifier * Time.deltaTime;
-        transform.Translate(straffe, 0, translation);
+
+        if (!isGrounded)
+        {
+            yVelocity += gravity * Time.deltaTime;
+        }
+
+        move.y = yVelocity;
+
+
+        // Apply to character
+        characterController.Move(move * Time.deltaTime);
+    }
+
+    public void SetSpeed(Vector2 newDirectionalSpeed)
+    {
+        horizontalSpeed = newDirectionalSpeed;
+    }
+
+    public void StartSprinting()
+    {
+        sprinting = true;
+    }
+
+    public void StopSprinting()
+    {
+        sprinting = false;
+    }
+
+    public void Jump()
+    {
+        CheckGrounding();
+
+        if (isGrounded)
+        {
+            yVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity); // Because physics!
+        }
+    }
+
+    private void CheckGrounding()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
 }

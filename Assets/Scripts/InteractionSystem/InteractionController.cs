@@ -2,8 +2,10 @@
 
 public class InteractionController : MonoBehaviour
 {
+    [Header("References")]
+    public Camera cam;
+
     [Header("Data")]
-    public InteractionInputData interactionInputData;
     public InteractionData interactionData;
 
     [Space]
@@ -14,22 +16,35 @@ public class InteractionController : MonoBehaviour
 
 
     // Private
-    private Camera cam;
+    private bool interactingNow;
+    private Timer interactingTimer;
 
-    bool interactingNow;
-    float interactingTimer;
+    private bool interactionPush = false;
+    private bool interactionRelease = false;
 
     // Builtin Methods
 
     private void Awake()
     {
-        cam = GetComponent<Camera>();
+        interactingTimer = new Timer();
     }
 
     private void Update()
     {
         CheckForInteractable();
         CheckForInteractableInput();
+    }
+
+    public void InteractPush()
+    {
+        interactionPush = true;
+        Update();
+    }
+
+    public void InteractRelease()
+    {
+        interactionRelease = true;
+        Update();
     }
 
     // Custom Methods
@@ -79,16 +94,18 @@ public class InteractionController : MonoBehaviour
             return;
         }
 
-        if (interactionInputData.InteractClicked)
+        if (interactionPush)
         {
+            interactionPush = false;
             interactingNow = true;
-            interactingTimer = 0f;
+            interactingTimer.Restart();
         }
 
-        if (interactionInputData.InteractReleased)
+        if (interactionRelease)
         {
+            interactionRelease = false;
             interactingNow = false;
-            interactingTimer = 0f;
+            interactingTimer.Reset();
         }
 
         if (interactingNow)
@@ -100,9 +117,7 @@ public class InteractionController : MonoBehaviour
 
             if (interactionData.Interactable.HoldToInteract)
             {
-                interactingTimer += Time.deltaTime;
-
-                if (interactingTimer > interactionData.Interactable.HoldDuration)
+                if (interactingTimer.Get() > interactionData.Interactable.HoldDuration)
                 {
                     interactionData.Interact();
                     interactingNow = false;

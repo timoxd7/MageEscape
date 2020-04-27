@@ -1,31 +1,46 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
-{
-    public MovementInputData movementInputData;
-    public InteractionInputData interactionInputData;
+{   
+    [Header("References")]
+    public MouseLook mouseLook;
+    public PlayerMovement playerMovement;
+    public InteractionController interactionController;
+    
+    private InputMaster inputMaster;
 
 
-    private void Start()
+    public void Awake()
     {
-        movementInputData.ResetInput();
-        interactionInputData.ResetInput();
+        inputMaster = new InputMaster();
+
+        // Interaction
+        inputMaster.Player.InteractPush.performed += _ => interactionController.InteractPush();
+        inputMaster.Player.InteractRelease.performed += _ => interactionController.InteractRelease();
+
+        // Player Controller
+        inputMaster.Player.Move.performed += context => playerMovement.SetSpeed(context.ReadValue<Vector2>());
+        inputMaster.Player.SprintPush.performed += _ => playerMovement.StartSprinting();
+        inputMaster.Player.SprintRelease.performed += _ => playerMovement.StopSprinting();
+        inputMaster.Player.Jump.performed += _ => playerMovement.Jump();
+        inputMaster.Player.Look.performed += context => mouseLook.UpdateView(context.ReadValue<Vector2>());
     }
 
-    void Update()
+
+    // -------------------------------- Others --------------------------------
+
+
+    public void OnEnable()
     {
-        GetMovementInput();
-        GetInteractionInput();
+        inputMaster.Enable();
     }
 
-    private void GetInteractionInput()
+    public void OnDisable()
     {
-        interactionInputData.InteractClicked = Input.GetKeyDown(KeyCode.E);
-        interactionInputData.InteractReleased = Input.GetKeyUp(KeyCode.E);
+        inputMaster.Disable();
     }
 
-    private void GetMovementInput()
-    {
-        movementInputData.Movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-    }
 }
