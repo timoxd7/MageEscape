@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerLookController : MonoBehaviour
 {
@@ -12,11 +13,13 @@ public class PlayerLookController : MonoBehaviour
     public Transform character;
 
     [Header("Settings")]
-    public float lookSensitivity = 0.1f;
+    public float lookSensitivity = 120f;
     public float maxUpPosition = -90;
     public float maxDownPosition = 90;
 
     private float xRotation = 0;
+    private bool lastKnownFullscreedMode = false;
+    private Vector2 lookSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -39,20 +42,32 @@ public class PlayerLookController : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             // Hide Courser again
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        bool currentInFullscreen = Screen.fullScreen;
+        if (currentInFullscreen != lastKnownFullscreedMode)
+        {
+            lastKnownFullscreedMode = currentInFullscreen;
             Cursor.lockState = CursorLockMode.None;
             Cursor.lockState = CursorLockMode.Locked;
         }
-    }
 
-    public void UpdateView(Vector2 deltaLook)
-    {
-        float deltaX = deltaLook.x * lookSensitivity;
-        float deltaY = deltaLook.y * lookSensitivity;
+
+        // Apply Look Speed
+
+        float deltaX = lookSpeed.x * lookSensitivity * Time.deltaTime;
+        float deltaY = lookSpeed.y * lookSensitivity * Time.deltaTime;
 
         xRotation += deltaX;
         xRotation = Mathf.Clamp(xRotation, Mathf.Min(maxUpPosition, maxDownPosition), Mathf.Max(maxUpPosition, maxDownPosition));
 
         usedCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         character.Rotate(new Vector3(0f, deltaY, 0f));
+    }
+
+    public void UpdateView(Vector2 deltaLook)
+    {
+        lookSpeed = deltaLook;
     }
 }

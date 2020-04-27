@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usedCamera: {fileID: 7896014403280023045}
   character: {fileID: 5863036474862294244}
-  lookSensitivity: 0.1
+  lookSensitivity: 120
   maxUpPosition: -90
   maxDownPosition: 90
 --- !u!114 &8106487347942679032

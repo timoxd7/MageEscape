@@ -214,7 +214,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Controller dPad"",
                     ""id"": ""5b35a579-4744-4099-a4aa-82afbb3063b9"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -282,7 +282,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""id"": ""7a52a5e8-557f-476a-905a-2a1c3ddfe2b7"",
                     ""path"": ""<Mouse>/delta/x"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""Scale(factor=0.1)"",
                     ""groups"": ""PC Keyboard & Mouse"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
@@ -293,7 +293,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""id"": ""faf0da00-0e10-45f5-9061-130a81fb06e7"",
                     ""path"": ""<Mouse>/delta/y"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""Scale(factor=0.1)"",
                     ""groups"": ""PC Keyboard & Mouse"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
@@ -313,7 +313,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""3704df6b-199f-4975-bed4-a198ebccfcf1"",
-                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
@@ -324,7 +324,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""eef86359-c436-4845-8bfb-7a750bebcf58"",
-                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
@@ -335,7 +335,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""ccc36f93-5390-453f-980a-9e3c9df27f50"",
-                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
@@ -346,7 +346,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""86b2c110-a682-40a3-afb1-047d822e180b"",
-                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
@@ -401,7 +401,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ebdd455d-3493-4e73-a375-9354572704d1"",
-                    ""path"": ""<Keyboard>/ctrl"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC Keyboard & Mouse"",
