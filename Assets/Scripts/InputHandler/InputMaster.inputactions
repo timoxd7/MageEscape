@@ -38,6 +38,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Sneak",
+                    "type": "Button",
+                    "id": "52b6689e-5e05-4f93-8086-a0492fff426b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Look",
                     "type": "PassThrough",
                     "id": "3a057c0d-179a-47e8-a99d-1ef70acf79ad",
@@ -51,6 +59,17 @@
                     "name": "",
                     "id": "bb235641-cd44-4bbe-9647-e4586b4de76c",
                     "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC Keyboard & Mouse",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc24375b-3997-492f-95e2-657561fc4e62",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "PC Keyboard & Mouse",
@@ -363,6 +382,28 @@
                     "processors": "",
                     "groups": "Controller",
                     "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebdd455d-3493-4e73-a375-9354572704d1",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC Keyboard & Mouse",
+                    "action": "Sneak",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8eb8d2c-9399-425f-83e0-7646965677a5",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Sneak",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

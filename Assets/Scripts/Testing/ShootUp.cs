@@ -17,6 +17,5 @@ public class ShootUp : BaseInteractable
     public override void OnInteract()
     {
         rb.AddForce(new Vector3(0f, shootForce, 0f));
-        Debug.Log("Shoot");
     }
 }

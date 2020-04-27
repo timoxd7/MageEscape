@@ -27,6 +27,8 @@ public class InputHandler : MonoBehaviour
         inputMaster.Player.Sprint.canceled += _ => playerMovementController.StopSprinting();
         inputMaster.Player.Jump.performed += _ => playerMovementController.Jump();
         inputMaster.Player.Look.performed += context => playerLookController.UpdateView(context.ReadValue<Vector2>());
+        inputMaster.Player.Sneak.performed += _ => playerMovementController.StartSneak();
+        inputMaster.Player.Sneak.canceled += _ => playerMovementController.StopSneak();
     }
 
 

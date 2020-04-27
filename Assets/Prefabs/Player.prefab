@@ -85,6 +85,7 @@ MonoBehaviour:
   characterController: {fileID: 2783385624152069179}
   character: {fileID: 5863036474862294244}
   groundCheck: {fileID: 6321986906112016789}
+  usedCamera: {fileID: 6312586590411751295}
   movementSpeed: 5
   sprintMultiplyer: 2
   groundMask:
@@ -94,6 +95,11 @@ MonoBehaviour:
   groundDistance: 0.55
   forcedYVelocity: -2
   jumpHeight: 1
+  sneakingHeight: 1.4
+  sneakingSpeedMultiplyer: 0.5
+  lockJumpAtSneaking: 0
+  sneakingJumpHeightMultiplyer: 0.5
+  lockSprintAtSneaking: 0
 --- !u!1 &2014118620198835567
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class PlayerLookController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Lock / Unlock Mouse Cursor
+        // Lock / Unlock Mouse Cursor (PC Keyboard/Mouse Spezific)
 
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
@@ -39,6 +39,7 @@ public class PlayerLookController : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             // Hide Courser again
+            Cursor.lockState = CursorLockMode.None;
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
