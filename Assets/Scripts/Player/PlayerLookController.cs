@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MouseLook : MonoBehaviour
+public class PlayerLookController : MonoBehaviour
 {
     [Header("References")]
     [Tooltip("The Camera this Player is attached to")]
