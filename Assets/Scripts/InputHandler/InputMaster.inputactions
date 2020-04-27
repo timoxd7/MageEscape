@@ -6,20 +6,12 @@
             "id": "a3c2c224-5fef-4206-baac-97027c08fbc7",
             "actions": [
                 {
-                    "name": "InteractPush",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "e045d9ad-655f-4997-836e-b8bcc2841696",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "InteractRelease",
-                    "type": "Button",
-                    "id": "5023fdb5-4913-4477-b855-504d83a6aa33",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press(behavior=1)"
+                    "interactions": ""
                 },
                 {
                     "name": "Move",
@@ -30,20 +22,12 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SprintPush",
+                    "name": "Sprint",
                     "type": "Button",
                     "id": "cf6b48ce-4aa4-4523-9b0e-810ff6a87428",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "SprintRelease",
-                    "type": "Button",
-                    "id": "ba20d9d4-6e78-485d-8cc2-804e86372f9d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press(behavior=1)"
+                    "interactions": ""
                 },
                 {
                     "name": "Jump",
@@ -70,7 +54,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC Keyboard & Mouse",
-                    "action": "InteractPush",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -81,7 +65,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "InteractPush",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -367,7 +351,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC Keyboard & Mouse",
-                    "action": "SprintPush",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -378,51 +362,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "SprintPush",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cc6f107a-8e4d-4751-90e4-03442fc9c7d5",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC Keyboard & Mouse",
-                    "action": "InteractRelease",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cfb4b15d-6379-4b2a-ad8a-481692a218b8",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "InteractRelease",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9f0a1c5c-450a-4ecf-9d39-83aa9592a45f",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC Keyboard & Mouse",
-                    "action": "SprintRelease",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7b275897-849c-4c33-ae2a-2eedd642f78f",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "SprintRelease",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -19,20 +19,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
             ""id"": ""a3c2c224-5fef-4206-baac-97027c08fbc7"",
             ""actions"": [
                 {
-                    ""name"": ""InteractPush"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""e045d9ad-655f-4997-836e-b8bcc2841696"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""InteractRelease"",
-                    ""type"": ""Button"",
-                    ""id"": ""5023fdb5-4913-4477-b855-504d83a6aa33"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=1)""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Move"",
@@ -43,20 +35,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""SprintPush"",
+                    ""name"": ""Sprint"",
                     ""type"": ""Button"",
                     ""id"": ""cf6b48ce-4aa4-4523-9b0e-810ff6a87428"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""SprintRelease"",
-                    ""type"": ""Button"",
-                    ""id"": ""ba20d9d4-6e78-485d-8cc2-804e86372f9d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=1)""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Jump"",
@@ -83,7 +67,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC Keyboard & Mouse"",
-                    ""action"": ""InteractPush"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -94,7 +78,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""InteractPush"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -380,7 +364,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC Keyboard & Mouse"",
-                    ""action"": ""SprintPush"",
+                    ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -391,51 +375,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""SprintPush"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cc6f107a-8e4d-4751-90e4-03442fc9c7d5"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""PC Keyboard & Mouse"",
-                    ""action"": ""InteractRelease"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cfb4b15d-6379-4b2a-ad8a-481692a218b8"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""InteractRelease"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9f0a1c5c-450a-4ecf-9d39-83aa9592a45f"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""PC Keyboard & Mouse"",
-                    ""action"": ""SprintRelease"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7b275897-849c-4c33-ae2a-2eedd642f78f"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""SprintRelease"",
+                    ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -474,11 +414,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_InteractPush = m_Player.FindAction("InteractPush", throwIfNotFound: true);
-        m_Player_InteractRelease = m_Player.FindAction("InteractRelease", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_SprintPush = m_Player.FindAction("SprintPush", throwIfNotFound: true);
-        m_Player_SprintRelease = m_Player.FindAction("SprintRelease", throwIfNotFound: true);
+        m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
     }
@@ -530,22 +468,18 @@ public class @InputMaster : IInputActionCollection, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_InteractPush;
-    private readonly InputAction m_Player_InteractRelease;
+    private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_SprintPush;
-    private readonly InputAction m_Player_SprintRelease;
+    private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Look;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
         public PlayerActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @InteractPush => m_Wrapper.m_Player_InteractPush;
-        public InputAction @InteractRelease => m_Wrapper.m_Player_InteractRelease;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputAction @SprintPush => m_Wrapper.m_Player_SprintPush;
-        public InputAction @SprintRelease => m_Wrapper.m_Player_SprintRelease;
+        public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -557,21 +491,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @InteractPush.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractPush;
-                @InteractPush.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractPush;
-                @InteractPush.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractPush;
-                @InteractRelease.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractRelease;
-                @InteractRelease.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractRelease;
-                @InteractRelease.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractRelease;
+                @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
-                @SprintPush.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintPush;
-                @SprintPush.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintPush;
-                @SprintPush.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintPush;
-                @SprintRelease.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintRelease;
-                @SprintRelease.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintRelease;
-                @SprintRelease.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintRelease;
+                @Sprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
+                @Sprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
+                @Sprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
@@ -582,21 +510,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @InteractPush.started += instance.OnInteractPush;
-                @InteractPush.performed += instance.OnInteractPush;
-                @InteractPush.canceled += instance.OnInteractPush;
-                @InteractRelease.started += instance.OnInteractRelease;
-                @InteractRelease.performed += instance.OnInteractRelease;
-                @InteractRelease.canceled += instance.OnInteractRelease;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @SprintPush.started += instance.OnSprintPush;
-                @SprintPush.performed += instance.OnSprintPush;
-                @SprintPush.canceled += instance.OnSprintPush;
-                @SprintRelease.started += instance.OnSprintRelease;
-                @SprintRelease.performed += instance.OnSprintRelease;
-                @SprintRelease.canceled += instance.OnSprintRelease;
+                @Sprint.started += instance.OnSprint;
+                @Sprint.performed += instance.OnSprint;
+                @Sprint.canceled += instance.OnSprint;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
@@ -627,11 +549,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
     }
     public interface IPlayerActions
     {
-        void OnInteractPush(InputAction.CallbackContext context);
-        void OnInteractRelease(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
-        void OnSprintPush(InputAction.CallbackContext context);
-        void OnSprintRelease(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
     }
