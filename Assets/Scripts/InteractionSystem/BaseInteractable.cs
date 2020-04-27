@@ -6,8 +6,9 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
     // Variables
 
     [Header("Interactable Settings")]
-    public float holdDuration;
     public bool holdToInteract;
+    [MyBox.ConditionalField("holdToInteract")]
+    public float holdDuration;
     public bool mutipleUse;
     public bool isInteractable;
 

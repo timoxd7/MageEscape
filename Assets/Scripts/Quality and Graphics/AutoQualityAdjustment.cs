@@ -26,9 +26,6 @@ public class AutoQualityAdjustment : MonoBehaviour
     [Header("Info")]
     [SerializeField]
     private string currentQualitySetting;
-    [Tooltip("If the lowest Quality-Setting is reached and the FPS is still under fpsLowerThreshhold, this will get true")]
-    [SerializeField]
-    private bool needPerformanceImprovement = false;
 
 
     void Start()
@@ -109,11 +106,6 @@ public class AutoQualityAdjustment : MonoBehaviour
 
     private void LowerQualitySettings()
     {
-        if (QualitySettings.GetQualityLevel() == 0)
-        {
-            needPerformanceImprovement = true;
-        }
-
         if (highestQualityLocked)
         {
             QualitySettings.DecreaseLevel(false);
@@ -129,7 +121,6 @@ public class AutoQualityAdjustment : MonoBehaviour
     private void HigherQualitySettings()
     {
         int currentQualityLevel = QualitySettings.GetQualityLevel();
-        needPerformanceImprovement = false;
 
         if (highestQualityLocked)
         {
