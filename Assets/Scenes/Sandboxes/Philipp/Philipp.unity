@@ -13655,6 +13655,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dungeon_Custom_Corner_Flat
       objectReference: {fileID: 0}
+    - target: {fileID: 7730142280078882947, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95, type: 3}
 --- !u!4 &589903843 stripped
@@ -30534,14 +30539,14 @@ Transform:
   - {fileID: 1915211476}
   - {fileID: 733666423}
   - {fileID: 973672056}
+  - {fileID: 552551150}
   - {fileID: 88999098}
   - {fileID: 1402797118}
-  - {fileID: 552551150}
+  - {fileID: 431067172}
+  - {fileID: 1143146034}
   - {fileID: 259750430}
   - {fileID: 192533815}
   - {fileID: 1295230007}
-  - {fileID: 431067172}
-  - {fileID: 1143146034}
   m_Father: {fileID: 912626419}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46113,6 +46118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dungeon_Custom_Corner_Flat (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730142280078882947, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95, type: 3}
