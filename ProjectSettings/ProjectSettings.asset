@@ -595,6 +595,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
+    1: SCENE_FUSION;SF_PROBUILDER_PACKAGE
     13: SF_PROBUILDER_PACKAGE;SCENE_FUSION
   platformArchitecture: {}
   scriptingBackend: {}
