@@ -36,6 +36,12 @@ public class PlayerMovementController : MonoBehaviour
     public float sneakingJumpHeightMultiplyer = 0.5f;
     public bool lockSprintAtSneaking = true;
 
+    [Header("Settings for spezific areas")]
+    public bool jumpEnabled = true;
+    public bool sneakEnabled = true;
+    public bool sprintEnabled = true;
+
+
     private Vector2 horizontalSpeed;
     private float yVelocity = 0f;
     private bool isGrounded;
@@ -60,16 +66,19 @@ public class PlayerMovementController : MonoBehaviour
         Vector3 move = character.right * horizontalSpeed.x + character.forward * horizontalSpeed.y;
         move *= movementSpeed;
 
-        if ((sprinting && !sneaking) || (sprinting && sneaking && !lockSprintAtSneaking))
+        if (sprintEnabled)
         {
-            move *= sprintMultiplyer;
+            if ((sprinting && !sneaking) || (sprinting && sneaking && !lockSprintAtSneaking))
+            {
+                move *= sprintMultiplyer;
+            }
+
         }
 
-        if (sneaking)
+        if (sneaking && sneakEnabled)
         {
             move *= sneakingSpeedMultiplyer;
         }
-
 
         // Add gravity
         CheckGrounding();
@@ -87,18 +96,19 @@ public class PlayerMovementController : MonoBehaviour
         move.y = yVelocity;
 
 
-        // Apply to character
+        // Apply movement to character
         characterController.Move(move * Time.deltaTime);
 
 
         // Apply Sneeking if needed
-        if (sneaking && currentHeight != sneakingHeight)
+        if (sneaking && (currentHeight != sneakingHeight) && sneakEnabled)
         {
             currentHeight -= sneakMovementSpeed * Time.deltaTime;
             if (currentHeight < sneakingHeight)
                 currentHeight = sneakingHeight;
             UpdatePlayerHeight();
-        } else if (!sneaking && currentHeight != normalHeight)
+        }
+        else if ((!sneaking && currentHeight != normalHeight) || (currentHeight != normalHeight && !sneakEnabled))
         {
             currentHeight += sneakMovementSpeed * Time.deltaTime;
             if (currentHeight > normalHeight)
@@ -144,21 +154,24 @@ public class PlayerMovementController : MonoBehaviour
 
     public void Jump()
     {
-        float currentJumpHeight = jumpHeight;
-
-        if (sneaking)
+        if (jumpEnabled)
         {
-            if (lockJumpAtSneaking)
-                return;
-            else
-                currentJumpHeight *= sneakingJumpHeightMultiplyer;
-        }
+            float currentJumpHeight = jumpHeight;
 
-        CheckGrounding();
+            if (sneaking && sneakEnabled)
+            {
+                if (lockJumpAtSneaking)
+                    return;
+                else
+                    currentJumpHeight *= sneakingJumpHeightMultiplyer;
+            }
 
-        if (isGrounded)
-        {
-            yVelocity = Mathf.Sqrt(currentJumpHeight * -2f * gravity); // Because physics!
+            CheckGrounding();
+
+            if (isGrounded)
+            {
+                yVelocity = Mathf.Sqrt(currentJumpHeight * -2f * gravity); // Because physics!
+            }
         }
     }
 
