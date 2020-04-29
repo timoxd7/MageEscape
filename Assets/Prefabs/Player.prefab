@@ -96,10 +96,11 @@ MonoBehaviour:
   forcedYVelocity: -2
   jumpHeight: 1
   sneakingHeight: 1.4
+  sneakMovementSpeed: 4
   sneakingSpeedMultiplyer: 0.5
-  lockJumpAtSneaking: 0
+  lockJumpAtSneaking: 1
   sneakingJumpHeightMultiplyer: 0.5
-  lockSprintAtSneaking: 0
+  lockSprintAtSneaking: 1
 --- !u!1 &2014118620198835567
 GameObject:
   m_ObjectHideFlags: 0
