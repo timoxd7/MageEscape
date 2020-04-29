@@ -96,10 +96,14 @@ MonoBehaviour:
   forcedYVelocity: -2
   jumpHeight: 1
   sneakingHeight: 1.4
+  sneakMovementSpeed: 4
   sneakingSpeedMultiplyer: 0.5
   lockJumpAtSneaking: 0
   sneakingJumpHeightMultiplyer: 0.5
   lockSprintAtSneaking: 0
+  jumpEnabled: 1
+  sneakEnabled: 1
+  sprintEnabled: 1
 --- !u!1 &2014118620198835567
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +115,7 @@ GameObject:
   - component: {fileID: 7896014403280023045}
   - component: {fileID: 6312586590411751295}
   - component: {fileID: 4072116696939310620}
+  - component: {fileID: 3048237669047417068}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -183,6 +188,24 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014118620198835567}
   m_Enabled: 1
+--- !u!114 &3048237669047417068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014118620198835567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841c17af27cb7b841ad804b087d7c857, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fps: 0
+  fpsUpperThreshhold: 80
+  fpsLowerThreshhold: 30
+  maxTimeOutOfBound: 1.5
+  highestQualityLocked: 0
+  currentQualitySetting: 
 --- !u!1 &8542561744784980693
 GameObject:
   m_ObjectHideFlags: 0

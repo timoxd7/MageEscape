@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProBuilder;
+using UnityEngine.UIElements;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -26,11 +27,20 @@ public class PlayerMovementController : MonoBehaviour
 
     [Header("Sneak")]
     public float sneakingHeight = 1.4f;
+    [Tooltip("The vertical speed the player will get in sneaking position")]
+    public float sneakMovementSpeed = 4.0f;
+    [Tooltip("The multiplyer which will be applied on the horizontal movement speed of the player")]
     public float sneakingSpeedMultiplyer = 0.5f;
     public bool lockJumpAtSneaking = true;
     [MyBox.ConditionalField("lockJumpAtSneaking", true)]
     public float sneakingJumpHeightMultiplyer = 0.5f;
     public bool lockSprintAtSneaking = true;
+
+    [Header("Settings for spezific areas")]
+    public bool jumpEnabled = true;
+    public bool sneakEnabled = true;
+    public bool sprintEnabled = true;
+
 
     private Vector2 horizontalSpeed;
     private float yVelocity = 0f;
@@ -41,10 +51,12 @@ public class PlayerMovementController : MonoBehaviour
     private float normalHeight;
     private float cameraHeadOffset;
     private bool sneaking = false;
+    private float currentHeight;
 
     private void Start()
     {
         normalHeight = characterController.height;
+        currentHeight = normalHeight;
         cameraHeadOffset = normalHeight - usedCamera.transform.localPosition.y;
     }
 
@@ -54,16 +66,19 @@ public class PlayerMovementController : MonoBehaviour
         Vector3 move = character.right * horizontalSpeed.x + character.forward * horizontalSpeed.y;
         move *= movementSpeed;
 
-        if ((sprinting && !sneaking) || (sprinting && sneaking && !lockSprintAtSneaking))
+        if (sprintEnabled)
         {
-            move *= sprintMultiplyer;
+            if ((sprinting && !sneaking) || (sprinting && sneaking && !lockSprintAtSneaking))
+            {
+                move *= sprintMultiplyer;
+            }
+
         }
 
-        if (sneaking)
+        if (sneaking && sneakEnabled)
         {
             move *= sneakingSpeedMultiplyer;
         }
-
 
         // Add gravity
         CheckGrounding();
@@ -81,8 +96,25 @@ public class PlayerMovementController : MonoBehaviour
         move.y = yVelocity;
 
 
-        // Apply to character
+        // Apply movement to character
         characterController.Move(move * Time.deltaTime);
+
+
+        // Apply Sneeking if needed
+        if (sneaking && (currentHeight != sneakingHeight) && sneakEnabled)
+        {
+            currentHeight -= sneakMovementSpeed * Time.deltaTime;
+            if (currentHeight < sneakingHeight)
+                currentHeight = sneakingHeight;
+            UpdatePlayerHeight();
+        }
+        else if ((!sneaking && currentHeight != normalHeight) || (currentHeight != normalHeight && !sneakEnabled))
+        {
+            currentHeight += sneakMovementSpeed * Time.deltaTime;
+            if (currentHeight > normalHeight)
+                currentHeight = normalHeight;
+            UpdatePlayerHeight();
+        }
     }
 
     public void SetSpeed(Vector2 newDirectionalSpeed)
@@ -103,42 +135,43 @@ public class PlayerMovementController : MonoBehaviour
     public void StartSneak()
     {
         sneaking = true;
-        SetPlayerHeight(sneakingHeight);
     }
 
     public void StopSneak()
     {
         sneaking = false;
-        SetPlayerHeight(normalHeight);
     }
 
-    private void SetPlayerHeight(float newHeight)
+    private void UpdatePlayerHeight()
     {
         // Set Capsule
-        characterController.height = newHeight;
-        characterController.center = new Vector3(characterController.center.x, newHeight / 2, characterController.center.z);
+        characterController.height = currentHeight;
+        characterController.center = new Vector3(characterController.center.x, currentHeight / 2, characterController.center.z);
 
         // Set Camera
-        usedCamera.transform.localPosition = new Vector3(usedCamera.transform.localPosition.x, newHeight - cameraHeadOffset, usedCamera.transform.localPosition.z);
+        usedCamera.transform.localPosition = new Vector3(usedCamera.transform.localPosition.x, currentHeight - cameraHeadOffset, usedCamera.transform.localPosition.z);
     }
 
     public void Jump()
     {
-        float currentJumpHeight = jumpHeight;
-
-        if (sneaking)
+        if (jumpEnabled)
         {
-            if (lockJumpAtSneaking)
-                return;
-            else
-                currentJumpHeight *= sneakingJumpHeightMultiplyer;
-        }
+            float currentJumpHeight = jumpHeight;
 
-        CheckGrounding();
+            if (sneaking && sneakEnabled)
+            {
+                if (lockJumpAtSneaking)
+                    return;
+                else
+                    currentJumpHeight *= sneakingJumpHeightMultiplyer;
+            }
 
-        if (isGrounded)
-        {
-            yVelocity = Mathf.Sqrt(currentJumpHeight * -2f * gravity); // Because physics!
+            CheckGrounding();
+
+            if (isGrounded)
+            {
+                yVelocity = Mathf.Sqrt(currentJumpHeight * -2f * gravity); // Because physics!
+            }
         }
     }
 
