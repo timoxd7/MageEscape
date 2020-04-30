@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using MyBox;
+﻿using MyBox;
 using UnityEngine;
 
-public class ShootUp : BaseInteractable
+public class ShootUp : MonoBehaviour, IInteractable
 {
     public float shootForce = 10f;
 
@@ -13,9 +11,9 @@ public class ShootUp : BaseInteractable
     {
         rb = gameObject.GetOrAddComponent<Rigidbody>();
     }
-
-    public override void OnInteract()
+    public void OnInteraction()
     {
         rb.AddForce(new Vector3(0f, shootForce, 0f));
+        
     }
 }

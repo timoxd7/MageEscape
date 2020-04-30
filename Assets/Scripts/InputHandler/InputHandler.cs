@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {   
@@ -10,25 +7,50 @@ public class InputHandler : MonoBehaviour
     public PlayerMovementController playerMovementController;
     public InteractionController interactionController;
     
-    private InputMaster inputMaster;
+    
+    private InputMaster _inputMaster;
 
 
     public void Awake()
     {
-        inputMaster = new InputMaster();
+        _inputMaster = new InputMaster();
 
         // Interaction
-        inputMaster.Player.Interact.performed += _ => interactionController.InteractPush();
-        inputMaster.Player.Interact.canceled += _ => interactionController.InteractRelease();
+        if (interactionController != null)
+        {
+            _inputMaster.Player.Interact.performed += _ => interactionController.InteractPush();
+            _inputMaster.Player.Interact.canceled += _ => interactionController.InteractRelease();
+        }
+        else
+        {
+            Debug.LogWarning("No InteractionController given");
+        }
 
-        // Player Controller
-        inputMaster.Player.Move.performed += context => playerMovementController.SetSpeed(context.ReadValue<Vector2>());
-        inputMaster.Player.Sprint.performed += _ => playerMovementController.StartSprinting();
-        inputMaster.Player.Sprint.canceled += _ => playerMovementController.StopSprinting();
-        inputMaster.Player.Jump.performed += _ => playerMovementController.Jump();
-        inputMaster.Player.Look.performed += context => playerLookController.UpdateView(context.ReadValue<Vector2>());
-        inputMaster.Player.Sneak.performed += _ => playerMovementController.StartSneak();
-        inputMaster.Player.Sneak.canceled += _ => playerMovementController.StopSneak();
+        // Player Movement
+        if (playerMovementController != null)
+        {
+            _inputMaster.Player.Move.performed += context => playerMovementController.SetSpeed(context.ReadValue<Vector2>());
+            _inputMaster.Player.Sprint.performed += _ => playerMovementController.StartSprinting();
+            _inputMaster.Player.Sprint.canceled += _ => playerMovementController.StopSprinting();
+            _inputMaster.Player.Jump.performed += _ => playerMovementController.Jump();
+            _inputMaster.Player.Sneak.performed += _ => playerMovementController.StartSneak();
+            _inputMaster.Player.Sneak.canceled += _ => playerMovementController.StopSneak();
+        }
+        else
+        {
+            Debug.LogWarning("No MovementController given");
+        }
+
+        // Player Looking
+        if (playerLookController != null)
+        {
+            _inputMaster.Player.Look.performed += context => playerLookController.UpdateView(context.ReadValue<Vector2>());
+        }
+        else
+        {
+            Debug.LogWarning("No LookController given");
+        }
+
     }
 
 
@@ -37,12 +59,12 @@ public class InputHandler : MonoBehaviour
 
     public void OnEnable()
     {
-        inputMaster.Enable();
+        _inputMaster.Enable();
     }
 
     public void OnDisable()
     {
-        inputMaster.Disable();
+        _inputMaster.Disable();
     }
 
 }
