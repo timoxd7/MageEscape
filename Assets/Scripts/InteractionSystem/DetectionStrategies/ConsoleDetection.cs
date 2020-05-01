@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
-public class ConsoleDetection : MonoBehaviour, IDetectable
+public class ConsoleDetection : BaseDetection
 
 {
-    public void OnDetectionEnter()
+    public override void OnDetectionEnter()
     {
         Debug.Log("Detection Enter: " + gameObject.name);
     }
 
-    public void OnDetectionExit()
+    public override void OnDetectionExit()
     {
         Debug.Log("Detection Exit: " + gameObject.name);
     }

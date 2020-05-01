@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class EmptyInteraction : MonoBehaviour, IInteractable
+public class EmptyInteraction : BaseInteraction
 {
-    public void OnInteraction()
+    public override void OnInteraction()
     {
-        // Literally No Interaction
+        // Hier passiert nichts
     }
 }

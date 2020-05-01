@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class ConsoleInteraction : MonoBehaviour, IInteractable
+public class ConsoleInteraction : BaseInteraction
 {
-    public void OnInteraction()
+    public override void OnInteraction()
     {
         Debug.Log("Interaction: " + gameObject.name);
     }

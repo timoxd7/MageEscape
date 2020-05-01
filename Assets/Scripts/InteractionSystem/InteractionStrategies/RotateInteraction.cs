@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class RotateInteraction : MonoBehaviour, IInteractable
+public class RotateInteraction : BaseInteraction
 {
-    public void OnInteraction()
+    public override void OnInteraction()
     {
         gameObject.transform.Rotate(20, 20, 20);
         

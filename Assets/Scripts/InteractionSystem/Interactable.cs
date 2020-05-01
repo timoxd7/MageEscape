@@ -1,4 +1,4 @@
-﻿using InteractionSystem.InteractableObject;
+﻿using MyBox;
 using UnityEngine;
 
 public enum InteractionBehaviour 
@@ -6,6 +6,7 @@ public enum InteractionBehaviour
     ConsoleLog,
     Rotate,
     Empty,
+    Custom,
 }
 
 public enum DetectionBehaviour
@@ -13,32 +14,32 @@ public enum DetectionBehaviour
     ConsoleLog,
     Highlight,
     Empty,
+    Custom,
 }
 
-public class Interactable : MonoBehaviour, IBaseInteractable, IInteractable, IDetectable
+public class Interactable : MonoBehaviour, IInteractable, IDetectable
 {
 
     #region Variables
     
     /* IBase */
     [Header("Properties")]
-    public float holdDuration;
+    // public float holdDuration;
     public bool holdToInteract;
     public bool multipleUse;    // subject to removal
     public bool isInteractable;
-    public float HoldDuration => holdDuration;
+    public float HoldDuration { get; set; }
     public bool HoldToInteract => holdToInteract;
     public bool MultipleUse => multipleUse;
     public bool IsInteractable => isInteractable;
 
-    /* Strategies */
-    public IDetectable DetectionStrategy { get; set; }
-    public IInteractable InteractionStrategy { get; set; }
-    
-    [Header("Behaviour")]
-    public DetectionBehaviour detectionBehaviour;
-    public InteractionBehaviour interactionBehaviour;
-
+    [Header("Choose Behaviour")]
+    public DetectionBehaviour detectionOption;
+    [ConditionalField(nameof(detectionOption), false, DetectionBehaviour.Custom)]
+    public BaseDetection detectionBehaviour;
+    public InteractionBehaviour interactionOption;
+    [ConditionalField(nameof(interactionOption), false, InteractionBehaviour.Custom)]
+    public BaseInteraction interactionBehaviour;
     #endregion
 
     #region Builtin
@@ -58,19 +59,21 @@ public class Interactable : MonoBehaviour, IBaseInteractable, IInteractable, IDe
         if (c != null) Destroy(c);
         */ 
         
-        switch (interactionBehaviour)
+        switch (interactionOption)
         {
+            case InteractionBehaviour.Custom:
+                break;
             case InteractionBehaviour.ConsoleLog:
-                InteractionStrategy = gameObject.AddComponent<ConsoleInteraction>();
+                interactionBehaviour = gameObject.AddComponent<ConsoleInteraction>();
                 break;
             case InteractionBehaviour.Rotate:
-                InteractionStrategy = gameObject.AddComponent<RotateInteraction>();
+                interactionBehaviour = gameObject.AddComponent<RotateInteraction>();
                 break;
             case InteractionBehaviour.Empty:
-                InteractionStrategy = gameObject.AddComponent<EmptyInteraction>();
+                interactionBehaviour = gameObject.AddComponent<EmptyInteraction>();
                 break;
             default:
-                InteractionStrategy = gameObject.AddComponent<EmptyInteraction>();
+                interactionBehaviour = gameObject.AddComponent<EmptyInteraction>();
                 break;
         }    
     }
@@ -82,19 +85,21 @@ public class Interactable : MonoBehaviour, IBaseInteractable, IInteractable, IDe
         if (c != null) Destroy(c);
         */
 
-        switch (detectionBehaviour)
+        switch (detectionOption)
         {
+            case DetectionBehaviour.Custom:
+                break;
             case DetectionBehaviour.ConsoleLog:
-                DetectionStrategy = gameObject.AddComponent<ConsoleDetection>();
+                detectionBehaviour = gameObject.AddComponent<ConsoleDetection>();
                 break;
             case DetectionBehaviour.Highlight:
-                DetectionStrategy = gameObject.AddComponent<HighlightDetection>();
+                detectionBehaviour = gameObject.AddComponent<HighlightDetection>();
                 break;
             case DetectionBehaviour.Empty:
-                DetectionStrategy = gameObject.AddComponent<EmptyDetection>();
+                detectionBehaviour = gameObject.AddComponent<EmptyDetection>();
                 break;
             default:
-                DetectionStrategy = gameObject.AddComponent<EmptyDetection>();
+                detectionBehaviour = gameObject.AddComponent<EmptyDetection>();
                 break;
         }
     }
@@ -104,18 +109,18 @@ public class Interactable : MonoBehaviour, IBaseInteractable, IInteractable, IDe
     /* Interaction */
     public void OnInteraction()
     {
-        InteractionStrategy.OnInteraction();
+        interactionBehaviour.OnInteraction();
     }
 
     /* Detection */
     public void OnDetectionEnter()
     {
-        DetectionStrategy.OnDetectionEnter();
+        detectionBehaviour.OnDetectionEnter();
     }
 
     public void OnDetectionExit()
     {
-        DetectionStrategy.OnDetectionExit();
+        detectionBehaviour.OnDetectionExit();
     }
 
     #endregion

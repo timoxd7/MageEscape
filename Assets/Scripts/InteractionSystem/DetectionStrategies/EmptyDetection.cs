@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-public class EmptyDetection : MonoBehaviour, IDetectable
+public class EmptyDetection : BaseDetection
 {
-    public void OnDetectionEnter()
+    public override void OnDetectionEnter()
     {
         // Hier könnte ihre Werbung stehen...
     }
 
-    public void OnDetectionExit()
+    public override void OnDetectionExit()
     {
         // Aber nur in Kommentarblöcken!
     }

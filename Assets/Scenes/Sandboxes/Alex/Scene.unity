@@ -298,7 +298,7 @@ PrefabInstance:
     - target: {fileID: 7886973110094470529, guid: 429d9f80ea6c7c1499a60be9a65c2613,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429d9f80ea6c7c1499a60be9a65c2613, type: 3}
@@ -326,12 +326,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdDuration: 0
   holdToInteract: 0
   multipleUse: 0
-  isInteractable: 0
-  detectionBehaviour: 0
-  interactionBehaviour: 2
+  isInteractable: 1
+  detectionOption: 2
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 3
+  interactionBehaviour: {fileID: 0}
 --- !u!1001 &802092486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 7447022692855013307, guid: 6b07ab31d47036645833e234477aa56f,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b07ab31d47036645833e234477aa56f, type: 3}
@@ -542,7 +543,7 @@ PrefabInstance:
     - target: {fileID: 3454277780500744143, guid: 7234c83608121694ebb0c6175d854ed0,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7234c83608121694ebb0c6175d854ed0, type: 3}
@@ -565,7 +566,7 @@ GameObject:
   - component: {fileID: 1076248100}
   - component: {fileID: 1076248099}
   - component: {fileID: 1076248098}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,15 +582,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076248097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5692d2f989b44673a783210ada98fcbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdDuration: 0
-  holdToInteract: 0
-  multipleUse: 0
-  isInteractable: 1
-  detectionBehaviour: 0
-  interactionBehaviour: 1
 --- !u!65 &1076248099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -673,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1377360652}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1690706289}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

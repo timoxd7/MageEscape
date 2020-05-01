@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
-public class HighlightDetection : MonoBehaviour, IDetectable
+public class HighlightDetection : BaseDetection
 {
-    public void OnDetectionEnter()
+    public override void OnDetectionEnter()
     {
         // TODO
         throw new System.NotImplementedException();
     }
 
-    public void OnDetectionExit()
+    public override void OnDetectionExit()
     {
         // TODO
         throw new System.NotImplementedException();
