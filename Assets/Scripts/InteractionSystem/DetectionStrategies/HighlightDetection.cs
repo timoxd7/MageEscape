@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class HighlightDetection : BaseDetection
+﻿public class HighlightDetection : BaseDetection
 {
     public override void OnDetectionEnter()
     {

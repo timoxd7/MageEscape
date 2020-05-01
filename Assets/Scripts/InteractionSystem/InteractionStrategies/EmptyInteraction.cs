@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class EmptyInteraction : BaseInteraction
+﻿public class EmptyInteraction : BaseInteraction
 {
     public override void OnInteraction()
     {

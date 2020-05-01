@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class KeyInsert : MonoBehaviour, IInteractable
+public class KeyInsert : BaseInteraction
 {
 
     public GameObject animatedKey;
@@ -31,7 +31,7 @@ public class KeyInsert : MonoBehaviour, IInteractable
         }
     }
     
-    public void OnInteraction()
+    public override void OnInteraction()
     {
     // -> Key inserted
     // Make animated Key visible

@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class EmptyDetection : BaseDetection
+﻿public class EmptyDetection : BaseDetection
 {
     public override void OnDetectionEnter()
     {

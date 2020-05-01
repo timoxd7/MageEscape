@@ -1,22 +1,6 @@
 ﻿using MyBox;
 using UnityEngine;
 
-public enum InteractionBehaviour 
-{
-    ConsoleLog,
-    Rotate,
-    Empty,
-    Custom,
-}
-
-public enum DetectionBehaviour
-{
-    ConsoleLog,
-    Highlight,
-    Empty,
-    Custom,
-}
-
 public class Interactable : MonoBehaviour, IInteractable, IDetectable
 {
 
@@ -25,13 +9,17 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     /* IBase */
     [Header("Properties")]
     // public float holdDuration;
-    public bool holdToInteract;
-    public bool multipleUse;    // subject to removal
     public bool isInteractable;
-    public float HoldDuration { get; set; }
-    public bool HoldToInteract => holdToInteract;
-    public bool MultipleUse => multipleUse;
+    public bool holdToInteract;
+    [ConditionalField(nameof(holdToInteract))]
+    public float holdDuration;
+    // public bool multipleUse;    // subject to removal
+
+    
     public bool IsInteractable => isInteractable;
+    public bool HoldToInteract => holdToInteract;
+    public float HoldDuration => holdDuration;
+    // public bool MultipleUse => multipleUse;
 
     [Header("Choose Behaviour")]
     public DetectionBehaviour detectionOption;
@@ -106,13 +94,11 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     #region Strategy Implementation
 
-    /* Interaction */
     public void OnInteraction()
     {
         interactionBehaviour.OnInteraction();
     }
 
-    /* Detection */
     public void OnDetectionEnter()
     {
         detectionBehaviour.OnDetectionEnter();
@@ -124,4 +110,20 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     }
 
     #endregion
+}
+
+public enum InteractionBehaviour 
+{
+    ConsoleLog,
+    Rotate,
+    Empty,
+    Custom,
+}
+
+public enum DetectionBehaviour
+{
+    ConsoleLog,
+    Highlight,
+    Empty,
+    Custom,
 }
