@@ -40,6 +40,8 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     
     #endregion
 
+    #region Strategy Handler
+    
     private void HandleInteractionStrategy()
     {
         /* Subject to change
@@ -91,6 +93,8 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
                 break;
         }
     }
+    
+    #endregion
 
     #region Strategy Implementation
 
@@ -112,6 +116,8 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     #endregion
 }
 
+#region Enums
+
 public enum InteractionBehaviour 
 {
     ConsoleLog,
@@ -127,3 +133,5 @@ public enum DetectionBehaviour
     Empty,
     Custom,
 }
+
+#endregion
