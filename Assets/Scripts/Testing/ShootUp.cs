@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ShootUp : BaseInteraction
 {
-    public float shootForce = 10f;
+    public float shootForce = 1000f;
 
     private Rigidbody rb;
 
@@ -14,6 +14,5 @@ public class ShootUp : BaseInteraction
     public override void OnInteraction()
     {
         rb.AddForce(new Vector3(0f, shootForce, 0f));
-        
     }
 }
