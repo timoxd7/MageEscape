@@ -302,7 +302,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17548
+  m_Name: pb_Mesh26784
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -763,8 +763,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &142556768
@@ -1455,8 +1458,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!43 &286606740
@@ -1465,7 +1471,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17658
+  m_Name: pb_Mesh26902
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1761,8 +1767,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &358837897
@@ -1778,6 +1787,7 @@ GameObject:
   - component: {fileID: 358837901}
   - component: {fileID: 358837900}
   - component: {fileID: 358837899}
+  - component: {fileID: 358837903}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
@@ -1873,6 +1883,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358837897}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &358837903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358837897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 1
+  detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.013357639, b: 1, a: 1}
+  outlineWidth: 5
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
 --- !u!1 &405888365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,8 +1962,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!114 &408107043
@@ -2251,8 +2286,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!43 &458178594
@@ -2261,7 +2299,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17442
+  m_Name: pb_Mesh26670
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3000,8 +3038,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!43 &664640162
@@ -3010,7 +3051,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17332
+  m_Name: pb_Mesh26548
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3173,7 +3214,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17456
+  m_Name: pb_Mesh26686
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4501,8 +4542,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &692525836
@@ -4646,7 +4690,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17616
+  m_Name: pb_Mesh26856
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5856,8 +5900,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!43 &850349993
@@ -5866,7 +5913,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17418
+  m_Name: pb_Mesh26642
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6044,8 +6091,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!114 &853014460
@@ -6104,7 +6154,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17578
+  m_Name: pb_Mesh26816
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6565,8 +6615,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &937363294 stripped
@@ -6590,8 +6643,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!114 &937363298
@@ -7660,8 +7716,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &1041095948
@@ -8676,8 +8735,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &1051601987
@@ -9646,8 +9708,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &1104671388 stripped
@@ -9671,8 +9736,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!114 &1104671392
@@ -10401,7 +10469,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17200
+  m_Name: pb_Mesh26406
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10564,7 +10632,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17352
+  m_Name: pb_Mesh26570
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10727,7 +10795,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17506
+  m_Name: pb_Mesh26742
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10890,7 +10958,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17292
+  m_Name: pb_Mesh26506
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11053,7 +11121,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17248
+  m_Name: pb_Mesh26456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12097,8 +12165,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!114 &1392420467
@@ -12165,7 +12236,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17392
+  m_Name: pb_Mesh26612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13334,8 +13405,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!43 &1622970046
@@ -13344,7 +13418,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17672
+  m_Name: pb_Mesh26918
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13507,7 +13581,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17476
+  m_Name: pb_Mesh26708
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14287,7 +14361,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17596
+  m_Name: pb_Mesh26836
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14793,8 +14867,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &1859764770
@@ -14937,7 +15014,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17488
+  m_Name: pb_Mesh26720
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15166,8 +15243,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!114 &1997550755
@@ -16236,8 +16316,11 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 0
+  detectionOption: 1
   detectionBehaviour: {fileID: 0}
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
+  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!1 &2103200615
