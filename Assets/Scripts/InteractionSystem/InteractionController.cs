@@ -80,20 +80,39 @@ public class InteractionController : MonoBehaviour
 
     private void CheckDetection()
     {
-        if (_interactionData.IsEmpty())
-        {
-            if (_interactionData.LastInteractable != null)
-            {
-                _interactionData.LastInteractable.OnDetectionExit();
-                _interactionData.LastInteractable = null;
-            }
-            return;
-        }
+        /*
+         * 3 Transitions/Cases here:
+         * 1. No Object -> New Object
+         * 2. Current Object -> New Object
+         * 3. Current Object -> No Object
+         */
 
-        if (!_interactionData.IsSame(_interactionData.LastInteractable))
+        // Case 1
+        if (_interactionData.LastInteractable == null && !_interactionData.IsEmpty())
         {
             _interactionData.CurrentInteractable.OnDetectionEnter();
             _interactionData.LastInteractable = _interactionData.CurrentInteractable;
+            return;
+        }
+
+        // Case 2
+        if (_interactionData.LastInteractable != null && _interactionData.CurrentInteractable != null)
+        {
+            if (!_interactionData.IsSame(_interactionData.LastInteractable))
+            {
+                _interactionData.LastInteractable.OnDetectionExit();
+                _interactionData.CurrentInteractable.OnDetectionEnter();
+                _interactionData.LastInteractable = _interactionData.CurrentInteractable;
+                return;
+            }
+        }
+
+        // Case 3
+        if (_interactionData.LastInteractable != null && _interactionData.IsEmpty())
+        {
+            _interactionData.LastInteractable.OnDetectionExit();
+            _interactionData.LastInteractable = null;
+            return;
         }
     }
     
