@@ -1,6 +1,7 @@
 ﻿using MyBox;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class Interactable : MonoBehaviour, IInteractable, IDetectable
 {
 
