@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class KeyInsert : BaseInteractable
+public class KeyInsert : BaseInteraction
 {
 
     public GameObject animatedKey;
@@ -32,15 +30,15 @@ public class KeyInsert : BaseInteractable
             }
         }
     }
-
-    public override void OnInteract()
+    
+    public override void OnInteraction()
     {
-        // -> Key inserted
-        // Make animated Key visible
-        animatedKey.SetActive(true);
+    // -> Key inserted
+    // Make animated Key visible
+    animatedKey.SetActive(true);
 
-        // Start Unlock animation and save start Time
-        animatedKeyAnimator.SetTrigger(keyRotationAnimationTrigger);
-        openTimer.Start();
+    // Start Unlock animation and save start Time
+    animatedKeyAnimator.SetTrigger(keyRotationAnimationTrigger);
+    openTimer.Start();
     }
 }

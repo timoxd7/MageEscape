@@ -122,6 +122,106 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17731387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17731388}
+  - component: {fileID: 17731391}
+  - component: {fileID: 17731390}
+  - component: {fileID: 17731392}
+  - component: {fileID: 17731389}
+  m_Layer: 8
+  m_Name: InteractionLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17731388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17731387}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 243669667}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17731389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17731387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &17731390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17731387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 243669668}
+  shootForce: 1000
+--- !u!64 &17731391
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17731387}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 218dd31f4c623bf42b57997c3b9f32f8, type: 3}
+--- !u!114 &17731392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17731387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.92208767, b: 0, a: 1}
+  outlineWidth: 5
+  outlinedObjects:
+  - {fileID: 243669670}
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &27019666
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +402,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21086
+  m_Name: pb_Mesh29870
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -473,6 +573,8 @@ GameObject:
   - component: {fileID: 120199107}
   - component: {fileID: 120199106}
   - component: {fileID: 120199111}
+  - component: {fileID: 120199112}
+  - component: {fileID: 120199113}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -746,11 +848,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &120199112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120199105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &120199113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120199105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &142556768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1188,133 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1974641224}
+--- !u!1001 &243669666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 858820314}
+    m_Modifications:
+    - target: {fileID: 2317576605584390678, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586580694, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel_Closed_Highlght_Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586580694, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586580694, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586580695, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586580695, guid: 5adaedd4c0081614da171fecdf6bbd37,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5adaedd4c0081614da171fecdf6bbd37, type: 3}
+--- !u!4 &243669667 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37,
+    type: 3}
+  m_PrefabInstance: {fileID: 243669666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &243669668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2317576605586580694, guid: 5adaedd4c0081614da171fecdf6bbd37,
+    type: 3}
+  m_PrefabInstance: {fileID: 243669666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &243669670 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2317576605584390678, guid: 5adaedd4c0081614da171fecdf6bbd37,
+    type: 3}
+  m_PrefabInstance: {fileID: 243669666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &246401393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1412,8 @@ GameObject:
   - component: {fileID: 285699490}
   - component: {fileID: 285699489}
   - component: {fileID: 285699494}
+  - component: {fileID: 285699495}
+  - component: {fileID: 285699496}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -1422,18 +1687,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &285699495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285699488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &285699496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285699488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &286606740
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21196
+  m_Name: pb_Mesh29988
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1713,11 +2012,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &349959826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349959824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &349959827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349959824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &358837897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +2064,8 @@ GameObject:
   - component: {fileID: 358837901}
   - component: {fileID: 358837900}
   - component: {fileID: 358837899}
+  - component: {fileID: 358837903}
+  - component: {fileID: 358837904}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
@@ -1765,10 +2100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdToInteract: 0
-  holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
+  objectToShoot: {fileID: 0}
   shootForce: 1000
 --- !u!135 &358837900
 SphereCollider:
@@ -1830,6 +2162,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358837897}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &358837903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358837897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &358837904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358837897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.03938794, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &405888365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,6 +2241,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 144587324}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &408107040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408107039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &408107041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408107039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &408107043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,10 +2290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdToInteract: 0
-  holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
+  objectToShoot: {fileID: 0}
   shootForce: 1000
 --- !u!1 &414624334
 GameObject:
@@ -1903,6 +2306,8 @@ GameObject:
   - component: {fileID: 414624336}
   - component: {fileID: 414624335}
   - component: {fileID: 414624340}
+  - component: {fileID: 414624341}
+  - component: {fileID: 414624342}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -2176,18 +2581,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &414624341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414624334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &414624342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414624334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &458178594
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20980
+  m_Name: pb_Mesh29756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2636,6 +3075,8 @@ GameObject:
   - component: {fileID: 664045621}
   - component: {fileID: 664045620}
   - component: {fileID: 664045625}
+  - component: {fileID: 664045626}
+  - component: {fileID: 664045627}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -2909,18 +3350,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &664045626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664045619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &664045627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664045619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &664640162
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20870
+  m_Name: pb_Mesh29634
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3083,7 +3558,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20994
+  m_Name: pb_Mesh29772
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3417,6 +3892,8 @@ GameObject:
   - component: {fileID: 685306742}
   - component: {fileID: 685306741}
   - component: {fileID: 685306746}
+  - component: {fileID: 685306747}
+  - component: {fileID: 685306748}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -4394,11 +4871,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &685306747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685306740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &685306748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685306740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &692525836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4540,7 +5051,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21154
+  m_Name: pb_Mesh29942
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4756,6 +5267,8 @@ GameObject:
   - component: {fileID: 840714177}
   - component: {fileID: 840714176}
   - component: {fileID: 840714181}
+  - component: {fileID: 840714182}
+  - component: {fileID: 840714183}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -5733,18 +6246,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &840714182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840714175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &840714183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840714175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &850349993
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20956
+  m_Name: pb_Mesh29728
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5907,6 +6454,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 562398323}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &853014457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853014456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &853014458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853014456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &853014460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5919,10 +6503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdToInteract: 0
-  holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
+  objectToShoot: {fileID: 0}
   shootForce: 1000
 --- !u!1 &858820313
 GameObject:
@@ -5958,6 +6539,7 @@ Transform:
   - {fileID: 1380865777}
   - {fileID: 562451307}
   - {fileID: 322958581}
+  - {fileID: 243669667}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5967,7 +6549,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21116
+  m_Name: pb_Mesh29902
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6138,6 +6720,8 @@ GameObject:
   - component: {fileID: 886332525}
   - component: {fileID: 886332524}
   - component: {fileID: 886332529}
+  - component: {fileID: 886332530}
+  - component: {fileID: 886332531}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -6411,17 +6995,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &886332530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886332523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &886332531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886332523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &937363294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4179086729700039233, guid: ce285a7430946e24ca0a9218777a7805,
     type: 3}
   m_PrefabInstance: {fileID: 152268428}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &937363295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937363294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &937363296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937363294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &937363298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6434,10 +7089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdToInteract: 0
-  holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
+  objectToShoot: {fileID: 0}
   shootForce: 1000
 --- !u!1 &965431124
 GameObject:
@@ -6498,6 +7150,8 @@ GameObject:
   - component: {fileID: 992829359}
   - component: {fileID: 992829358}
   - component: {fileID: 992829363}
+  - component: {fileID: 992829364}
+  - component: {fileID: 992829365}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -7475,11 +8129,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &992829364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992829357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &992829365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992829357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &1041095948
 GameObject:
   m_ObjectHideFlags: 0
@@ -7494,6 +8182,8 @@ GameObject:
   - component: {fileID: 1041095950}
   - component: {fileID: 1041095949}
   - component: {fileID: 1041095954}
+  - component: {fileID: 1041095955}
+  - component: {fileID: 1041095956}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -8475,11 +9165,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &1041095955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041095948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1041095956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041095948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &1051601987
 GameObject:
   m_ObjectHideFlags: 0
@@ -9156,6 +9880,8 @@ GameObject:
   - component: {fileID: 1095876986}
   - component: {fileID: 1095876985}
   - component: {fileID: 1095876990}
+  - component: {fileID: 1095876991}
+  - component: {fileID: 1095876992}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -9429,17 +10155,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &1095876991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095876984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1095876992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095876984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &1104671388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9190588765617413436, guid: ad2e0cfa2e8733c46ae66652ae0714f5,
     type: 3}
   m_PrefabInstance: {fileID: 1969350916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1104671389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104671388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1104671390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104671388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &1104671392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9452,10 +10249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdToInteract: 0
-  holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
+  objectToShoot: {fileID: 0}
   shootForce: 1000
 --- !u!1 &1181683026
 GameObject:
@@ -10170,7 +10964,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20738
+  m_Name: pb_Mesh29490
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10333,7 +11127,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20890
+  m_Name: pb_Mesh29656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10496,7 +11290,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21044
+  m_Name: pb_Mesh29828
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10659,7 +11453,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20830
+  m_Name: pb_Mesh29592
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10822,7 +11616,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20786
+  m_Name: pb_Mesh29540
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11851,6 +12645,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 31689104}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1392420464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392420463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1392420465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392420463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &1392420467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11863,10 +12694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdToInteract: 0
-  holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
+  objectToShoot: {fileID: 0}
   shootForce: 1000
 --- !u!1 &1396136971
 GameObject:
@@ -11919,7 +12747,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20930
+  m_Name: pb_Mesh29698
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12090,6 +12918,8 @@ GameObject:
   - component: {fileID: 1611984844}
   - component: {fileID: 1611984843}
   - component: {fileID: 1611984848}
+  - component: {fileID: 1611984849}
+  - component: {fileID: 1611984850}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -13071,18 +13901,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &1611984849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611984842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1611984850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611984842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &1622970046
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21210
+  m_Name: pb_Mesh30004
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13245,7 +14109,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21014
+  m_Name: pb_Mesh29794
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14025,7 +14889,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21134
+  m_Name: pb_Mesh29922
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14241,6 +15105,8 @@ GameObject:
   - component: {fileID: 1824246751}
   - component: {fileID: 1824246750}
   - component: {fileID: 1824246755}
+  - component: {fileID: 1824246756}
+  - component: {fileID: 1824246757}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -14514,11 +15380,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &1824246756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824246749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1824246757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824246749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &1859764770
 GameObject:
   m_ObjectHideFlags: 0
@@ -14659,7 +15559,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21026
+  m_Name: pb_Mesh29806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14873,6 +15773,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2120612144}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1997550752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997550751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1997550753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997550751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &1997550755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14885,10 +15822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdToInteract: 0
-  holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
+  objectToShoot: {fileID: 0}
   shootForce: 1000
 --- !u!1 &2025942375
 GameObject:
@@ -14949,6 +15883,8 @@ GameObject:
   - component: {fileID: 2080029131}
   - component: {fileID: 2080029130}
   - component: {fileID: 2080029135}
+  - component: {fileID: 2080029136}
+  - component: {fileID: 2080029137}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -15926,11 +16862,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908d82662e3b0df42bd97300d1f495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShoot: {fileID: 0}
+  shootForce: 1000
+--- !u!114 &2080029136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080029129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  mutipleUse: 0
-  isInteractable: 1
-  shootForce: 1000
+  detectionOption: 4
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &2080029137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080029129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &2103200615
 GameObject:
   m_ObjectHideFlags: 0
