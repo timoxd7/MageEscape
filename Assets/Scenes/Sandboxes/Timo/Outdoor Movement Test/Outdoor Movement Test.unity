@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 17731388}
   - component: {fileID: 17731391}
   - component: {fileID: 17731390}
+  - component: {fileID: 17731392}
   - component: {fileID: 17731389}
   m_Layer: 8
   m_Name: InteractionLayer
@@ -170,11 +171,8 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
 --- !u!114 &17731390
@@ -205,6 +203,25 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 218dd31f4c623bf42b57997c3b9f32f8, type: 3}
+--- !u!114 &17731392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17731387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.92208767, b: 0, a: 1}
+  outlineWidth: 5
+  outlinedObjects:
+  - {fileID: 243669670}
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &27019666
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +402,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26784
+  m_Name: pb_Mesh29870
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -557,6 +574,7 @@ GameObject:
   - component: {fileID: 120199106}
   - component: {fileID: 120199111}
   - component: {fileID: 120199112}
+  - component: {fileID: 120199113}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -847,13 +865,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &120199113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120199105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 10
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &142556768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1309,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 243669666}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &243669670 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2317576605584390678, guid: 5adaedd4c0081614da171fecdf6bbd37,
+    type: 3}
+  m_PrefabInstance: {fileID: 243669666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &246401393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,6 +1413,7 @@ GameObject:
   - component: {fileID: 285699489}
   - component: {fileID: 285699494}
   - component: {fileID: 285699495}
+  - component: {fileID: 285699496}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -1664,20 +1704,35 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &285699496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285699488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 10
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &286606740
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26902
+  m_Name: pb_Mesh29988
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1974,13 +2029,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &349959827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349959824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &358837897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2065,7 @@ GameObject:
   - component: {fileID: 358837900}
   - component: {fileID: 358837899}
   - component: {fileID: 358837903}
+  - component: {fileID: 358837904}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
@@ -2106,13 +2177,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.013357639, b: 1, a: 1}
-  outlineWidth: 5
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+--- !u!114 &358837904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358837897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.03938794, b: 1, a: 1}
+  outlineWidth: 5
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &405888365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,13 +2256,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &408107041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408107039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &408107043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2206,6 +2307,7 @@ GameObject:
   - component: {fileID: 414624335}
   - component: {fileID: 414624340}
   - component: {fileID: 414624341}
+  - component: {fileID: 414624342}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -2496,20 +2598,35 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &414624342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414624334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 10
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &458178594
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26670
+  m_Name: pb_Mesh29756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2959,6 +3076,7 @@ GameObject:
   - component: {fileID: 664045620}
   - component: {fileID: 664045625}
   - component: {fileID: 664045626}
+  - component: {fileID: 664045627}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -3249,20 +3367,35 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &664045627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664045619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 10
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &664640162
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26548
+  m_Name: pb_Mesh29634
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3425,7 +3558,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26686
+  m_Name: pb_Mesh29772
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3760,6 +3893,7 @@ GameObject:
   - component: {fileID: 685306741}
   - component: {fileID: 685306746}
   - component: {fileID: 685306747}
+  - component: {fileID: 685306748}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -4754,13 +4888,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
-  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+--- !u!114 &685306748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685306740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &692525836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4902,7 +5051,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26856
+  m_Name: pb_Mesh29942
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5119,6 +5268,7 @@ GameObject:
   - component: {fileID: 840714176}
   - component: {fileID: 840714181}
   - component: {fileID: 840714182}
+  - component: {fileID: 840714183}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -6113,20 +6263,35 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
-  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+--- !u!114 &840714183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840714175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &850349993
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26642
+  m_Name: pb_Mesh29728
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6304,13 +6469,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &853014458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853014456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &853014460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6369,7 +6549,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26816
+  m_Name: pb_Mesh29902
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6541,6 +6721,7 @@ GameObject:
   - component: {fileID: 886332524}
   - component: {fileID: 886332529}
   - component: {fileID: 886332530}
+  - component: {fileID: 886332531}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -6831,13 +7012,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &886332531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886332523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 10
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &937363294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4179086729700039233, guid: ce285a7430946e24ca0a9218777a7805,
@@ -6859,13 +7055,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &937363296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937363294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &937363298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6940,6 +7151,7 @@ GameObject:
   - component: {fileID: 992829358}
   - component: {fileID: 992829363}
   - component: {fileID: 992829364}
+  - component: {fileID: 992829365}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -7934,13 +8146,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
-  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+--- !u!114 &992829365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992829357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &1041095948
 GameObject:
   m_ObjectHideFlags: 0
@@ -7956,6 +8183,7 @@ GameObject:
   - component: {fileID: 1041095949}
   - component: {fileID: 1041095954}
   - component: {fileID: 1041095955}
+  - component: {fileID: 1041095956}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -8954,13 +9182,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
-  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+--- !u!114 &1041095956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041095948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &1051601987
 GameObject:
   m_ObjectHideFlags: 0
@@ -9638,6 +9881,7 @@ GameObject:
   - component: {fileID: 1095876985}
   - component: {fileID: 1095876990}
   - component: {fileID: 1095876991}
+  - component: {fileID: 1095876992}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -9928,13 +10172,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1095876992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095876984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 10
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &1104671388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9190588765617413436, guid: ad2e0cfa2e8733c46ae66652ae0714f5,
@@ -9956,13 +10215,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1104671390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104671388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &1104671392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10690,7 +10964,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26406
+  m_Name: pb_Mesh29490
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10853,7 +11127,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26570
+  m_Name: pb_Mesh29656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11016,7 +11290,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26742
+  m_Name: pb_Mesh29828
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11179,7 +11453,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26506
+  m_Name: pb_Mesh29592
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11342,7 +11616,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26456
+  m_Name: pb_Mesh29540
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12386,13 +12660,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1392420465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392420463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &1392420467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12458,7 +12747,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26612
+  m_Name: pb_Mesh29698
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12630,6 +12919,7 @@ GameObject:
   - component: {fileID: 1611984843}
   - component: {fileID: 1611984848}
   - component: {fileID: 1611984849}
+  - component: {fileID: 1611984850}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -13628,20 +13918,35 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
-  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+--- !u!114 &1611984850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611984842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!43 &1622970046
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26918
+  m_Name: pb_Mesh30004
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13804,7 +14109,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26708
+  m_Name: pb_Mesh29794
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14584,7 +14889,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26836
+  m_Name: pb_Mesh29922
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14801,6 +15106,7 @@ GameObject:
   - component: {fileID: 1824246750}
   - component: {fileID: 1824246755}
   - component: {fileID: 1824246756}
+  - component: {fileID: 1824246757}
   m_Layer: 8
   m_Name: Prism
   m_TagString: Untagged
@@ -15091,13 +15397,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1824246757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824246749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 10
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &1859764770
 GameObject:
   m_ObjectHideFlags: 0
@@ -15238,7 +15559,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26720
+  m_Name: pb_Mesh29806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15467,13 +15788,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+--- !u!114 &1997550753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997550751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!114 &1997550755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15548,6 +15884,7 @@ GameObject:
   - component: {fileID: 2080029130}
   - component: {fileID: 2080029135}
   - component: {fileID: 2080029136}
+  - component: {fileID: 2080029137}
   m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
@@ -16542,13 +16879,28 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6981132, b: 0.06087159, a: 1}
-  outlineWidth: 10
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+--- !u!114 &2080029137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080029129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
+  outlineWidth: 10
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
 --- !u!1 &2103200615
 GameObject:
   m_ObjectHideFlags: 0

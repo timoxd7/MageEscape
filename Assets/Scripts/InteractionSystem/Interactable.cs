@@ -27,12 +27,6 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     public DetectionBehaviour detectionOption;
     [ConditionalField(nameof(detectionOption), false, DetectionBehaviour.Custom)]
     public BaseDetection detectionBehaviour;
-    [ConditionalField(nameof(detectionOption), false, DetectionBehaviour.Highlight)]
-    public Outline.Mode outlineMode = Outline.Mode.OutlineVisible;
-    [ConditionalField(nameof(detectionOption), false, DetectionBehaviour.Highlight)]
-    public Color outlineColor = Color.white;
-    [ConditionalField(nameof(detectionOption), false, DetectionBehaviour.Highlight)]
-    public float outlineWidth = 5f;
 
     [Tooltip("The InteractionBehaviour for this Object. Choose Custom for own implementation, Custom Auto for own implementation already assigned to THIS gameObject (Custom Auto only for a single Behaviour an a gameObject)")]
     public InteractionBehaviour interactionOption;
@@ -107,12 +101,8 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
             case DetectionBehaviour.ConsoleLog:
                 detectionBehaviour = gameObject.AddComponent<ConsoleDetection>();
                 break;
-            case DetectionBehaviour.Highlight:
-                HighlightDetection highlightDetection = gameObject.AddComponent<HighlightDetection>();
-                highlightDetection.outlineMode = outlineMode;
-                highlightDetection.outlineColor = outlineColor;
-                highlightDetection.outlineWidth = outlineWidth;
-                detectionBehaviour = highlightDetection;
+            case DetectionBehaviour.BasicHighlight:
+                detectionBehaviour = gameObject.AddComponent<HighlightDetection>();
                 break;
             case DetectionBehaviour.Empty:
                 detectionBehaviour = gameObject.AddComponent<EmptyDetection>();
@@ -159,7 +149,7 @@ public enum InteractionBehaviour
 public enum DetectionBehaviour
 {
     ConsoleLog,
-    Highlight,
+    BasicHighlight,
     Empty,
     Custom,
     CustomAuto,
