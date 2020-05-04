@@ -1,15 +1,16 @@
 ﻿using MyBox;
 using System;
 using System.Collections.Generic;
+using cakeslice;
 using UnityEngine;
 
 public class HighlightDetection : BaseDetection
 {
 
     [Header("Outline Settings")]
-    public Outline.Mode outlineMode = Outline.Mode.OutlineVisible;
-    public Color outlineColor = Color.white;
-    public float outlineWidth = 5f;
+    [Tooltip("The Highlight Type set in the OutlineEffect")]
+    public int outlineType = 0;
+    public bool eraseRenderer = false;
 
     [Header("Outlined Object(s)")]
     [Tooltip("Specify which object should be outlined. If no objects are given, it will try to outline the Mesh sitting on this object (if enabled)")]
@@ -19,8 +20,12 @@ public class HighlightDetection : BaseDetection
     [Tooltip("Automatically add this object to be outlined, even if other objects are already in this list")]
     public bool autoAddThis = false;
 
+    [Header("Other")]
+    public bool destroyOutlineInstancesOnDestruction = true;
+
 
     private List<Outline> outlineInstances;
+    private bool lastKnownHighlightVisible = false;
 
 
     private void Start()
@@ -55,15 +60,15 @@ public class HighlightDetection : BaseDetection
             if (outlineInstance != null)
             {
                 outlineInstance.enabled = true;
-                outlineInstance.OutlineMode = outlineMode;
-                outlineInstance.OutlineColor = outlineColor;
-                outlineInstance.OutlineWidth = outlineWidth;
+                // !!!
             }
             else
             {
                 Debug.LogError("Can't create or locate outline Instance", gameObject);
             }
         }
+
+        lastKnownHighlightVisible = true;
 
     }
 
@@ -73,6 +78,42 @@ public class HighlightDetection : BaseDetection
         {
             if (outlineInstance != null)
                 outlineInstance.enabled = false;
+        }
+
+        lastKnownHighlightVisible = false;
+    }
+
+    private void OnDestroy()
+    {
+        if (lastKnownHighlightVisible)
+        {
+            OnDetectionExit();
+        }
+
+        if (destroyOutlineInstancesOnDestruction)
+        {
+            foreach (Outline outlineInstance in outlineInstances)
+            {
+                if (outlineInstance != null)
+                    Destroy(outlineInstance);
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (lastKnownHighlightVisible)
+        {
+            OnDetectionExit();
+            lastKnownHighlightVisible = true;
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (lastKnownHighlightVisible)
+        {
+            OnDetectionEnter();
         }
     }
 }

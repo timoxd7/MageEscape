@@ -215,13 +215,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0.92208767, b: 0, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects:
   - {fileID: 243669670}
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &27019666
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +402,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29870
+  m_Name: pb_Mesh21020
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -881,12 +881,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &142556768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1051,7 @@ Transform:
   - {fileID: 120199110}
   - {fileID: 886332528}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &152268428
 PrefabInstance:
@@ -1345,7 +1345,7 @@ Transform:
   - {fileID: 358837898}
   - {fileID: 1996521416}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &259983577
 GameObject:
@@ -1720,19 +1720,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!43 &286606740
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29988
+  m_Name: pb_Mesh21146
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2045,12 +2045,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &358837897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,12 +2193,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.03938794, b: 1, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
+--- !u!84 &404803622
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 976
+  m_Height: 531
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &405888365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,7 +2268,7 @@ Transform:
   - {fileID: 1611984847}
   - {fileID: 685306745}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &408107039 stripped
 GameObject:
@@ -2272,12 +2307,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &408107043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,19 +2649,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!43 &458178594
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29756
+  m_Name: pb_Mesh20898
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3383,19 +3418,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!43 &664640162
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29634
+  m_Name: pb_Mesh20764
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3558,7 +3593,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29772
+  m_Name: pb_Mesh20916
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4904,12 +4939,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &692525836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5051,7 +5086,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29942
+  m_Name: pb_Mesh21096
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6279,19 +6314,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!43 &850349993
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29728
+  m_Name: pb_Mesh20866
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6485,12 +6520,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &853014460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6541,7 +6576,7 @@ Transform:
   - {fileID: 322958581}
   - {fileID: 243669667}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &872445292
 Mesh:
@@ -6549,7 +6584,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29902
+  m_Name: pb_Mesh21054
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7028,12 +7063,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &937363294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4179086729700039233, guid: ce285a7430946e24ca0a9218777a7805,
@@ -7071,12 +7106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &937363298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8162,12 +8197,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &1041095948
 GameObject:
   m_ObjectHideFlags: 0
@@ -9198,12 +9233,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &1051601987
 GameObject:
   m_ObjectHideFlags: 0
@@ -10188,12 +10223,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &1104671388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9190588765617413436, guid: ad2e0cfa2e8733c46ae66652ae0714f5,
@@ -10231,12 +10266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &1104671392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10964,7 +10999,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29490
+  m_Name: pb_Mesh20600
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11127,7 +11162,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29656
+  m_Name: pb_Mesh20788
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11290,7 +11325,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29828
+  m_Name: pb_Mesh20978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11453,7 +11488,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29592
+  m_Name: pb_Mesh20720
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11616,7 +11651,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29540
+  m_Name: pb_Mesh20660
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12637,7 +12672,7 @@ Transform:
   - {fileID: 1375699877}
   - {fileID: 1181683027}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1392420463 stripped
 GameObject:
@@ -12676,12 +12711,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &1392420467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12741,13 +12776,105 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 218dd31f4c623bf42b57997c3b9f32f8, type: 3}
+--- !u!1001 &1410318138
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1860673156206988, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_Name
+      value: Treasure
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311855464756708, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbf49eb31720b724daa0bfadc4f0ac27, type: 3}
+--- !u!84 &1514221534
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 976
+  m_Height: 531
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!43 &1611477272
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29698
+  m_Name: pb_Mesh20832
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13934,19 +14061,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!43 &1622970046
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30004
+  m_Name: pb_Mesh21164
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14109,7 +14236,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29794
+  m_Name: pb_Mesh20940
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14889,7 +15016,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29922
+  m_Name: pb_Mesh21076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15413,12 +15540,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &1859764770
 GameObject:
   m_ObjectHideFlags: 0
@@ -15559,7 +15686,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29806
+  m_Name: pb_Mesh20952
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15804,12 +15931,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &1997550755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16895,12 +17022,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0.6792453, b: 0.17199531, a: 1}
-  outlineWidth: 10
+  outlineType: 0
+  eraseRenderer: 0
   outlinedObjects: []
   doNotAutoAddThisIfEmpty: 0
   autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!1 &2103200615
 GameObject:
   m_ObjectHideFlags: 0
@@ -17692,7 +17819,7 @@ PrefabInstance:
     - target: {fileID: 1912725701459841381, guid: 6e643ed6c33c2b14097ae782d609acb4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1912725701459841381, guid: 6e643ed6c33c2b14097ae782d609acb4,
         type: 3}
@@ -17709,6 +17836,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2862334539661872005, guid: 6e643ed6c33c2b14097ae782d609acb4,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 404803622}
     - target: {fileID: 8328898696161953757, guid: 6e643ed6c33c2b14097ae782d609acb4,
         type: 3}
       propertyPath: m_Name
