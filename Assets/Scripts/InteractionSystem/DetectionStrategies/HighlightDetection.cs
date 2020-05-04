@@ -1,15 +1,16 @@
 ﻿using MyBox;
 using System;
 using System.Collections.Generic;
+using cakeslice;
 using UnityEngine;
 
 public class HighlightDetection : BaseDetection
 {
 
     [Header("Outline Settings")]
-    public Outline.Mode outlineMode = Outline.Mode.OutlineVisible;
-    public Color outlineColor = Color.white;
-    public float outlineWidth = 5f;
+    [Tooltip("The Highlight Type set in the OutlineEffect")]
+    public int outlineType = 0;
+    public bool eraseRenderer = false;
 
     [Header("Outlined Object(s)")]
     [Tooltip("Specify which object should be outlined. If no objects are given, it will try to outline the Mesh sitting on this object (if enabled)")]
@@ -59,9 +60,7 @@ public class HighlightDetection : BaseDetection
             if (outlineInstance != null)
             {
                 outlineInstance.enabled = true;
-                outlineInstance.OutlineMode = outlineMode;
-                outlineInstance.OutlineColor = outlineColor;
-                outlineInstance.OutlineWidth = outlineWidth;
+                // !!!
             }
             else
             {
