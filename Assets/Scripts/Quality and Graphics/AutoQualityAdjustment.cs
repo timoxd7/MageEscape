@@ -12,6 +12,7 @@ public class AutoQualityAdjustment : MonoBehaviour
     private float updateRate = 4f;  // 4 updates per sec.
     [SerializeField]
     private float fps = 0f;
+    public bool showFpsIngame = false;
 
     // Adjustment Check Stuff
     [Header("Quality Adjustment Settings")]
@@ -24,6 +25,7 @@ public class AutoQualityAdjustment : MonoBehaviour
     private bool outOfBoundOver = false;
 
     [Header("Info")]
+    public bool showQualitySettingIngame = false;
     [SerializeField]
     private string currentQualitySetting;
 
@@ -45,6 +47,23 @@ public class AutoQualityAdjustment : MonoBehaviour
 
             CheckAdjustment();
         }
+    }
+
+    void OnGUI()
+    {
+        string onGuiInfo = "";
+
+        if (showFpsIngame)
+            onGuiInfo += fps.ToString("0");
+
+        if (showFpsIngame && showQualitySettingIngame)
+            onGuiInfo += " - ";
+
+        if (showQualitySettingIngame)
+            onGuiInfo += currentQualitySetting;
+
+        if (!onGuiInfo.Equals(""))
+            GUI.Label(new Rect(10, 10, 100, 20), onGuiInfo);
     }
 
     public float GetFPS()
