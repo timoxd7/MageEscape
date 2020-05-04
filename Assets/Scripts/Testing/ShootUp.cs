@@ -3,13 +3,17 @@ using UnityEngine;
 
 public class ShootUp : BaseInteraction
 {
+    public GameObject objectToShoot;
     public float shootForce = 1000f;
 
     private Rigidbody rb;
 
     private void Start()
     {
-        rb = gameObject.GetOrAddComponent<Rigidbody>();
+        if (objectToShoot == null)
+            objectToShoot = gameObject;
+
+        rb = objectToShoot.GetOrAddComponent<Rigidbody>();
     }
     public override void OnInteraction()
     {

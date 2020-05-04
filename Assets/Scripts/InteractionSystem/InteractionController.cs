@@ -50,7 +50,7 @@ public class InteractionController : MonoBehaviour
         if (hitSomething)
         {
             // Wenn wir etwas detected haben schauen wir ob das Objecte eine enrprechende Detactable Komponente hat
-            Interactable detected = hitInfo.transform.GetComponent<Interactable>();
+            Interactable detected = hitInfo.collider.GetComponent<Interactable>();
             if (detected != null)
             {
                 if (_interactionData.IsEmpty())
@@ -67,6 +67,9 @@ public class InteractionController : MonoBehaviour
                         _interactionData.CurrentInteractable = detected;
                     }
                 }
+            } else
+            {
+                Debug.Log("Ray hit Object on interaction Layer but it has no Interactable!", gameObject);
             }
         }
         else
