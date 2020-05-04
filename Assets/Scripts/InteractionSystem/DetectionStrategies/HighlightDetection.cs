@@ -19,8 +19,12 @@ public class HighlightDetection : BaseDetection
     [Tooltip("Automatically add this object to be outlined, even if other objects are already in this list")]
     public bool autoAddThis = false;
 
+    [Header("Other")]
+    public bool destroyOutlineInstancesOnDestruction = true;
+
 
     private List<Outline> outlineInstances;
+    private bool lastKnownHighlightVisible = false;
 
 
     private void Start()
@@ -65,6 +69,8 @@ public class HighlightDetection : BaseDetection
             }
         }
 
+        lastKnownHighlightVisible = true;
+
     }
 
     public override void OnDetectionExit()
@@ -73,6 +79,42 @@ public class HighlightDetection : BaseDetection
         {
             if (outlineInstance != null)
                 outlineInstance.enabled = false;
+        }
+
+        lastKnownHighlightVisible = false;
+    }
+
+    private void OnDestroy()
+    {
+        if (lastKnownHighlightVisible)
+        {
+            OnDetectionExit();
+        }
+
+        if (destroyOutlineInstancesOnDestruction)
+        {
+            foreach (Outline outlineInstance in outlineInstances)
+            {
+                if (outlineInstance != null)
+                    Destroy(outlineInstance);
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (lastKnownHighlightVisible)
+        {
+            OnDetectionExit();
+            lastKnownHighlightVisible = true;
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (lastKnownHighlightVisible)
+        {
+            OnDetectionEnter();
         }
     }
 }
