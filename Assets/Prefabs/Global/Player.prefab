@@ -346,10 +346,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fps: 0
+  showFpsIngame: 0
   fpsUpperThreshhold: 80
   fpsLowerThreshhold: 30
   maxTimeOutOfBound: 1.5
   highestQualityLocked: 0
+  debugGuiWriter: {fileID: 2455745254143991974}
+  showQualitySettingIngame: 0
   currentQualitySetting: 
 --- !u!1 &8542561744784980693
 GameObject:
