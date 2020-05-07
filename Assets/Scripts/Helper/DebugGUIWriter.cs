@@ -36,7 +36,7 @@ public class DebugGUIWriter : MonoBehaviour
         clearNeeded = true;
     }
 
-    // Should only be called from inside a Update() method (anythinb BEFORE OnGui()!)
+    // Should only be called from inside a Update() method (anythinb BEFORE OnGUI()!)
     public void AddLine(string line)
     {
         if (clearNeeded)

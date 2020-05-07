@@ -68,9 +68,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usedCamera: {fileID: 7896014403280023045}
   character: {fileID: 5863036474862294244}
-  lookSensitivity: 120
+  velocityModeSensitivity: 120
+  motionModeSensitivity: 0.1
   maxUpPosition: -90
   maxDownPosition: 90
+  debugGuiWriter: {fileID: 2455745254143991974}
+  guiShowCurrentLookMode: 0
 --- !u!114 &8106487347942679032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +212,7 @@ GameObject:
   - component: {fileID: 6312586590411751295}
   - component: {fileID: 4072116696939310620}
   - component: {fileID: 8138734510322494925}
+  - component: {fileID: 2455745254143991974}
   - component: {fileID: 3048237669047417068}
   m_Layer: 0
   m_Name: Camera
@@ -313,6 +317,22 @@ MonoBehaviour:
   outlineShaderMaterial: {fileID: 0}
   renderTexture: {fileID: 0}
   extraRenderTexture: {fileID: 0}
+--- !u!114 &2455745254143991974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014118620198835567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66823f70d2b4076489ad2b7a22181c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineSpacing: 1
+  lineOffset: 10
+  initPosition: {x: 10, y: 10}
+  textBoxSize: {x: 100, y: 20}
 --- !u!114 &3048237669047417068
 MonoBehaviour:
   m_ObjectHideFlags: 0

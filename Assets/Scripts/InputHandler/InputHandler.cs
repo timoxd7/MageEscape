@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Runtime.Remoting.Contexts;
+using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {   
@@ -44,7 +45,8 @@ public class InputHandler : MonoBehaviour
         // Player Looking
         if (playerLookController != null)
         {
-            _inputMaster.Player.Look.performed += context => playerLookController.UpdateView(context.ReadValue<Vector2>());
+            _inputMaster.Player.LookVelocityBased.performed += context => playerLookController.UpdateViewVelocity(context.ReadValue<Vector2>());
+            _inputMaster.Player.LookMotionBased.performed += context => playerLookController.UpdateViewMotion(context.ReadValue<Vector2>());
         }
         else
         {

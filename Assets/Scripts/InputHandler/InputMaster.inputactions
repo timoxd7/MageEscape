@@ -46,9 +46,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Look",
+                    "name": "Look Velocity-Based",
                     "type": "PassThrough",
                     "id": "3a057c0d-179a-47e8-a99d-1ef70acf79ad",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Look Motion-Based",
+                    "type": "PassThrough",
+                    "id": "3af7eac0-3188-4e7e-b913-f0fa1f5971af",
                     "expectedControlType": "Analog",
                     "processors": "",
                     "interactions": ""
@@ -255,45 +263,12 @@
                 },
                 {
                     "name": "2D Vector",
-                    "id": "19451a7d-b6cf-4036-af3b-ca5ac61e0c5c",
-                    "path": "2DVector(mode=2)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "7a52a5e8-557f-476a-905a-2a1c3ddfe2b7",
-                    "path": "<Mouse>/delta/x",
-                    "interactions": "",
-                    "processors": "Scale(factor=0.1)",
-                    "groups": "PC Keyboard & Mouse",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "faf0da00-0e10-45f5-9061-130a81fb06e7",
-                    "path": "<Mouse>/delta/y",
-                    "interactions": "",
-                    "processors": "Scale(factor=0.1)",
-                    "groups": "PC Keyboard & Mouse",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "2D Vector",
                     "id": "397aa759-7bc7-4a7c-9419-25f8487f50e6",
                     "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Look",
+                    "action": "Look Velocity-Based",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -304,7 +279,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Look",
+                    "action": "Look Velocity-Based",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -315,7 +290,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Look",
+                    "action": "Look Velocity-Based",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -326,7 +301,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Look",
+                    "action": "Look Velocity-Based",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -337,7 +312,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Look",
+                    "action": "Look Velocity-Based",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -406,6 +381,39 @@
                     "action": "Sneak",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "19451a7d-b6cf-4036-af3b-ca5ac61e0c5c",
+                    "path": "2DVector(mode=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look Motion-Based",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "7a52a5e8-557f-476a-905a-2a1c3ddfe2b7",
+                    "path": "<Mouse>/delta/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC Keyboard & Mouse",
+                    "action": "Look Motion-Based",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "faf0da00-0e10-45f5-9061-130a81fb06e7",
+                    "path": "<Mouse>/delta/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC Keyboard & Mouse",
+                    "action": "Look Motion-Based",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

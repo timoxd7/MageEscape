@@ -59,9 +59,17 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Look"",
+                    ""name"": ""Look Velocity-Based"",
                     ""type"": ""PassThrough"",
                     ""id"": ""3a057c0d-179a-47e8-a99d-1ef70acf79ad"",
+                    ""expectedControlType"": ""Analog"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Look Motion-Based"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""3af7eac0-3188-4e7e-b913-f0fa1f5971af"",
                     ""expectedControlType"": ""Analog"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -268,45 +276,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""19451a7d-b6cf-4036-af3b-ca5ac61e0c5c"",
-                    ""path"": ""2DVector(mode=2)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Look"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""7a52a5e8-557f-476a-905a-2a1c3ddfe2b7"",
-                    ""path"": ""<Mouse>/delta/x"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=0.1)"",
-                    ""groups"": ""PC Keyboard & Mouse"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""faf0da00-0e10-45f5-9061-130a81fb06e7"",
-                    ""path"": ""<Mouse>/delta/y"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=0.1)"",
-                    ""groups"": ""PC Keyboard & Mouse"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""2D Vector"",
                     ""id"": ""397aa759-7bc7-4a7c-9419-25f8487f50e6"",
                     ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Look"",
+                    ""action"": ""Look Velocity-Based"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -317,7 +292,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""Look"",
+                    ""action"": ""Look Velocity-Based"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -328,7 +303,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""Look"",
+                    ""action"": ""Look Velocity-Based"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -339,7 +314,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""Look"",
+                    ""action"": ""Look Velocity-Based"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -350,7 +325,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""Look"",
+                    ""action"": ""Look Velocity-Based"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -419,6 +394,39 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Sneak"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""19451a7d-b6cf-4036-af3b-ca5ac61e0c5c"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look Motion-Based"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""7a52a5e8-557f-476a-905a-2a1c3ddfe2b7"",
+                    ""path"": ""<Mouse>/delta/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC Keyboard & Mouse"",
+                    ""action"": ""Look Motion-Based"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""faf0da00-0e10-45f5-9061-130a81fb06e7"",
+                    ""path"": ""<Mouse>/delta/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC Keyboard & Mouse"",
+                    ""action"": ""Look Motion-Based"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -460,7 +468,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Sneak = m_Player.FindAction("Sneak", throwIfNotFound: true);
-        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        m_Player_LookVelocityBased = m_Player.FindAction("Look Velocity-Based", throwIfNotFound: true);
+        m_Player_LookMotionBased = m_Player.FindAction("Look Motion-Based", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -515,7 +524,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Sneak;
-    private readonly InputAction m_Player_Look;
+    private readonly InputAction m_Player_LookVelocityBased;
+    private readonly InputAction m_Player_LookMotionBased;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -525,7 +535,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Sneak => m_Wrapper.m_Player_Sneak;
-        public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputAction @LookVelocityBased => m_Wrapper.m_Player_LookVelocityBased;
+        public InputAction @LookMotionBased => m_Wrapper.m_Player_LookMotionBased;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -550,9 +561,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Sneak.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSneak;
                 @Sneak.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSneak;
                 @Sneak.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSneak;
-                @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @LookVelocityBased.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookVelocityBased;
+                @LookVelocityBased.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookVelocityBased;
+                @LookVelocityBased.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookVelocityBased;
+                @LookMotionBased.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookMotionBased;
+                @LookMotionBased.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookMotionBased;
+                @LookMotionBased.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookMotionBased;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -572,9 +586,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Sneak.started += instance.OnSneak;
                 @Sneak.performed += instance.OnSneak;
                 @Sneak.canceled += instance.OnSneak;
-                @Look.started += instance.OnLook;
-                @Look.performed += instance.OnLook;
-                @Look.canceled += instance.OnLook;
+                @LookVelocityBased.started += instance.OnLookVelocityBased;
+                @LookVelocityBased.performed += instance.OnLookVelocityBased;
+                @LookVelocityBased.canceled += instance.OnLookVelocityBased;
+                @LookMotionBased.started += instance.OnLookMotionBased;
+                @LookMotionBased.performed += instance.OnLookMotionBased;
+                @LookMotionBased.canceled += instance.OnLookMotionBased;
             }
         }
     }
@@ -604,6 +621,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnSneak(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
+        void OnLookVelocityBased(InputAction.CallbackContext context);
+        void OnLookMotionBased(InputAction.CallbackContext context);
     }
 }
