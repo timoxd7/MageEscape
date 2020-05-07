@@ -329,10 +329,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66823f70d2b4076489ad2b7a22181c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineSpacing: 1
+  lineSpacing: 0
   lineOffset: 10
   initPosition: {x: 10, y: 10}
-  textBoxSize: {x: 100, y: 20}
+  textBoxSize: {x: 700, y: 20}
 --- !u!114 &3048237669047417068
 MonoBehaviour:
   m_ObjectHideFlags: 0

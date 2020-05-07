@@ -6,7 +6,7 @@ public class DebugGUIWriter : MonoBehaviour
     public float lineSpacing = 0;
     public float lineOffset = 10;
     public Vector2 initPosition = new Vector2(10, 10);
-    public Vector2 textBoxSize = new Vector2(500, 20);
+    public Vector2 textBoxSize = new Vector2(700, 20);
 
     private List<string> debugLines;
     private bool clearNeeded = false;
