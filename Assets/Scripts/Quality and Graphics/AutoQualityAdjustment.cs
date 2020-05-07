@@ -12,6 +12,7 @@ public class AutoQualityAdjustment : MonoBehaviour
     private float updateRate = 4f;  // 4 updates per sec.
     [SerializeField]
     private float fps = 0f;
+    [Tooltip("Needs DebugGuiWriter be attached")]
     public bool showFpsIngame = false;
 
     // Adjustment Check Stuff
@@ -25,6 +26,8 @@ public class AutoQualityAdjustment : MonoBehaviour
     private bool outOfBoundOver = false;
 
     [Header("Info")]
+    public DebugGUIWriter debugGuiWriter;
+    [Tooltip("Needs DebugGuiWriter be attached")]
     public bool showQualitySettingIngame = false;
     [SerializeField]
     private string currentQualitySetting;
@@ -37,6 +40,7 @@ public class AutoQualityAdjustment : MonoBehaviour
 
     void Update()
     {
+        // Quality Adjustment Stuff
         frameCount++;
         dt += Time.deltaTime;
         if (dt > 1f / updateRate)
@@ -47,23 +51,24 @@ public class AutoQualityAdjustment : MonoBehaviour
 
             CheckAdjustment();
         }
-    }
 
-    void OnGUI()
-    {
-        string onGuiInfo = "";
+        // Debug Info Stuff
+        if (debugGuiWriter != null && (showFpsIngame || showQualitySettingIngame))
+        {
+            string onGuiInfo = "";
 
-        if (showFpsIngame)
-            onGuiInfo += fps.ToString("0");
+            if (showFpsIngame)
+                onGuiInfo += fps.ToString("0");
 
-        if (showFpsIngame && showQualitySettingIngame)
-            onGuiInfo += " - ";
+            if (showFpsIngame && showQualitySettingIngame)
+                onGuiInfo += " - ";
 
-        if (showQualitySettingIngame)
-            onGuiInfo += currentQualitySetting;
+            if (showQualitySettingIngame)
+                onGuiInfo += currentQualitySetting;
 
-        if (!onGuiInfo.Equals(""))
-            GUI.Label(new Rect(10, 10, 100, 20), onGuiInfo);
+            if (!onGuiInfo.Equals(""))
+                debugGuiWriter.AddLine(onGuiInfo);
+        }
     }
 
     public float GetFPS()
