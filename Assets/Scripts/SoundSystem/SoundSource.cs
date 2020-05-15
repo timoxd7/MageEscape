@@ -1,6 +1,4 @@
-﻿using MyBox;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundSource : MonoBehaviour
 {
@@ -20,7 +18,7 @@ public class SoundSource : MonoBehaviour
     bool pausedAtDisable = false;
 
 
-    public void Initialize(SoundSystem.SoundType soundType, SoundClip soundClip, SoundSystem soundSystem, bool autoplay = false)
+    public void Initialize(SoundSystem.SoundType soundType, SoundClip soundClip, SoundSystem soundSystem, bool loopPlay = false, bool autoplay = false)
     {
         if (started)
         {
@@ -45,6 +43,7 @@ public class SoundSource : MonoBehaviour
         this.soundClip = soundClip;
         this.soundSystem = soundSystem;
 
+        this.loopPlay = loopPlay;
 
         if (autoplay)
             Play();
@@ -56,11 +55,10 @@ public class SoundSource : MonoBehaviour
         {
             if (!loopPlay)
             {
-                if (!audioSource.isPlaying)
+                if (!audioSource.isPlaying && !paused)
                 {
                     // Cleanup
                     soundSystem.RemovePlayingSource(this);
-                    Destroy(audioSource);
                     Destroy(this);
                     return;
                 }
@@ -89,6 +87,11 @@ public class SoundSource : MonoBehaviour
             Pause();
             pausedAtDisable = true;
         }
+    }
+
+    private void OnDestroy()
+    {
+        Destroy(audioSource);
     }
 
     public void UpdateProperty(SoundProperty soundProperty)
@@ -155,7 +158,7 @@ public class SoundSource : MonoBehaviour
     {
         if (paused)
         {
-            audioSource.Play();
+            audioSource.UnPause();
             paused = false;
         }
     }

@@ -1,9 +1,8 @@
 ﻿using MyBox;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundSourceManager : MonoBehaviour
+public class SoundSourcePlayer : MonoBehaviour
 {
     public SoundSystem.SoundType soundType = SoundSystem.SoundType.Default;
     public SoundSystem soundSystem;
@@ -13,6 +12,8 @@ public class SoundSourceManager : MonoBehaviour
 
     [Tooltip("Play the Sound on PlaySound() only once, then destroy this")]
     public bool playOnlyOnce = false;
+    public bool playOnStart = false;
+    public bool loopPlay = false;
 
     private bool oncePlayStarted = false;
     private List<SoundSource> soundSources;
@@ -26,6 +27,14 @@ public class SoundSourceManager : MonoBehaviour
         {
             Debug.Log("No SoundClip(s) attatched, destroying now: ", this);
             Destroy(this);
+        }
+    }
+
+    private void Start()
+    {
+        if (playOnStart)
+        {
+            Play();
         }
     }
 
@@ -47,26 +56,14 @@ public class SoundSourceManager : MonoBehaviour
         }
     }
 
-    public void Pause()
+    private void OnDestroy()
     {
-        if (oncePlayStarted && !paused)
+        if (oncePlayStarted)
         {
             foreach (SoundSource soundSource in soundSources)
             {
                 if (soundSource != null)
-                    soundSource.Pause();
-            }
-        }
-    }
-
-    public void Resume()
-    {
-        if (oncePlayStarted && paused)
-        {
-            foreach (SoundSource soundSource in soundSources)
-            {
-                if (soundSource != null)
-                    soundSource.Resume();
+                    Destroy(soundSource);
             }
         }
     }
@@ -93,6 +90,9 @@ public class SoundSourceManager : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
+    [ButtonMethod]
+#endif
     public void Play()
     {
         if (paused)
@@ -122,10 +122,52 @@ public class SoundSourceManager : MonoBehaviour
             if (soundClip != null)
             {
                 SoundSource soundSource = soundClip.GetSourceObject().AddComponent<SoundSource>();
-                soundSource.Initialize(soundType, soundClip, soundSystem, true);
+                soundSource.Initialize(soundType, soundClip, soundSystem, loopPlay, true);
 
                 soundSources.Add(soundSource);
             }
         }
     }
+
+#if UNITY_EDITOR
+    [ButtonMethod]
+#endif
+    public void Pause()
+    {
+        if (oncePlayStarted && !paused)
+        {
+            foreach (SoundSource soundSource in soundSources)
+            {
+                if (soundSource != null)
+                    soundSource.Pause();
+            }
+
+            paused = true;
+        }
+    }
+
+#if UNITY_EDITOR
+    [ButtonMethod]
+#endif
+    public void Resume()
+    {
+        if (paused)
+        {
+            foreach (SoundSource soundSource in soundSources)
+            {
+                if (soundSource != null)
+                    soundSource.Resume();
+            }
+
+            paused = false;
+        }
+    }
+
+#if UNITY_EDITOR
+    [ButtonMethod]
+    private void ForceKill()
+    {
+        Destroy(this);
+    }
+#endif
 }
