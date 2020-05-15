@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class SoundSourcePlayer : MonoBehaviour
 {
+    [Header("Sound System")]
     public SoundSystem.SoundType soundType = SoundSystem.SoundType.Default;
     public SoundSystem soundSystem;
 
+    [Header("Sound Clips")]
     public List<SoundClip> soundClips;
     public bool destroyIfNoClip = true;
 
+    [Header("Settings")]
     [Tooltip("Play the Sound on PlaySound() only once, then destroy this")]
     public bool playOnlyOnce = false;
     public bool playOnStart = false;
     public bool loopPlay = false;
+    [Tooltip("To Update the Values according to the SoundProperty eacht Frame, enable this. Else, only on Playing and complete Change of the SoundProperty, the Change will be applied. Needed for animations.")]
+    public bool continouslyUpdate = false;
 
     private bool oncePlayStarted = false;
     private List<SoundSource> soundSources;
@@ -122,7 +127,7 @@ public class SoundSourcePlayer : MonoBehaviour
             if (soundClip != null)
             {
                 SoundSource soundSource = soundClip.GetSourceObject().AddComponent<SoundSource>();
-                soundSource.Initialize(soundType, soundClip, soundSystem, loopPlay, true);
+                soundSource.Initialize(soundType, soundClip, soundSystem, loopPlay, continouslyUpdate, true);
 
                 soundSources.Add(soundSource);
             }

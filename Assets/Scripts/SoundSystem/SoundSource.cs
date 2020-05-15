@@ -2,7 +2,7 @@
 
 public class SoundSource : MonoBehaviour
 {
-    [Tooltip("To Update the Values according to the SoundProperty eacht Frame, enable this. Else, only on Playing and complete Change of the SoundProperty, the Change will be applied.")]
+    [Tooltip("To Update the Values according to the SoundProperty eacht Frame, enable this. Else, only on Playing and complete Change of the SoundProperty, the Change will be applied. Needed for animations.")]
     public bool continouslyUpdate = false;
     public bool loopPlay = false;
 
@@ -18,7 +18,7 @@ public class SoundSource : MonoBehaviour
     bool pausedAtDisable = false;
 
 
-    public void Initialize(SoundSystem.SoundType soundType, SoundClip soundClip, SoundSystem soundSystem, bool loopPlay = false, bool autoplay = false)
+    public void Initialize(SoundSystem.SoundType soundType, SoundClip soundClip, SoundSystem soundSystem, bool loopPlay = false, bool continouslyUpdate = false, bool autoplay = false)
     {
         if (started)
         {
@@ -44,6 +44,7 @@ public class SoundSource : MonoBehaviour
         this.soundSystem = soundSystem;
 
         this.loopPlay = loopPlay;
+        this.continouslyUpdate = continouslyUpdate;
 
         if (autoplay)
             Play();
@@ -166,6 +167,7 @@ public class SoundSource : MonoBehaviour
     private void UpdateAudioSource()
     {
         soundProperty.Apply(audioSource);
+        audioSource.loop = loopPlay;
         audioSource.volume *= soundClip.volumeMultiplyer;
     }
 }

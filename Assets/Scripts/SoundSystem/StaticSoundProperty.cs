@@ -2,6 +2,7 @@
 
 public class StaticSoundProperty : SoundProperty
 {
+    [Header("Property Auto Assignment")]
     public SoundSystem soundSystem;
     public SoundSystem.SoundType soundType = SoundSystem.SoundType.Default;
     
