@@ -6,7 +6,7 @@ public class CollectibleItemInteraction : BaseInteraction
     public string description;
     public Sprite icon;
     
-    public override void OnInteraction()
+    public override void OnInteraction(InteractionContext context)
     {
         Debug.Log("Putting " + this.title + " into the inventory.");
         

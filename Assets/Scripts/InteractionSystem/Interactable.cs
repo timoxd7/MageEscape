@@ -107,9 +107,9 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     #region Strategy Implementation
 
-    public void OnInteraction()
+    public void OnInteraction(InteractionContext context)
     {
-        interactionBehaviour.OnInteraction();
+        interactionBehaviour.OnInteraction(context);
     }
 
     public void OnDetectionEnter()

@@ -155,14 +155,14 @@ public class InteractionController : MonoBehaviour
                 if (_interactionTimer.Get() > interactable.HoldDuration)
                 {
                     _interactionTimer.Reset();
-                    interactable.OnInteraction();
+                    interactable.OnInteraction(_interactionContext);
                     _interactionContext.InteractingNow = false;
                 }
             }
             else
             {
                 _interactionTimer.Reset();
-                interactable.OnInteraction();
+                interactable.OnInteraction(_interactionContext);
                 _interactionContext.InteractingNow = false;
             }
         }

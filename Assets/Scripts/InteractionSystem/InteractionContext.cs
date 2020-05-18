@@ -1,4 +1,4 @@
-class InteractionContext
+public class InteractionContext
 {
     public Interactable LastInteractable { get; set; }
     public Interactable CurrentInteractable { get; set; }

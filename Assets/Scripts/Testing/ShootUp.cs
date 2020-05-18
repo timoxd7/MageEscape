@@ -15,7 +15,7 @@ public class ShootUp : BaseInteraction
 
         rb = objectToShoot.GetOrAddComponent<Rigidbody>();
     }
-    public override void OnInteraction()
+    public override void OnInteraction(InteractionContext context)
     {
         rb.AddForce(new Vector3(0f, shootForce, 0f));
     }
