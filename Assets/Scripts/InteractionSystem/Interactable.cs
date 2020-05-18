@@ -49,11 +49,6 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     
     private void HandleInteractionStrategy()
     {
-        /* Subject to change
-        Component c = gameObject.GetComponent<IInteractable>() as Component;
-        if (c != null) Destroy(c);
-        */ 
-        
         switch (interactionOption)
         {
             case InteractionBehaviour.Custom:
@@ -82,11 +77,6 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     private void HandleDetectionStrategy()
     {
-        /* Subjet to change
-        Component c = gameObject.GetComponent<IDetectable>() as Component;
-        if (c != null) Destroy(c);
-        */
-
         switch (detectionOption)
         {
             case DetectionBehaviour.Custom:
