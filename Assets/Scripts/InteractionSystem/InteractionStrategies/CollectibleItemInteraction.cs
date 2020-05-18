@@ -11,7 +11,7 @@ public class CollectibleItemInteraction : BaseInteraction
         Debug.Log("Putting " + this.title + " into the inventory.");
         
         Item item = new Item(title, description, icon);
-        // GetInventory.Put(item); oder so ähnlich
+        context.InventoryData.Add(item);
         
         Destroy(this.gameObject);
     }

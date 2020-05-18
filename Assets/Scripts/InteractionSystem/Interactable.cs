@@ -9,28 +9,24 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     
     /* IBase */
     [Header("Properties")]
-    // public float holdDuration;
     public bool isInteractable;
     public bool holdToInteract;
     [ConditionalField(nameof(holdToInteract))]
     public float holdDuration;
-    // public bool multipleUse;    // subject to removal
-
     
     public bool IsInteractable => isInteractable;
     public bool HoldToInteract => holdToInteract;
     public float HoldDuration => holdDuration;
-    // public bool MultipleUse => multipleUse;
 
     [Header("Choose Behaviour")]
-    [Tooltip("The DetectionBehaviour for this Object. Choose Custom for own implementation, Custom Auto for own implementation already assigned to THIS gameObject (Custom Auto only for a single Behaviour an a gameObject)")]
-    public DetectionBehaviour detectionOption;
-    [ConditionalField(nameof(detectionOption), false, DetectionBehaviour.Custom)]
+    [Tooltip("The DetectionOption for this Object. Choose Custom for own implementation, Custom Auto for own implementation already assigned to THIS gameObject (Custom Auto only for a single Behaviour an a gameObject)")]
+    public DetectionOption detectionOption;
+    [ConditionalField(nameof(detectionOption), false, DetectionOption.Custom)]
     public BaseDetection detectionBehaviour;
 
-    [Tooltip("The InteractionBehaviour for this Object. Choose Custom for own implementation, Custom Auto for own implementation already assigned to THIS gameObject (Custom Auto only for a single Behaviour an a gameObject)")]
-    public InteractionBehaviour interactionOption;
-    [ConditionalField(nameof(interactionOption), false, InteractionBehaviour.Custom)]
+    [Tooltip("The InteractionOption for this Object. Choose Custom for own implementation, Custom Auto for own implementation already assigned to THIS gameObject (Custom Auto only for a single Behaviour an a gameObject)")]
+    public InteractionOption interactionOption;
+    [ConditionalField(nameof(interactionOption), false, InteractionOption.Custom)]
     public BaseInteraction interactionBehaviour;
 
     #endregion
@@ -51,22 +47,22 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     {
         switch (interactionOption)
         {
-            case InteractionBehaviour.Custom:
+            case InteractionOption.Custom:
                 if (interactionBehaviour == null)
                     Debug.LogError("No BaseInteraction assigned to Interactable", gameObject);
                 break;
-            case InteractionBehaviour.CustomAuto:
+            case InteractionOption.CustomAuto:
                 interactionBehaviour = gameObject.GetComponent<BaseInteraction>();
                 if (interactionBehaviour == null)
                     Debug.LogError("No Script with BaseInteraction on Object to be auto added to Interactable", gameObject);
                 break;
-            case InteractionBehaviour.ConsoleLog:
+            case InteractionOption.ConsoleLog:
                 interactionBehaviour = gameObject.AddComponent<ConsoleInteraction>();
                 break;
-            case InteractionBehaviour.Rotate:
+            case InteractionOption.Rotate:
                 interactionBehaviour = gameObject.AddComponent<RotateInteraction>();
                 break;
-            case InteractionBehaviour.Empty:
+            case InteractionOption.Empty:
                 interactionBehaviour = gameObject.AddComponent<EmptyInteraction>();
                 break;
             default:
@@ -79,22 +75,22 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     {
         switch (detectionOption)
         {
-            case DetectionBehaviour.Custom:
+            case DetectionOption.Custom:
                 if (detectionBehaviour == null)
                     Debug.LogError("No BaseDetection assigned to Interactable", gameObject);
                 break;
-            case DetectionBehaviour.CustomAuto:
+            case DetectionOption.CustomAuto:
                 detectionBehaviour = gameObject.GetComponent<BaseDetection>();
                 if (detectionBehaviour == null)
                     Debug.LogError("No Script with BaseDetection on Object to be auto added to Interactable");
                 break;
-            case DetectionBehaviour.ConsoleLog:
+            case DetectionOption.ConsoleLog:
                 detectionBehaviour = gameObject.AddComponent<ConsoleDetection>();
                 break;
-            case DetectionBehaviour.BasicHighlight:
+            case DetectionOption.BasicHighlight:
                 detectionBehaviour = gameObject.AddComponent<HighlightDetection>();
                 break;
-            case DetectionBehaviour.Empty:
+            case DetectionOption.Empty:
                 detectionBehaviour = gameObject.AddComponent<EmptyDetection>();
                 break;
             default:
@@ -127,7 +123,7 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
 #region Enums
 
-public enum InteractionBehaviour 
+public enum InteractionOption 
 {
     ConsoleLog,
     Rotate,
@@ -136,7 +132,7 @@ public enum InteractionBehaviour
     CustomAuto
 }
 
-public enum DetectionBehaviour
+public enum DetectionOption
 {
     ConsoleLog,
     BasicHighlight,
