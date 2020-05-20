@@ -77,3 +77,7 @@ crashlytics-build.properties
 
 # KSEditorLogs
 /KSEditorLogs
+
+# ProBuilder and ProGrinds Settings
+/ProjectSettings/Packages/com.unity.probuilder/
+/ProjectSettings/Packages/com.unity.progrids/
