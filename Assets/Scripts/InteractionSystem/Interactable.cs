@@ -35,6 +35,9 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     
     protected void Start()
     {
+        // Automatische Layerzuweisung.
+        // TODO: 3567
+        this.gameObject.layer = 8;
         HandleInteractionStrategy();
         HandleDetectionStrategy();
     }
