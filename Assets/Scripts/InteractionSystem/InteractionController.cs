@@ -13,7 +13,7 @@ public class InteractionController : MonoBehaviour
     /*Utils*/
     private readonly Timer _interactionTimer = new Timer();
     private readonly InteractionInput _interactionInput = new InteractionInput();
-    private readonly InteractionContext _interactionContext = new InteractionContext();
+    private readonly PlayerContext _playerContext = new PlayerContext();
     #endregion
     
     #region Builtin
@@ -53,18 +53,18 @@ public class InteractionController : MonoBehaviour
             Interactable detected = hitInfo.collider.GetComponent<Interactable>();
             if (detected != null)
             {
-                if (_interactionContext.IsEmpty())
+                if (_playerContext.InteractionData.IsEmpty())
                 {
                     // Wenn jetzt unser aktueller slot für detectables leer ist, können wir das gefundene Objekt dem Slot zuweisen
-                    _interactionContext.CurrentInteractable = detected;
+                    _playerContext.InteractionData.CurrentInteractable = detected;
                 }
                 else
                 {
                     // Wenn der Slot nicht leer ist wollen wir wissen ob das gefundene Objekt nicht ohnehin schon unser aktuelles ist
-                    if (!_interactionContext.IsSame(detected))
+                    if (!_playerContext.InteractionData.IsSame(detected))
                     {
                         // Wenn nicht, dann jetzt schon
-                        _interactionContext.CurrentInteractable = detected;
+                        _playerContext.InteractionData.CurrentInteractable = detected;
                     }
                 }
             } else
@@ -75,7 +75,7 @@ public class InteractionController : MonoBehaviour
         else
         {
             // Unser Ray hat nichts getroffen, es gitb kein Objekt zum interagieren
-            _interactionContext.Reset();
+            _playerContext.InteractionData.Reset();
         }
 
         Debug.DrawRay(ray.origin, ray.direction * rayDistance, hitSomething ? Color.green : Color.red);
@@ -90,60 +90,63 @@ public class InteractionController : MonoBehaviour
          * 3. Current Object -> No Object
          */
 
+        InteractionData interactionData = _playerContext.InteractionData;
+
         // Case 1
-        if (_interactionContext.LastInteractable == null && !_interactionContext.IsEmpty())
+        if (interactionData.LastInteractable == null && !interactionData.IsEmpty())
         {
-            _interactionContext.CurrentInteractable.OnDetectionEnter();
-            _interactionContext.LastInteractable = _interactionContext.CurrentInteractable;
+            interactionData.CurrentInteractable.OnDetectionEnter();
+            interactionData.LastInteractable = interactionData.CurrentInteractable;
             return;
         }
 
         // Case 2
-        if (_interactionContext.LastInteractable != null && _interactionContext.CurrentInteractable != null)
+        if (interactionData.LastInteractable != null && interactionData.CurrentInteractable != null)
         {
-            if (!_interactionContext.IsSame(_interactionContext.LastInteractable))
+            if (!interactionData.IsSame(interactionData.LastInteractable))
             {
-                _interactionContext.LastInteractable.OnDetectionExit();
-                _interactionContext.CurrentInteractable.OnDetectionEnter();
-                _interactionContext.LastInteractable = _interactionContext.CurrentInteractable;
+                interactionData.LastInteractable.OnDetectionExit();
+                interactionData.CurrentInteractable.OnDetectionEnter();
+                interactionData.LastInteractable = interactionData.CurrentInteractable;
                 return;
             }
         }
 
         // Case 3
-        if (_interactionContext.LastInteractable != null && _interactionContext.IsEmpty())
+        if (interactionData.LastInteractable != null && interactionData.IsEmpty())
         {
-            _interactionContext.LastInteractable.OnDetectionExit();
-            _interactionContext.LastInteractable = null;
+            interactionData.LastInteractable.OnDetectionExit();
+            interactionData.LastInteractable = null;
             return;
         }
     }
     
     private void CheckInput()
     {
-        if(_interactionContext.IsEmpty())
+        InteractionData interactionData = _playerContext.InteractionData;
+        Interactable interactable = interactionData.CurrentInteractable;
+        
+        if(interactionData.IsEmpty())
         {
             return;
         }
-
-        Interactable interactable = _interactionContext.CurrentInteractable;
-
+        
         if (_interactionInput.InteractPush)
         {
             _interactionInput.InteractPush = false;
-            _interactionContext.InteractingNow = true;
+            interactionData.InteractingNow = true;
             _interactionTimer.Restart();
         }
 
         if (_interactionInput.InteractRelease)
         {
             _interactionInput.InteractRelease = false;
-            _interactionContext.InteractingNow = false;
+            interactionData.InteractingNow = false;
             _interactionTimer.Reset();
             
         }
 
-        if (_interactionContext.InteractingNow)
+        if (interactionData.InteractingNow)
         {
             if (!interactable.IsInteractable)
             {
@@ -155,15 +158,15 @@ public class InteractionController : MonoBehaviour
                 if (_interactionTimer.Get() > interactable.HoldDuration)
                 {
                     _interactionTimer.Reset();
-                    interactable.OnInteraction(_interactionContext);
-                    _interactionContext.InteractingNow = false;
+                    interactable.OnInteraction(_playerContext);
+                    interactionData.InteractingNow = false;
                 }
             }
             else
             {
                 _interactionTimer.Reset();
-                interactable.OnInteraction(_interactionContext);
-                _interactionContext.InteractingNow = false;
+                interactable.OnInteraction(_playerContext);
+                interactionData.InteractingNow = false;
             }
         }
     }

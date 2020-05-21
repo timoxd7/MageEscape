@@ -1,6 +1,6 @@
 ﻿public class EmptyInteraction : BaseInteraction
 {
-    public override void OnInteraction(InteractionContext context)
+    public override void OnInteraction(PlayerContext context)
     {
         // Hier passiert nichts
     }

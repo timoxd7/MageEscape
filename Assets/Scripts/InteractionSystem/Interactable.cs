@@ -103,7 +103,7 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     #region Strategy Implementation
 
-    public void OnInteraction(InteractionContext context)
+    public void OnInteraction(PlayerContext context)
     {
         interactionBehaviour.OnInteraction(context);
     }

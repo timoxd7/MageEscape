@@ -1,5 +1,5 @@
 ﻿public interface IInteractable
 {
-    void OnInteraction(InteractionContext context);
+    void OnInteraction(PlayerContext context);
 }
 

@@ -37,7 +37,7 @@ public class KeyInsert : BaseInteraction
         }
     }
     
-    public override void OnInteraction(InteractionContext context)
+    public override void OnInteraction(PlayerContext context)
     {
         // -> Key inserted
         // Make animated Key visible
