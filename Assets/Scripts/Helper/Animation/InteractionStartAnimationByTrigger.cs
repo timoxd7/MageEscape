@@ -1,11 +1,9 @@
-﻿using UnityEditor.Animations;
-using UnityEngine;
-using UnityEngine.Animations;
+﻿using UnityEngine;
 
 public class InteractionStartAnimationByTrigger : BaseInteraction
 {
     public GameObject player;
-    public AnimatorController animatorController;
+    public RuntimeAnimatorController animatorController;
     public string triggerName;
 
     public override void OnInteraction()
