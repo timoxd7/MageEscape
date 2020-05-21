@@ -21,7 +21,7 @@ public class SliderUsed : BaseInteraction
         
     }
 
-    public override void OnInteraction()
+    public override void OnInteraction(InteractionContext context)
     {
         //Increases Value 
         if(button.name == "PlusButton") 
