@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class Item
 {
-    private static int _idCounter = 0;
-
-    public int Id { get; }
+    public string UniqeId { get; }
     public string Title { get; }
     public string Description { get; }
     public Sprite Sprite { get; }
 
-    public Item(string title, string description, Sprite sprite)
+    public Item(string uniqueId, string title, string description, Sprite sprite)
     {
-        this.Id = _idCounter++;
+        this.UniqeId = uniqueId;
         this.Title = title;
         this.Description = description;
         this.Sprite = sprite;
@@ -19,7 +17,7 @@ public class Item
 
     public Item(Item item)
     {
-        this.Id = _idCounter++;
+        this.UniqeId = item.UniqeId;
         this.Title = item.Title;
         this.Description = item.Description;
         this.Sprite = item.Sprite;
