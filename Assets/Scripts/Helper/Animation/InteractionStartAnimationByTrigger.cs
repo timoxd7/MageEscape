@@ -6,7 +6,7 @@ public class InteractionStartAnimationByTrigger : BaseInteraction
     public RuntimeAnimatorController animatorController;
     public string triggerName;
 
-    public override void OnInteraction()
+    public override void OnInteraction(PlayerContext context)
     {
         if (triggerName == "")
         {
