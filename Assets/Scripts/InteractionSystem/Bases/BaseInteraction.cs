@@ -2,5 +2,5 @@
 
 public abstract class BaseInteraction : MonoBehaviour, IInteractable
 {
-    public abstract void OnInteraction();
+    public abstract void OnInteraction(PlayerContext context);
 }

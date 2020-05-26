@@ -2,7 +2,7 @@
 
 public class ConsoleInteraction : BaseInteraction
 {
-    public override void OnInteraction()
+    public override void OnInteraction(PlayerContext context)
     {
         Debug.Log("Interaction: " + gameObject.name);
     }

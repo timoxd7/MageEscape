@@ -20,7 +20,7 @@ public class MenuPressed : BaseInteraction
         
     }
 
-    public override void OnInteraction()
+    public override void OnInteraction(PlayerContext context)
     {
         switch (menuPressed.name)
         {
