@@ -49,15 +49,11 @@ public class PlayerLookController : MonoBehaviour
     {
         // Lock / Unlock Mouse Cursor (PC Keyboard/Mouse Spezific)
 
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if(PauseMenu.GameIsPaused)
         {
-            // Show Courser again
-            Cursor.lockState = CursorLockMode.None; // !!! Remove later for the Use of a menu
-        }
-
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+            Cursor.lockState = CursorLockMode.None;
+        } else
         {
-            // Hide Courser again
             Cursor.lockState = CursorLockMode.Locked;
         }
 
@@ -84,7 +80,7 @@ public class PlayerLookController : MonoBehaviour
             deltaLook.Set(0, 0);
         }
 
-
+        
         // Add Debug Info
         if (guiShowCurrentLookMode && debugGuiWriter != null)
         {
