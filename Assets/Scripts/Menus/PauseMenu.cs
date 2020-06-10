@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public string levelName;
     public string mainMenu;
     public GameObject optionsMenu;
     public static Slider generalVolume;
@@ -27,9 +28,23 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseMenu.GameIsPaused)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(GameIsPaused)
+            if(GameIsPaused && optionsMenu.activeSelf)
+            {
+                optionsMenu.SetActive(false);
+                pauseMenuUI.SetActive(true);
+            } else if(GameIsPaused)
             {
                 Resume();
             } else
@@ -41,6 +56,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        GameObject.Find("Player").GetComponent<PlayerLookController>().enabled = true;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -48,6 +64,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        GameObject.Find("Player").GetComponent<PlayerLookController>().enabled = false;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -60,7 +77,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResetGame()
     {
-        Debug.Log("Reseting Game...");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Options() 

@@ -16,12 +16,12 @@ public class MainMenus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isActiveAndEnabled)
+        /*if(isActiveAndEnabled)
         {
             generalVolume.value = PauseMenu.generalVolume.value;
             musicVolume.value = PauseMenu.musicVolume.value;
             effectsVolume.value = PauseMenu.effectsVolume.value;
-        }
+        }*/
     }
 
     public void Back()
