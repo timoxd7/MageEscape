@@ -12,6 +12,7 @@ public class SelectButton : MonoBehaviour
 
     public void lowbuttonClicked()
     {
+        QualitySettings.DecreaseLevel(true);
         lowbutton.GetComponent<Image>().color = Color.red;
         middlebutton.image.color = orgColor;
         highbutton.image.color = orgColor;
@@ -26,6 +27,7 @@ public class SelectButton : MonoBehaviour
 
     public void highbuttonClicked()
     {
+        QualitySettings.IncreaseLevel(true);
         highbutton.GetComponent<Image>().color = Color.red;
         middlebutton.image.color = orgColor;
         lowbutton.image.color = orgColor;

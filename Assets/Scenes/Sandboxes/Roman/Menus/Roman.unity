@@ -792,7 +792,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 128791510}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 684925912}
+        m_MethodName: middlebuttonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &128791510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2328,6 +2339,7 @@ GameObject:
   - component: {fileID: 684925909}
   - component: {fileID: 684925911}
   - component: {fileID: 684925910}
+  - component: {fileID: 684925912}
   m_Layer: 5
   m_Name: Graphic
   m_TagString: Untagged
@@ -2475,6 +2487,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684925908}
   m_CullTransparentMesh: 0
+--- !u!114 &684925912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684925908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f432c82d0868d4fbe70c1f4299fc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowbutton: {fileID: 807059433}
+  middlebutton: {fileID: 128791509}
+  highbutton: {fileID: 1367587225}
+  orgColor: {r: 0.3647059, g: 0.058823533, b: 0, a: 1}
 --- !u!1 &687517649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,7 +3576,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 807059434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 684925912}
+        m_MethodName: lowbuttonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &807059434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5693,9 +5732,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsMenu: {fileID: 1492575914}
   mainMenu: {fileID: 65761662}
-  generalVolume: {fileID: 34795109}
-  musicVolume: {fileID: 845530877}
-  effectsVolume: {fileID: 1533304607}
 --- !u!1 &1367587223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5777,7 +5813,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1367587226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 684925912}
+        m_MethodName: highbuttonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1367587226
 MonoBehaviour:
   m_ObjectHideFlags: 0

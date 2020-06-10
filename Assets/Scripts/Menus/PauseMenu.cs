@@ -20,9 +20,9 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        generalVolume.value = MainMenus.generalVolume.value;
+        /*generalVolume.value = MainMenus.generalVolume.value;
         musicVolume.value = MainMenus.musicVolume.value;
-        effectsVolume.value = MainMenus.effectsVolume.value;
+        effectsVolume.value = MainMenus.effectsVolume.value;*/
     }
 
     // Update is called once per frame
