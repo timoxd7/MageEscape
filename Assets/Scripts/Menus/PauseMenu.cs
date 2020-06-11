@@ -14,15 +14,15 @@ public class PauseMenu : MonoBehaviour
     public string levelName;
     public string mainMenu;
     public GameObject optionsMenu;
-    public static Slider generalVolume;
-    public static Slider musicVolume;
-    public static Slider effectsVolume;
+    public Slider generalVolume;
+    public Slider musicVolume;
+    public Slider effectsVolume;
 
     void Start()
     {
-        /*generalVolume.value = MainMenus.generalVolume.value;
-        musicVolume.value = MainMenus.musicVolume.value;
-        effectsVolume.value = MainMenus.effectsVolume.value;*/
+        generalVolume.value = MainMenus.general;
+        musicVolume.value = MainMenus.music;
+        effectsVolume.value = MainMenus.effects;
     }
 
     // Update is called once per frame

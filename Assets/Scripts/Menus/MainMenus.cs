@@ -9,31 +9,25 @@ public class MainMenus : MonoBehaviour
 
     public GameObject optionsMenu;
     public GameObject mainMenu;
-    public static Slider generalVolume;
-    public static Slider musicVolume;
-    public static Slider effectsVolume;
+    public Slider generalVolume;
+    public Slider musicVolume;
+    public Slider effectsVolume;
+    public static float general = 1f;
+    public static float music;
+    public static float effects;
 
     // Update is called once per frame
     void Update()
     {
-        /*if(isActiveAndEnabled)
-        {
-            generalVolume.value = PauseMenu.generalVolume.value;
-            musicVolume.value = PauseMenu.musicVolume.value;
-            effectsVolume.value = PauseMenu.effectsVolume.value;
-        }*/
+        general = generalVolume.value;
+        music = musicVolume.value;
+        effects = effectsVolume.value;
     }
 
     public void Back()
     {
         optionsMenu.SetActive(false);
         mainMenu.SetActive(true);
-    }
-
-    public void Options()
-    {
-        optionsMenu.SetActive(true);
-        mainMenu.SetActive(false);
     }
 
 }
