@@ -13,11 +13,17 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     public bool holdToInteract;
     [ConditionalField(nameof(holdToInteract))]
     public float holdDuration;
+    public bool itemRequired;
+    [ConditionalField(nameof(itemRequired))]
+    [Tooltip("The unique Id of the item required to use this interactable")]
+    public string itemId;
     
     public bool IsInteractable => isInteractable;
     public bool HoldToInteract => holdToInteract;
     public float HoldDuration => holdDuration;
-
+    public bool ItemRequired => itemRequired;
+    public string ItemId => itemId;
+    
     [Header("Choose Behaviour")]
     [Tooltip("The DetectionOption for this Object. Choose Custom for own implementation, Custom Auto for own implementation already assigned to THIS gameObject (Custom Auto only for a single Behaviour an a gameObject)")]
     public DetectionOption detectionOption;
@@ -108,7 +114,17 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     public void OnInteraction(PlayerContext context)
     {
-        interactionBehaviour.OnInteraction(context);
+        if (ItemRequired)
+        {
+            if (context.InventoryData.Contains(ItemId))
+            {
+                interactionBehaviour.OnInteraction(context);
+            }
+        }
+        else
+        {
+            interactionBehaviour.OnInteraction(context);
+        }
     }
 
     public void OnDetectionEnter()
