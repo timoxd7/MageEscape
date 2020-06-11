@@ -7,6 +7,9 @@ public class SoundSourcePlayer : MonoBehaviour
     [Header("Sound System")]
     public SoundSystem.SoundType soundType = SoundSystem.SoundType.Default;
     public SoundSystem soundSystem;
+    public bool searchIfNoSoundSystem = true;
+    [ConditionalField(nameof(searchIfNoSoundSystem))]
+    public string soundSystemTag = "SoundSystem";
 
     [Header("Sound Clips")]
     public List<SoundClip> soundClips;
@@ -107,12 +110,33 @@ public class SoundSourcePlayer : MonoBehaviour
 
         if (soundSystem == null)
         {
-            Debug.LogError("Sound System not given! ", this);
+            
 
-            if (playOnlyOnce)
-                Destroy(this);
+            if (searchIfNoSoundSystem)
+            {
+                GameObject soundSystemGameObject = GameObject.FindWithTag(soundSystemTag);
+                
+                if (soundSystemGameObject != null)
+                    soundSystem = soundSystemGameObject.GetComponent<SoundSystem>();
 
-            return;
+                if (soundSystem == null)
+                {
+                    Debug.LogError("Sound System not found by Tag (is it in the Scene?)!", this);
+                    
+                    if (playOnlyOnce)
+                        Destroy(this);
+
+                    return;
+                }
+            } else
+            {
+                Debug.LogError("Sound System not given! ", this);
+
+                if (playOnlyOnce)
+                    Destroy(this);
+
+                return;
+            }
         }
         
 

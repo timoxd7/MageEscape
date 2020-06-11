@@ -45,7 +45,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useFromAudioSource: 0
   audioSource: {fileID: 0}
+  output: {fileID: 0}
+  mute: 0
+  bypassEffects: 0
+  bypassListenerEffects: 0
+  bypassReverbZones: 0
+  priority: 128
   volume: 1
+  pitch: 1
+  stereoPan: 0
+  spatialBlend: 1
+  reverbZoneMix: 1
+  dopplerLevel: 1
+  spread: 0
+  volumeRolloff: 0
+  minDistance: 1
+  maxDistance: 500
   soundSystem: {fileID: 4414416827756698936}
   soundType: 0
 --- !u!1 &2840236404725105715
@@ -93,7 +108,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useFromAudioSource: 0
   audioSource: {fileID: 0}
+  output: {fileID: 0}
+  mute: 0
+  bypassEffects: 0
+  bypassListenerEffects: 0
+  bypassReverbZones: 0
+  priority: 128
   volume: 1
+  pitch: 1
+  stereoPan: 0
+  spatialBlend: 1
+  reverbZoneMix: 1
+  dopplerLevel: 1
+  spread: 0
+  volumeRolloff: 0
+  minDistance: 1
+  maxDistance: 500
   soundSystem: {fileID: 4414416827756698936}
   soundType: 3
 --- !u!1 &5415047904412089538
@@ -141,7 +171,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useFromAudioSource: 0
   audioSource: {fileID: 0}
+  output: {fileID: 0}
+  mute: 0
+  bypassEffects: 0
+  bypassListenerEffects: 0
+  bypassReverbZones: 0
+  priority: 128
   volume: 1
+  pitch: 1
+  stereoPan: 0
+  spatialBlend: 1
+  reverbZoneMix: 1
+  dopplerLevel: 1
+  spread: 0
+  volumeRolloff: 0
+  minDistance: 1
+  maxDistance: 500
   soundSystem: {fileID: 4414416827756698936}
   soundType: 1
 --- !u!1 &5697253691028185168
@@ -156,7 +201,7 @@ GameObject:
   - component: {fileID: 4414416827756698936}
   m_Layer: 0
   m_Name: SoundSystem
-  m_TagString: Untagged
+  m_TagString: SoundSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +282,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useFromAudioSource: 0
   audioSource: {fileID: 0}
+  output: {fileID: 0}
+  mute: 0
+  bypassEffects: 0
+  bypassListenerEffects: 0
+  bypassReverbZones: 0
+  priority: 128
   volume: 1
+  pitch: 1
+  stereoPan: 0
+  spatialBlend: 1
+  reverbZoneMix: 1
+  dopplerLevel: 1
+  spread: 0
+  volumeRolloff: 0
+  minDistance: 1
+  maxDistance: 500
   soundSystem: {fileID: 4414416827756698936}
   soundType: 2
 --- !u!1 &8642196460025765871
@@ -285,6 +345,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useFromAudioSource: 0
   audioSource: {fileID: 0}
+  output: {fileID: 0}
+  mute: 0
+  bypassEffects: 0
+  bypassListenerEffects: 0
+  bypassReverbZones: 0
+  priority: 128
   volume: 1
+  pitch: 1
+  stereoPan: 0
+  spatialBlend: 1
+  reverbZoneMix: 1
+  dopplerLevel: 1
+  spread: 0
+  volumeRolloff: 0
+  minDistance: 1
+  maxDistance: 500
   soundSystem: {fileID: 4414416827756698936}
   soundType: 4
