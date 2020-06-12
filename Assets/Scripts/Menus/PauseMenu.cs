@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-
-    public static bool gameIsPaused = false;
+    public PlayerAccessibility player;
     public GameObject pauseMenuUI;
     public string levelName;
     public string mainMenu;
@@ -13,6 +12,8 @@ public class PauseMenu : MonoBehaviour
     public Slider generalVolume;
     public Slider musicVolume;
     public Slider effectsVolume;
+
+    private bool gameIsPaused = false;
 
     void Start()
     {
@@ -39,7 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        GameObject.Find("Player").GetComponent<PlayerLookController>().enabled = true;
+        player.ReleasePlayer();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
@@ -47,7 +48,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        GameObject.Find("Player").GetComponent<PlayerLookController>().enabled = false;
+        player.LockPlayer();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
