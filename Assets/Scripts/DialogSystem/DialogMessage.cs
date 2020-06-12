@@ -8,26 +8,16 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Canvas))]
 public class DialogMessage : MonoBehaviour
 {
-    [ConditionalField(nameof(useFromPreviousMessage), true)]
-    public GameObject textPrefab;
-    [ConditionalField(nameof(useFromPreviousMessage), true)]
-    public Vector2 textPosition;
-    [ConditionalField(nameof(useFromPreviousMessage), true)]
-    public GameObject buttonPrefab;
-    [ConditionalField(nameof(useFromPreviousMessage), true)]
-    public Vector2 optionsOrigin;
-    [ConditionalField(nameof(useFromPreviousMessage), true)]
-    public float optionsOffset;
-    [ConditionalField(nameof(useFromPreviousMessage), true)]
-    public PlayerAccessibility player;
-
-    public bool useFromPreviousMessage = false;
+    [Header("Properties")]
+    public DialogProperties dialogProperties;
 
     [Header("Text")]
+    [Tooltip("The Text in the Middle of the dialog for the current Message")]
     public string text;
     
 
     [Header("Options")]
+    [Tooltip("The Options right next to the Text Box to continue")]
     public List<DialogOption> options;
 
 
@@ -37,82 +27,20 @@ public class DialogMessage : MonoBehaviour
 
     public void Show()
     {
-        if (useFromPreviousMessage)
-        {
-            Debug.LogError("Should use Settings from previous Dialog, but this Dialog is called as the first dialog! This is not possible!", this);
-            return;
-        }
-
-        PrivateShow();
-    }
-
-    public void Show(DialogMessage previous)
-    {
-        if (useFromPreviousMessage)
-        {
-            textPrefab = previous.textPrefab;
-            textPosition = previous.textPosition;
-            buttonPrefab = previous.buttonPrefab;
-            optionsOrigin = previous.optionsOrigin;
-            optionsOffset = previous.optionsOffset;
-            player = previous.player;
-        }
-
-        PrivateShow();
-    }
-
-    public void Hide()
-    {
-        if (!currentShownState)
-        {
-            Debug.Log("Already hidden! (1)", this);
-            return;
-        }
-
-        if (player == null)
-        {
-            Debug.LogError("No Player attached! (1)", this);
-            return;
-        }
-
-        currentShownState = false;
-        player.ReleasePlayer();
-
-        if (currentlyShownObjects.IsNullOrEmpty())
-        {
-            Debug.Log("Already hidden!", this);
-            return;
-        }
-
-        foreach (SelfDestruct currentObject in currentlyShownObjects)
-        {
-            if (currentObject != null)
-            {
-                Debug.Log("Destruct: ", currentObject);
-                currentObject.DestroyThis();
-            } else
-                Debug.LogError("Object already destroyed (?)!", this);
-        }
-
-        currentlyShownObjects = null;
-    }
-
-    private void PrivateShow()
-    {
         if (currentShownState)
         {
             Debug.LogError("Already Shown!", this);
             return;
         }
 
-        if (player == null)
+        if (dialogProperties == null || !dialogProperties.Validate())
         {
-            Debug.LogError("No Player attached!", this);
+            Debug.LogError("No or broken DialogProperties attached!", this);
             return;
         }
 
         currentShownState = true;
-        player.LockPlayer();
+        dialogProperties.player.LockPlayer();
 
         if (currentlyShownObjects.IsNullOrEmpty())
         {
@@ -123,7 +51,7 @@ public class DialogMessage : MonoBehaviour
             Hide();
         }
 
-        GameObject textObject = Instantiate(textPrefab, gameObject.transform);
+        GameObject textObject = Instantiate(dialogProperties.textPrefab, gameObject.transform);
         RectTransform textTransform = textObject.GetComponent<RectTransform>();
         TMP_Text tmProText = textObject.GetComponentInChildren<TMP_Text>();
         SelfDestruct textDestruct = textObject.AddComponent<SelfDestruct>();
@@ -153,8 +81,8 @@ public class DialogMessage : MonoBehaviour
         }
 
         tmProText.text = text;
-        textTransform.SetPositionX(textPosition.x);
-        textTransform.SetPositionY(textPosition.y);
+        textTransform.SetPositionX(dialogProperties.textPosition.x);
+        textTransform.SetPositionY(dialogProperties.textPosition.y);
 
         currentlyShownObjects.Add(textDestruct);
 
@@ -162,9 +90,9 @@ public class DialogMessage : MonoBehaviour
         int currentNumber = 0;
         foreach (DialogOption dialogOption in options)
         {
-            float yPosition = optionsOrigin.y - ((optionsOffset * (options.Count - 1)) / 2) + (optionsOffset * (float)(currentNumber++));
+            float yPosition = dialogProperties.optionsOrigin.y - ((dialogProperties.optionsOffset * (options.Count - 1)) / 2) + (dialogProperties.optionsOffset * (float)(currentNumber++));
 
-            GameObject optionObject = Instantiate(buttonPrefab, gameObject.transform);
+            GameObject optionObject = Instantiate(dialogProperties.buttonPrefab, gameObject.transform);
             RectTransform optionTransform = optionObject.GetComponent<RectTransform>();
             TMP_Text optionText = optionObject.GetComponentInChildren<TMP_Text>();
             DialogButton dialogButton = optionObject.GetComponentInChildren<DialogButton>();
@@ -185,11 +113,47 @@ public class DialogMessage : MonoBehaviour
                 dialogButton.parentMessage = this;
                 dialogButton.dialogOption = dialogOption;
                 optionText.text = dialogOption.optionName;
-                optionTransform.SetPositionX(optionsOrigin.x);
+                optionTransform.SetPositionX(dialogProperties.optionsOrigin.x);
                 optionTransform.SetPositionY(yPosition);
 
                 currentlyShownObjects.Add(optionDestruct);
             }
         }
+    }
+
+    public void Hide()
+    {
+        if (!currentShownState)
+        {
+            Debug.Log("Already hidden! (1)", this);
+            return;
+        }
+
+        if (dialogProperties == null || !dialogProperties.Validate())
+        {
+            Debug.LogError("No or broken DialogProperties attached!", this);
+            return;
+        }
+
+        currentShownState = false;
+        dialogProperties.player.ReleasePlayer();
+
+        if (currentlyShownObjects.IsNullOrEmpty())
+        {
+            Debug.Log("Already hidden!", this);
+            return;
+        }
+
+        foreach (SelfDestruct currentObject in currentlyShownObjects)
+        {
+            if (currentObject != null)
+            {
+                Debug.Log("Destruct: ", currentObject);
+                currentObject.DestroyThis();
+            } else
+                Debug.LogError("Object already destroyed (?)!", this);
+        }
+
+        currentlyShownObjects = null;
     }
 }
