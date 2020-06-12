@@ -37,6 +37,68 @@ public class DialogMessage : MonoBehaviour
 
     public void Show()
     {
+        if (useFromPreviousMessage)
+        {
+            Debug.LogError("Should use Settings from previous Dialog, but this Dialog is called as the first dialog! This is not possible!", this);
+            return;
+        }
+
+        PrivateShow();
+    }
+
+    public void Show(DialogMessage previous)
+    {
+        if (useFromPreviousMessage)
+        {
+            textPrefab = previous.textPrefab;
+            textPosition = previous.textPosition;
+            buttonPrefab = previous.buttonPrefab;
+            optionsOrigin = previous.optionsOrigin;
+            optionsOffset = previous.optionsOffset;
+            player = previous.player;
+        }
+
+        PrivateShow();
+    }
+
+    public void Hide()
+    {
+        if (!currentShownState)
+        {
+            Debug.Log("Already hidden! (1)", this);
+            return;
+        }
+
+        if (player == null)
+        {
+            Debug.LogError("No Player attached! (1)", this);
+            return;
+        }
+
+        currentShownState = false;
+        player.ReleasePlayer();
+
+        if (currentlyShownObjects.IsNullOrEmpty())
+        {
+            Debug.Log("Already hidden!", this);
+            return;
+        }
+
+        foreach (SelfDestruct currentObject in currentlyShownObjects)
+        {
+            if (currentObject != null)
+            {
+                Debug.Log("Destruct: ", currentObject);
+                currentObject.DestroyThis();
+            } else
+                Debug.LogError("Object already destroyed (?)!", this);
+        }
+
+        currentlyShownObjects = null;
+    }
+
+    private void PrivateShow()
+    {
         if (currentShownState)
         {
             Debug.LogError("Already Shown!", this);
@@ -55,7 +117,8 @@ public class DialogMessage : MonoBehaviour
         if (currentlyShownObjects.IsNullOrEmpty())
         {
             currentlyShownObjects = new List<SelfDestruct>();
-        } else
+        }
+        else
         {
             Hide();
         }
@@ -128,56 +191,5 @@ public class DialogMessage : MonoBehaviour
                 currentlyShownObjects.Add(optionDestruct);
             }
         }
-    }
-
-    public void Show(DialogMessage previous)
-    {
-        if (useFromPreviousMessage)
-        {
-            textPrefab = previous.textPrefab;
-            textPosition = previous.textPosition;
-            buttonPrefab = previous.buttonPrefab;
-            optionsOrigin = previous.optionsOrigin;
-            optionsOffset = previous.optionsOffset;
-            player = previous.player;
-        }
-
-        Show();
-    }
-
-    public void Hide()
-    {
-        if (!currentShownState)
-        {
-            Debug.Log("Already hidden! (1)", this);
-            return;
-        }
-
-        if (player == null)
-        {
-            Debug.LogError("No Player attached! (1)", this);
-            return;
-        }
-
-        currentShownState = false;
-        player.ReleasePlayer();
-
-        if (currentlyShownObjects.IsNullOrEmpty())
-        {
-            Debug.Log("Already hidden!", this);
-            return;
-        }
-
-        foreach (SelfDestruct currentObject in currentlyShownObjects)
-        {
-            if (currentObject != null)
-            {
-                Debug.Log("Destruct: ", currentObject);
-                currentObject.DestroyThis();
-            } else
-                Debug.LogError("Object already destroyed (?)!", this);
-        }
-
-        currentlyShownObjects = null;
     }
 }
