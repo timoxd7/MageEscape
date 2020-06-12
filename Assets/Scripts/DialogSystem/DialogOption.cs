@@ -14,7 +14,7 @@ public class DialogOption : MonoBehaviour
     public DialogMessage dialogMessage;
 
 
-    public void Execute(DialogMessage parentMessage)
+    public void Execute(DialogMessage parentMessage = null)
     {
         if (eventType == EventType.None)
         {
@@ -22,7 +22,8 @@ public class DialogOption : MonoBehaviour
             return;
         }
 
-        parentMessage.Hide();
+        if (parentMessage != null)
+            parentMessage.Hide();
 
         switch (eventType)
         {
@@ -41,7 +42,7 @@ public class DialogOption : MonoBehaviour
                 if (dialogMessage == null)
                     Debug.LogError("No dialogMessage given!", this);
                 else
-                    dialogMessage.Show(parentMessage);
+                    dialogMessage.Show();
                 break;
         }
     }
