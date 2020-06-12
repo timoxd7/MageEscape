@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class PlayerLookController : MonoBehaviour
 {
@@ -39,33 +35,8 @@ public class PlayerLookController : MonoBehaviour
 
     #region Builtin
 
-    void Start()
-    {
-        // Hide Mouse while in-game
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
     void Update()
     {
-        // Lock / Unlock Mouse Cursor (PC Keyboard/Mouse Spezific)
-
-        if(PauseMenu.GameIsPaused)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        } else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-
-        bool currentInFullscreen = Screen.fullScreen;
-        if (currentInFullscreen != lastKnownFullscreedMode)
-        {
-            lastKnownFullscreedMode = currentInFullscreen;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-
-
         // Apply Look Speed
 
         if (currentLookMode == LookMode.Velocity)
@@ -112,7 +83,8 @@ public class PlayerLookController : MonoBehaviour
     {
         // Add the new incremental Look-Movement
         currentLookMode = LookMode.Motion;
-        this.deltaLook += deltaLook;
+        if (enabled)
+            this.deltaLook += deltaLook;
     }
 
     private void ApplyRotation(Vector2 deltaRotation)
