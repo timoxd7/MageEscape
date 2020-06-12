@@ -27,7 +27,6 @@ public class PlayerLookController : MonoBehaviour
     #region Private Vars
 
     private float xRotation = 0;
-    private bool lastKnownFullscreedMode = false;
     private Vector2 deltaLook;
     private LookMode currentLookMode;
 
