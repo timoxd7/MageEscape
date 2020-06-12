@@ -73,6 +73,14 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Analog"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""ef8a55c8-dbb3-4daa-9ae8-04a42d1e21fb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -427,6 +435,28 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Look Motion-Based"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27e0fb6f-1d55-49bd-8da7-8815b7e5cc1e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC Keyboard & Mouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b940e7c9-5b7a-44ae-91fb-48029a33e64b"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -470,6 +500,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_Sneak = m_Player.FindAction("Sneak", throwIfNotFound: true);
         m_Player_LookVelocityBased = m_Player.FindAction("Look Velocity-Based", throwIfNotFound: true);
         m_Player_LookMotionBased = m_Player.FindAction("Look Motion-Based", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -526,6 +557,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Sneak;
     private readonly InputAction m_Player_LookVelocityBased;
     private readonly InputAction m_Player_LookMotionBased;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -537,6 +569,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @Sneak => m_Wrapper.m_Player_Sneak;
         public InputAction @LookVelocityBased => m_Wrapper.m_Player_LookVelocityBased;
         public InputAction @LookMotionBased => m_Wrapper.m_Player_LookMotionBased;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -567,6 +600,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @LookMotionBased.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookMotionBased;
                 @LookMotionBased.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookMotionBased;
                 @LookMotionBased.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLookMotionBased;
+                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -592,6 +628,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @LookMotionBased.started += instance.OnLookMotionBased;
                 @LookMotionBased.performed += instance.OnLookMotionBased;
                 @LookMotionBased.canceled += instance.OnLookMotionBased;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -623,5 +662,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnSneak(InputAction.CallbackContext context);
         void OnLookVelocityBased(InputAction.CallbackContext context);
         void OnLookMotionBased(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

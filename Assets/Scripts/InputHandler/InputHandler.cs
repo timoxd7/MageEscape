@@ -6,6 +6,7 @@ public class InputHandler : MonoBehaviour
     public PlayerLookController playerLookController;
     public PlayerMovementController playerMovementController;
     public InteractionController interactionController;
+    public PauseMenu pauseMenu;
     
     
     private InputMaster _inputMaster;
@@ -50,6 +51,15 @@ public class InputHandler : MonoBehaviour
         else
         {
             Debug.LogWarning("No LookController given");
+        }
+
+        // Pause Menu
+        if (pauseMenu != null)
+        {
+            _inputMaster.Player.Pause.performed += _ => pauseMenu.PausePressed();
+        } else
+        {
+            Debug.LogWarning("No PauseMenu given");
         }
 
     }
