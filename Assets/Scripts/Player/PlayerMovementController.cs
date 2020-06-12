@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.ProBuilder;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -154,6 +150,9 @@ public class PlayerMovementController : MonoBehaviour
 
     public void Jump()
     {
+        if (!enabled)
+            return;
+
         if (jumpEnabled)
         {
             float currentJumpHeight = jumpHeight;

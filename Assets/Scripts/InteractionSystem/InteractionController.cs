@@ -23,6 +23,13 @@ public class InteractionController : MonoBehaviour
         CheckDetection();
         CheckInput();
     }
+
+    private void OnDisable()
+    {
+        UpdateInteractionContext(true);
+        CheckDetection();
+        CheckInput();
+    }
     #endregion
 
     #region Input handling
@@ -40,12 +47,17 @@ public class InteractionController : MonoBehaviour
     #endregion
 
     #region Cutsom Methods
-    private void UpdateInteractionContext()
+    private void UpdateInteractionContext(bool hitOverwriteFalse = false)
     {
         var camTransform = rayCam.transform;
         Ray ray = new Ray(camTransform.position, camTransform.forward);
 
         bool hitSomething = Physics.SphereCast(ray, raySpehereRadius, out var hitInfo, rayDistance, rayDetectableLayer);
+
+        if (hitOverwriteFalse)
+        {
+            hitSomething = false;
+        }
 
         if (hitSomething)
         {
