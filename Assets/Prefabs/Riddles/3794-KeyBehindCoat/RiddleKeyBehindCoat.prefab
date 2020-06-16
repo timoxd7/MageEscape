@@ -31,6 +31,8 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
+  itemRequired: 0
+  itemId: 
   detectionOption: 1
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
@@ -166,6 +168,8 @@ MonoBehaviour:
   isInteractable: 1
   holdToInteract: 0
   holdDuration: 0
+  itemRequired: 0
+  itemId: 
   detectionOption: 1
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
