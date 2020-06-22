@@ -9,9 +9,14 @@ public class PauseMenu : MonoBehaviour
     public string levelName;
     public string mainMenu;
     public GameObject optionsMenu;
+
+    //Values for Sound
     public Slider generalVolume;
+    public static float general;
     public Slider musicVolume;
+    public static float music;
     public Slider effectsVolume;
+    public static float effects;
 
     private bool gameIsPaused = false;
 
@@ -22,7 +27,13 @@ public class PauseMenu : MonoBehaviour
         effectsVolume.value = MainMenus.effects;
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        general = generalVolume.value;
+        music = musicVolume.value;
+        effects = effectsVolume.value;
+    }
+
     public void PausePressed()
     {
         if(gameIsPaused && optionsMenu.activeSelf)
