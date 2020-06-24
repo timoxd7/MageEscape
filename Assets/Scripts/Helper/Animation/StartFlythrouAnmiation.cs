@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class InteractionStartAnimationByTrigger : BaseInteraction
+public class StartFlythrouAnmiation : BaseInteraction
 {
     public GameObject player;
     public RuntimeAnimatorController animatorController;
