@@ -11,8 +11,6 @@ public class PauseMenu : MonoBehaviour
     [Header("Menus")]
     public GameObject pauseMenuUI;
     public GameObject optionsMenu;
-    public string levelName;
-    public string mainMenu;
 
     [Header("Sliders for Sound")]
     public Slider generalVolume;
@@ -75,16 +73,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
-    }
-
-    public void MainMenu()
-    {
-        SceneManager.LoadScene(mainMenu);
-    }
-
-    public void ResetGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Options() 
