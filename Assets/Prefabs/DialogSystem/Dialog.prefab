@@ -178,11 +178,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb7ea553dc32b248ae958415d993afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textPrefab: {fileID: 6760923220924640208, guid: 711610d34e8112d4d9397ead6d30de62,
+  textPrefab: {fileID: 6760923220924640208, guid: 5a7c7f8277df248c8a582345a3004681,
     type: 3}
-  textPosition: {x: -120, y: -280}
-  buttonPrefab: {fileID: 7510834247927383481, guid: cc5b81bdd8c39cc49901b524819de7ca,
+  textPosition: {x: -200, y: -280}
+  buttonPrefab: {fileID: 7510834247927383481, guid: ff81051abac644531937c483eda60cdb,
     type: 3}
-  optionsOrigin: {x: 650, y: -280}
-  optionsOffset: 120
+  optionsOrigin: {x: 700, y: -280}
+  optionsOffset: 100
   player: {fileID: 0}
