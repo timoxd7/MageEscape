@@ -168,22 +168,6 @@ public class SoundSource : MonoBehaviour
     {
         soundProperty.Apply(audioSource);
         audioSource.loop = loopPlay;
-        switch(soundType)
-        {
-            case SoundSystem.SoundType.Default:
-            case SoundSystem.SoundType.Player:
-                audioSource.volume = PauseMenu.general;
-                break;
-            case SoundSystem.SoundType.Envoirment:
-            case SoundSystem.SoundType.Explosion:
-                audioSource.volume = PauseMenu.general * PauseMenu.effects;
-                break;
-            case SoundSystem.SoundType.Ambient:
-                audioSource.volume = PauseMenu.general * PauseMenu.music;
-                break;  
-            default:
-                audioSource.volume = PauseMenu.general;
-                break;
-        }
+        audioSource.volume *= soundClip.volumeMultiplyer;
     }
 }
