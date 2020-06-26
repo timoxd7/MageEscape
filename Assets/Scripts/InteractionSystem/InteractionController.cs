@@ -13,10 +13,21 @@ public class InteractionController : MonoBehaviour
     /*Utils*/
     private readonly Timer _interactionTimer = new Timer();
     private readonly InteractionInput _interactionInput = new InteractionInput();
-    private readonly PlayerContext _playerContext = new PlayerContext();
+    
+    /*Context*/
+    public PlayerContext playerContext;
     #endregion
     
     #region Builtin
+
+    private void Start()
+    {
+        if (playerContext == null)
+        {
+            Debug.LogError("No PlayerContext given");
+        }
+    }
+
     private void Update()
     {
         UpdateInteractionContext();
@@ -65,18 +76,18 @@ public class InteractionController : MonoBehaviour
             Interactable detected = hitInfo.collider.GetComponent<Interactable>();
             if (detected != null)
             {
-                if (_playerContext.InteractionData.IsEmpty())
+                if (playerContext.InteractionData.IsEmpty())
                 {
                     // Wenn jetzt unser aktueller slot für detectables leer ist, können wir das gefundene Objekt dem Slot zuweisen
-                    _playerContext.InteractionData.CurrentInteractable = detected;
+                    playerContext.InteractionData.CurrentInteractable = detected;
                 }
                 else
                 {
                     // Wenn der Slot nicht leer ist wollen wir wissen ob das gefundene Objekt nicht ohnehin schon unser aktuelles ist
-                    if (!_playerContext.InteractionData.IsSame(detected))
+                    if (!playerContext.InteractionData.IsSame(detected))
                     {
                         // Wenn nicht, dann jetzt schon
-                        _playerContext.InteractionData.CurrentInteractable = detected;
+                        playerContext.InteractionData.CurrentInteractable = detected;
                     }
                 }
             } else
@@ -87,7 +98,7 @@ public class InteractionController : MonoBehaviour
         else
         {
             // Unser Ray hat nichts getroffen, es gitb kein Objekt zum interagieren
-            _playerContext.InteractionData.Reset();
+            playerContext.InteractionData.Reset();
         }
 
         Debug.DrawRay(ray.origin, ray.direction * rayDistance, hitSomething ? Color.green : Color.red);
@@ -102,7 +113,7 @@ public class InteractionController : MonoBehaviour
          * 3. Current Object -> No Object
          */
 
-        InteractionData interactionData = _playerContext.InteractionData;
+        InteractionData interactionData = playerContext.InteractionData;
 
         // Case 1
         if (interactionData.LastInteractable == null && !interactionData.IsEmpty())
@@ -135,7 +146,7 @@ public class InteractionController : MonoBehaviour
     
     private void CheckInput()
     {
-        InteractionData interactionData = _playerContext.InteractionData;
+        InteractionData interactionData = playerContext.InteractionData;
         Interactable interactable = interactionData.CurrentInteractable;
         
         if(interactionData.IsEmpty())
@@ -170,14 +181,14 @@ public class InteractionController : MonoBehaviour
                 if (_interactionTimer.Get() > interactable.HoldDuration)
                 {
                     _interactionTimer.Reset();
-                    interactable.OnInteraction(_playerContext);
+                    interactable.OnInteraction(playerContext);
                     interactionData.InteractingNow = false;
                 }
             }
             else
             {
                 _interactionTimer.Reset();
-                interactable.OnInteraction(_playerContext);
+                interactable.OnInteraction(playerContext);
                 interactionData.InteractingNow = false;
             }
         }
