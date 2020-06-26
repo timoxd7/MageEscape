@@ -154,9 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Orange Blossom SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -204651838
   material: {fileID: -7457859349510502884}
-  materialHashCode: 0
+  materialHashCode: -791588599
   m_Version: 1.1.0
   m_SourceFontFileGUID: 499edb00a0f294a98b0675b84b1ed70a
   m_SourceFontFile_EditorRef: {fileID: 0}
