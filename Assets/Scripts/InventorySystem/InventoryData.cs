@@ -27,4 +27,9 @@ public class InventoryData
     {
         return _items.TryGetValue(itemId, out Item item);
     }
+
+    public int Count()
+    {
+        return _items.Count;
+    }
 }
