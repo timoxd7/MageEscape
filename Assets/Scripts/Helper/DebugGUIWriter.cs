@@ -27,8 +27,6 @@ public class DebugGUIWriter : MonoBehaviour
             {
                 GUI.Label(new Rect(initPosition.x, initPosition.y + currentLineOffset, textBoxSize.x, textBoxSize.y), line);
                 currentLineOffset += lineSpacing + lineOffset;
-
-                Debug.Log("Writing " + line);
             }
         }
 
