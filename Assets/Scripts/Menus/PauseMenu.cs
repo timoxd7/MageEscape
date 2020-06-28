@@ -1,17 +1,31 @@
-﻿using UnityEngine;
+﻿using System.Text;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    [Header("Player")]
     public PlayerAccessibility player;
+
+    [Header("Menus")]
     public GameObject pauseMenuUI;
-    public string levelName;
-    public string mainMenu;
     public GameObject optionsMenu;
+
+    [Header("Sliders for Sound")]
     public Slider generalVolume;
+    public static float general;
     public Slider musicVolume;
+    public static float music;
     public Slider effectsVolume;
+    public static float effects;
+
+    [Header("SoundProperties")]
+    public SoundProperty defaultSound;
+    public SoundProperty playerSound;
+    public SoundProperty environmentSound;
+    public SoundProperty ambientSound;
+    public SoundProperty explosionsSound;
 
     private bool gameIsPaused = false;
 
@@ -20,9 +34,16 @@ public class PauseMenu : MonoBehaviour
         generalVolume.value = MainMenus.general;
         musicVolume.value = MainMenus.music;
         effectsVolume.value = MainMenus.effects;
+        general = generalVolume.value;
+        music = musicVolume.value;
+        effects = effectsVolume.value;
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     public void PausePressed()
     {
         if(gameIsPaused && optionsMenu.activeSelf)
@@ -54,16 +75,6 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = true;
     }
 
-    public void MainMenu()
-    {
-        SceneManager.LoadScene(mainMenu);
-    }
-
-    public void ResetGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     public void Options() 
     {
         optionsMenu.SetActive(true);
@@ -74,5 +85,28 @@ public class PauseMenu : MonoBehaviour
     {
         optionsMenu.SetActive(false);
         pauseMenuUI.SetActive(true);
+    }
+
+    public void UpdateGeneralVolume()
+    {
+        general = generalVolume.value;
+        defaultSound.volume = general;
+        playerSound.volume = general;
+        environmentSound.volume = general;
+        ambientSound.volume = general;
+        explosionsSound.volume = general;
+    }
+
+    public void UpdateMusicVolume()
+    {
+        music = musicVolume.value;
+        ambientSound.volume = general * music;
+    }
+
+    public void UpdateEffectVolume()
+    {
+        effects = effectsVolume.value;
+        environmentSound.volume = general * effects;
+        explosionsSound.volume = general * effects;
     }
 }
