@@ -12,7 +12,7 @@ public class MainMenus : MonoBehaviour
     public Slider generalVolume;
     public Slider musicVolume;
     public Slider effectsVolume;
-    public static float general = 1f;
+    public static float general;
     public static float music;
     public static float effects;
 
