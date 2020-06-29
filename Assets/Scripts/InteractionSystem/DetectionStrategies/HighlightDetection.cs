@@ -55,6 +55,9 @@ public class HighlightDetection : BaseDetection
 
     public override void OnDetectionEnter()
     {
+        if (!enabled)
+            return;
+
         foreach (Outline outlineInstance in outlineInstances)
         {
             if (outlineInstance != null)
@@ -74,6 +77,9 @@ public class HighlightDetection : BaseDetection
 
     public override void OnDetectionExit()
     {
+        if (!enabled)
+            return;
+
         foreach (Outline outlineInstance in outlineInstances)
         {
             if (outlineInstance != null)
