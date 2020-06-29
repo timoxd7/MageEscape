@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class InventoryController : BaseObservable
@@ -32,6 +33,16 @@ public class InventoryController : BaseObservable
         _inventoryData.Add(item);
         Notify();
         return true;
+    }
+
+    public bool RemoveItem()
+    {
+        throw new NotImplementedException();
+    }
+    
+    public bool ContainsItem(string itemId)
+    {
+        throw new NotImplementedException();
     }
 
     #endregion
