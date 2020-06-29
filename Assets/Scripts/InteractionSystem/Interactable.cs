@@ -35,6 +35,8 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     [ConditionalField(nameof(interactionOption), false, InteractionOption.Custom)]
     public BaseInteraction interactionBehaviour;
 
+    private bool lastDetectionState = false;
+
     #endregion
 
     #region Builtin
@@ -43,7 +45,7 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     {
         // Automatische Layerzuweisung.
         // TODO: 3567
-        this.gameObject.layer = 8;
+        gameObject.layer = 8;
         HandleInteractionStrategy();
         HandleDetectionStrategy();
     }
@@ -114,6 +116,11 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     public void OnInteraction(PlayerContext context)
     {
+        if (!enabled)
+        {
+            return;
+        }
+
         if (ItemRequired)
         {
             if (context.InventoryData.Contains(ItemId))
@@ -129,12 +136,33 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     public void OnDetectionEnter()
     {
+        if (!enabled)
+        {
+            return;
+        }
+
         detectionBehaviour.OnDetectionEnter();
+        lastDetectionState = true;
     }
 
     public void OnDetectionExit()
     {
+        if (!enabled)
+        {
+            return;
+        }
+
         detectionBehaviour.OnDetectionExit();
+        lastDetectionState = false;
+    }
+
+    public void OnDisable()
+    {
+        if (lastDetectionState)
+        {
+            detectionBehaviour.OnDetectionExit();
+            lastDetectionState = false;
+        }
     }
 
     #endregion
