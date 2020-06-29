@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 829264621ea982b48aad780770b3d769
+timeCreated: 1507965363
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Display
+    100004: Lamp 1
+    100006: Lamp 2
+    100008: Lamp 3
+    100010: Lamp 4
+    100012: Numpad
+    100014: Numpad.001
+    100016: Numpad.002
+    100018: Numpad_0
+    100020: Numpad_1
+    100022: Numpad_2
+    100024: Numpad_3
+    100026: Numpad_4
+    100028: Numpad_5
+    100030: Numpad_6
+    100032: Numpad_7
+    100034: Numpad_8
+    100036: Numpad_9
+    100038: Numpad_confirm
+    100040: Numpad_Delete
+    100042: Timer
+    400000: //RootNode
+    400002: Display
+    400004: Lamp 1
+    400006: Lamp 2
+    400008: Lamp 3
+    400010: Lamp 4
+    400012: Numpad
+    400014: Numpad.001
+    400016: Numpad.002
+    400018: Numpad_0
+    400020: Numpad_1
+    400022: Numpad_2
+    400024: Numpad_3
+    400026: Numpad_4
+    400028: Numpad_5
+    400030: Numpad_6
+    400032: Numpad_7
+    400034: Numpad_8
+    400036: Numpad_9
+    400038: Numpad_confirm
+    400040: Numpad_Delete
+    400042: Timer
+    2300000: //RootNode
+    2300002: Display
+    2300004: Lamp 1
+    2300006: Lamp 2
+    2300008: Lamp 3
+    2300010: Lamp 4
+    2300012: Numpad
+    2300014: Numpad.001
+    2300016: Numpad.002
+    2300018: Numpad_0
+    2300020: Numpad_1
+    2300022: Numpad_2
+    2300024: Numpad_3
+    2300026: Numpad_4
+    2300028: Numpad_5
+    2300030: Numpad_6
+    2300032: Numpad_7
+    2300034: Numpad_8
+    2300036: Numpad_9
+    2300038: Numpad_confirm
+    2300040: Numpad_Delete
+    2300042: Timer
+    3300000: //RootNode
+    3300002: Display
+    3300004: Lamp 1
+    3300006: Lamp 2
+    3300008: Lamp 3
+    3300010: Lamp 4
+    3300012: Numpad
+    3300014: Numpad.001
+    3300016: Numpad.002
+    3300018: Numpad_0
+    3300020: Numpad_1
+    3300022: Numpad_2
+    3300024: Numpad_3
+    3300026: Numpad_4
+    3300028: Numpad_5
+    3300030: Numpad_6
+    3300032: Numpad_7
+    3300034: Numpad_8
+    3300036: Numpad_9
+    3300038: Numpad_confirm
+    3300040: Numpad_Delete
+    3300042: Timer
+    4300000: bomb
+    4300002: Numpad_7
+    4300004: Numpad_4
+    4300006: Numpad_1
+    4300008: Numpad_Delete
+    4300010: Numpad_0
+    4300012: Numpad_2
+    4300014: Numpad_5
+    4300016: Numpad_8
+    4300018: Numpad_confirm
+    4300020: Numpad_3
+    4300022: Numpad_9
+    4300024: Numpad_6
+    4300026: Numpad.002
+    4300028: Numpad.001
+    4300030: Numpad
+    4300032: Display
+    4300034: Timer
+    4300036: Lamp 4
+    4300038: Lamp 2
+    4300040: Lamp 1
+    4300042: Lamp 3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dynamite
+    second: {fileID: 2100000, guid: ff52c50de3825a84694c70c8c68c8b6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamps
+    second: {fileID: 2100000, guid: e6b18855b4e99f541a8baf4221ad2a18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 5c67c6cf507654e4c971c9314508f409, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NumpadDisplay
+    second: {fileID: 2100000, guid: fca1804617896274298a12f79c8ef2e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tasten
+    second: {fileID: 2100000, guid: 309a45d5330a60d45964cab584771439, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Timer
+    second: {fileID: 2100000, guid: 91b37f17ab2df284ea095d81ff79d04c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
