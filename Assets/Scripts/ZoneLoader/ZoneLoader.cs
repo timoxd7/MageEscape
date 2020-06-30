@@ -8,8 +8,9 @@ public class ZoneLoader : MonoBehaviour
     public List<GameObject> zoneObjects;
 
     private bool currentLoadState = false;
+    private bool currentLoadStateSet = false;
 
-    private void Awake()
+    private void Start()
     {
         if (loadInOnGameStart)
         {
@@ -33,7 +34,7 @@ public class ZoneLoader : MonoBehaviour
 
     private void Load(bool activeState)
     {
-        if (activeState == currentLoadState)
+        if (activeState == currentLoadState && currentLoadStateSet)
             return;
 
         if (zoneObjects.IsNullOrEmpty())
@@ -52,5 +53,6 @@ public class ZoneLoader : MonoBehaviour
         }
 
         currentLoadState = activeState;
+        currentLoadStateSet = true;
     }
 }
