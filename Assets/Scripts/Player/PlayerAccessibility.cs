@@ -64,6 +64,11 @@ public class PlayerAccessibility : MonoBehaviour
         CaptureMouse();
     }
 
+    public bool GetPlayerLocked()
+    {
+        return playerLocked;
+    }
+
     [ButtonMethod]
     public void CaptureMouse()
     {
