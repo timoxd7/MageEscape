@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
     public SoundProperty explosionsSound;
 
     private bool gameIsPaused = false;
+    private bool playerLockedBeforePause = false;
 
     void Start()
     {
@@ -37,11 +38,6 @@ public class PauseMenu : MonoBehaviour
         general = generalVolume.value;
         music = musicVolume.value;
         effects = effectsVolume.value;
-    }
-
-    void Update()
-    {
-        
     }
 
     public void PausePressed()
@@ -61,7 +57,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        player.ReleasePlayer();
+        if (!playerLockedBeforePause)
+            player.ReleasePlayer();
+
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
@@ -78,7 +76,16 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        player.LockPlayer();
+        if (player.GetPlayerLocked())
+        {
+            playerLockedBeforePause = true;
+        }
+        else
+        {
+            player.LockPlayer();
+            playerLockedBeforePause = false;
+        }
+        
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
