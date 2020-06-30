@@ -14,12 +14,24 @@ public class CollectibleItemInteraction : BaseInteraction
 
     [ConditionalField(nameof(destroyOtherObject))]
     public GameObject otherObjectToDestroy;
+
+    public bool playSound = false;
+    [ConditionalField(nameof(playSound))]
+    public SoundSourcePlayer soundSourcePlayer;
     
     public override void OnInteraction(PlayerContext context)
     {
         Item item = new Item(uniqueId, title, description, icon, consumable);
         if (context.inventory.AddItem(item))
         {
+            if (playSound)
+            {
+                if (soundSourcePlayer != null)
+                {
+                    soundSourcePlayer.Play();
+                }
+            }
+
             Debug.Log("Putting " + title + " into the inventory.");
             if (autoDestroyThis)
             {
