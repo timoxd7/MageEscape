@@ -124,10 +124,10 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
         if (ItemRequired)
         {
             Item required = context.inventory.ContainsItem(ItemId);
-            if (context.inventory.ContainsItem(ItemId) != null)
+            if (required != null)
             {
                 // Achtung, hier ist die Reihenfolge wichtig:
-                // Erst das Item aus dem Inventar entfernen, und dann die Interaction!
+                // Erst das Item aus dem Inventar entfernen, und dann die Interaction!x
                 if (required.Consumable)
                 {
                     context.inventory.RemoveItem(required.UniqeId);

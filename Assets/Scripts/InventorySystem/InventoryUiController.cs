@@ -13,6 +13,11 @@ public class InventoryUiController : MonoBehaviour, IObserver
     
     public void UpdateState()
     {
+        foreach (Transform slot in UiSlots)
+        {
+            DisableSlot(slot);
+        }
+        
         for (int i = 0; i < _inventoryData.Items.Count(); i++)
         {
             Transform slot = UiSlots.ElementAt(i);
@@ -22,11 +27,6 @@ public class InventoryUiController : MonoBehaviour, IObserver
             {
                 ChangeSpriteForSlot(slot, item.Sprite);
                 EnableSlot(slot);
-            }
-            else
-            {
-                ChangeSpriteForSlot(slot, null);
-                DisableSlot(slot);
             }
         }
     }
