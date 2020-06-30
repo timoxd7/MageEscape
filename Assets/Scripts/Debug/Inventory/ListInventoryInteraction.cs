@@ -7,10 +7,10 @@ namespace InteractionSystem.InteractionStrategies
     {
         public override void OnInteraction(PlayerContext context)
         {
-            Dictionary<string, Item> items = context.InventoryData.Items;
-            foreach (KeyValuePair<string, Item> item in items)
+            List<Item> items = context.InventoryData.Items;
+            foreach (Item item in items)
             {
-                Debug.Log(item.Value.UniqeId + ":::" + item.Value.Title);
+                Debug.Log(item.UniqeId + ":::" + item.Title);
             }
         }
     }

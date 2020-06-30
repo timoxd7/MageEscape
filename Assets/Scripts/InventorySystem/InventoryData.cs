@@ -2,30 +2,39 @@ using System.Collections.Generic;
 
 public class InventoryData
 {
-    private readonly Dictionary<string,Item> _items = new Dictionary<string, Item>();
-    public Dictionary<string, Item> Items => _items;
+    private readonly List<Item> _items = new List<Item>();
+    public List<Item> Items => _items;
 
     public void Add(Item item)
     {
-        _items.Add(item.UniqeId, item);
+        _items.Add(item);
     }
 
     public Item Remove(string itemId)
     {
-        if (_items.TryGetValue(itemId, out Item value))
+        foreach (Item item in Items)
         {
-            _items.Remove(itemId);
-            return value;
+            if (item.UniqeId == itemId)
+            {
+                Items.Remove(item);
+                return item;
+            }
         }
-        else
-        {
-            return null;
-        }
+
+        return null;
     }
 
-    public bool Contains(string itemId)
+    public Item Contains(string itemId)
     {
-        return _items.TryGetValue(itemId, out Item item);
+        foreach (Item item in Items)
+        {
+            if (item.UniqeId == itemId)
+            {
+                return item;
+            }
+        }
+
+        return null;
     }
 
     public int Count()

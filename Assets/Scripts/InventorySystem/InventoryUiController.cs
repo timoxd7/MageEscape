@@ -8,40 +8,31 @@ public class InventoryUiController : MonoBehaviour, IObserver
     public InventoryController inventoryController;
 
     private InventoryData _inventoryData;
-    private Transform _panel;
 
-    private List<Transform> UiSlots => GetSlots();
-
-    #region Observer
+    private List<Transform> UiSlots => GetUiSlots();
     
     public void UpdateState()
     {
-        for (int i = 0; i < InventoryController.INVENTORY_MAX_ITEMS; i++)
+        for (int i = 0; i < _inventoryData.Items.Count(); i++)
         {
-            Item item = _inventoryData.Items.ElementAt(i).Value;
+            Transform slot = UiSlots.ElementAt(i);
+            Item item = _inventoryData.Items.ElementAt(i);
+
             if (item != null)
             {
-                ChangeItemSpriteForSlot(i, _inventoryData.Items.ElementAt(i).Value);
-                EnableSlot(i);
+                ChangeSpriteForSlot(slot, item.Sprite);
+                EnableSlot(slot);
             }
             else
             {
-                DisableSlot(i);
+                ChangeSpriteForSlot(slot, null);
+                DisableSlot(slot);
             }
         }
     }
     
-    #endregion
-
-    #region Builtin
-    
     public void Start()
     {
-        _panel = transform.Find("InventoryCanvas").Find("ItemPanel");
-        if (_panel == null)
-        {
-            Debug.LogError("No panel given");
-        }
         _inventoryData = inventoryController.playerContext.InventoryData;
         if (_inventoryData == null)
         {
@@ -52,74 +43,32 @@ public class InventoryUiController : MonoBehaviour, IObserver
             Debug.LogError("No Observable Subject given");
         }
         inventoryController.Register(this);
-
-        GetActiveSlots();
-        
+        UpdateState();
     }
-    
-    #endregion
 
-    #region Custom
-
-    private int CompareStateCount()
+    private void EnableSlot(Transform slot)
     {
-        List<Transform> activeSlots = GetActiveSlots();
-        
-        if (activeSlots.Count > _inventoryData.Count())
-        {
-            return 1;
-        }
-        else if (activeSlots.Count < _inventoryData.Count())
-        {
-            return -1;
-        }
-        else 
-        {
-            return 0;
-        }
-    }
-    
-    private void EnableSlot(int i)
-    {
-        Transform slot = UiSlots[i].GetChild(0).GetChild(0);
-        Image image = slot.GetComponent<Image>();
+        Image image = GetUiSlotItemImage(slot);
         image.enabled = true;
     }
     
-    private  void DisableSlot(int i)
+    private  void DisableSlot(Transform slot)
     {
-        Transform slot = UiSlots[i].GetChild(0).GetChild(0);
-        Image image = slot.GetComponent<Image>();
+        Image image = GetUiSlotItemImage(slot);
         image.enabled = false;
     }
     
-    private void ChangeItemSpriteForSlot(int index, Item item)
+    private void ChangeSpriteForSlot(Transform slot, Sprite sprite)
     {
-        Transform slot = UiSlots[index].GetChild(0).GetChild(0);
-        Image image = slot.GetComponent<Image>();
-        image.sprite = item.Sprite;
+        Image image = GetUiSlotItemImage(slot);
+        image.sprite = sprite;
     }
-    
-    
-    
-    private List<Transform> GetActiveSlots()
-    {
-        List<Transform> activeSlots = new List<Transform>();
-        foreach (Transform slot in UiSlots)
-        {
-            Transform sprite = slot.GetChild(0).GetChild(0);
-            if (sprite.GetComponent<Image>().isActiveAndEnabled)
-            {
-                activeSlots.Add(slot);
-            }
-        }
-        return activeSlots;
-    }
-    
-    private List<Transform> GetSlots()
+
+    private List<Transform> GetUiSlots()
     {
         List<Transform> slots = new List<Transform>();
-        foreach (Transform child in _panel)
+        Transform panel = transform.Find("InventoryCanvas").Find("ItemPanel");
+        foreach (Transform child in panel)
         {
             slots.Add(child);
         }
@@ -127,7 +76,15 @@ public class InventoryUiController : MonoBehaviour, IObserver
         return slots;
     }
 
-    #endregion
-    
-    
+    private Image GetUiSlotItemImage(Transform slot)
+    {
+        // Panel ... Sprite
+        Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+        if (image == null)
+        {
+            Debug.LogError("No image found");
+        }
+
+        return image;
+    }
 }
