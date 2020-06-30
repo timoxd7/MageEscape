@@ -1,15 +1,23 @@
-﻿using UnityEngine;
+﻿using MyBox;
+using UnityEngine;
 
 public class NumpadButton : BaseInteraction
 {
     public NumpadController numpadController;
     public NumpadController.NumpadButtonType numpadButtonType;
 
+    public bool playSound = false;
+    [ConditionalField(nameof(playSound))]
+    public SoundSourcePlayer soundSourcePlayer;
+
     public override void OnInteraction(PlayerContext context)
     {
         if (numpadController != null)
         {
             numpadController.ButtonPressed(numpadButtonType);
+
+            if (playSound && soundSourcePlayer != null)
+                soundSourcePlayer.Play();
         } else
         {
             Debug.LogError("No NumpadController given!", this);
