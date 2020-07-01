@@ -185,4 +185,6 @@ MonoBehaviour:
     type: 3}
   optionsOrigin: {x: 700, y: -280}
   optionsOffset: 100
+  autoAssignPlayer: 1
   player: {fileID: 0}
+  playerTag: Player

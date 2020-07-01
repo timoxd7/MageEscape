@@ -1,14 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MyBox;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Canvas))]
 public class DialogMessage : MonoBehaviour
 {
     [Header("Properties")]
+    public bool autoAssignGlobalProperties = true;
+    [ConditionalField(nameof(autoAssignGlobalProperties))]
+    public string dialogPropertiesTag = "GlobalDialogProperties";
+    [ConditionalField(nameof(autoAssignGlobalProperties), true)]
     public DialogProperties dialogProperties;
 
     [Header("Text")]
@@ -32,6 +34,9 @@ public class DialogMessage : MonoBehaviour
             Debug.LogError("Already Shown!", this);
             return;
         }
+
+        if (autoAssignGlobalProperties)
+            GetProperties();
 
         if (dialogProperties == null || !dialogProperties.Validate())
         {
@@ -129,6 +134,9 @@ public class DialogMessage : MonoBehaviour
             return;
         }
 
+        if (autoAssignGlobalProperties)
+            GetProperties();
+
         if (dialogProperties == null || !dialogProperties.Validate())
         {
             Debug.LogError("No or broken DialogProperties attached!", this);
@@ -155,5 +163,14 @@ public class DialogMessage : MonoBehaviour
         }
 
         currentlyShownObjects = null;
+    }
+
+    private void GetProperties()
+    {
+        GameObject dialogPropertiesObject = GameObject.FindGameObjectWithTag(dialogPropertiesTag);
+        if (dialogPropertiesObject != null)
+        {
+            dialogProperties = dialogPropertiesObject.GetComponent<DialogProperties>();
+        }
     }
 }
