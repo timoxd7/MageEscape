@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2242685464314553274}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Was wohl das Ende des Schl\xFCssels bedeutet?"
   options:
   - {fileID: 13322151}
@@ -312,7 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Ein R\xE4tsel dazu konnte ich h\xF6ren"
   options:
   - {fileID: 104736852}
@@ -463,7 +467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "...oder besser, sprengen k\xF6nnte?"
   options:
   - {fileID: 123958841}
@@ -569,7 +575,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: hier zu entkommen...
   options:
   - {fileID: 181472013}
@@ -846,7 +854,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Mich verlassen so langsam meine Kr\xE4fte"
   options:
   - {fileID: 354857625}
@@ -951,7 +961,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2242685464314553274}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Alle gegeben Jahre?
   options:
   - {fileID: 380254997}
@@ -1038,7 +1050,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Tag 12
   options:
   - {fileID: 400787140}
@@ -1144,7 +1158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Ich habe es leider nicht geschafft
   options:
   - {fileID: 423286881}
@@ -1289,7 +1305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Tag 17
   options:
   - {fileID: 432617969}
@@ -1394,7 +1412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2242685464314553274}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Welche Zahlen \xE4ndern sich wohl, alle gegeben Jahre?"
   options:
   - {fileID: 443708798}
@@ -1607,7 +1627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Den Anfang, so meinte er, finde man an der Wand...
   options:
   - {fileID: 465289800}
@@ -1794,7 +1816,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Ich wei\xDF jetzt zwar, wie ich weiter komme"
   options:
   - {fileID: 477039778}
@@ -1945,7 +1969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Tag 19
   options:
   - {fileID: 604551137}
@@ -2051,7 +2077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Doch nun, so nahe am Ziel, komme ich nicht mehr weiter...
   options:
   - {fileID: 621099923}
@@ -2157,7 +2185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "so m\xF6ge ich ihm weiter helfen k\xF6nnen."
   options:
   - {fileID: 652171834}
@@ -2263,7 +2293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Eine Wand, sie klang hohl, als ich gegen sie klopfte
   options:
   - {fileID: 708713412}
@@ -2414,7 +2446,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Doch falls das hier jemand lesen sollte
   options:
   - {fileID: 777404745}
@@ -2519,7 +2553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: ...zumindest hier konnte ich nichts weiter finden...
   options:
   - {fileID: 788840956}
@@ -2606,7 +2642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "So werden sie wissen, was sie tun m\xFCssen"
   options:
   - {fileID: 820761474}
@@ -2828,7 +2866,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Doch mit blo\xDFer Hand konnte ich sie nicht zerst\xF6ren..."
   options:
   - {fileID: 915716041}
@@ -3116,7 +3156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Und fast hatte ich den Fluch von ihm befreien k\xF6nnen"
   options:
   - {fileID: 1091644245}
@@ -3421,7 +3463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Tag 6
   options:
   - {fileID: 1141640208}
@@ -3556,7 +3600,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2242685464314553274}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Es muss ein Zahlenr\xE4tsel sein..."
   options:
   - {fileID: 1154601338}
@@ -3705,7 +3751,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Aber daf\xFCr m\xFCsste ich das Lampen-\xD6l abf\xFCllen k\xF6nnen..."
   options:
   - {fileID: 1158757371}
@@ -3811,7 +3859,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Ich habe heute einen W\xE4hrter reden h\xF6ren"
   options:
   - {fileID: 1181229820}
@@ -3962,7 +4012,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "So gibt dein anders seien, den Schl\xFCssel seines Endes!\""
   options:
   - {fileID: 1191111464}
@@ -4068,7 +4120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Doch das ist einfacher gesagt, als getan...
   options:
   - {fileID: 1200965035}
@@ -4359,7 +4413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Er wollte mich hier raus lassen, wenn ich ihn nur befreien w\xFCrde..."
   options:
   - {fileID: 1302007275}
@@ -4465,7 +4521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Tag 13
   options:
   - {fileID: 1330139537}
@@ -4891,7 +4949,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2242685464314553274}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Vielleicht ein versteckter Hinweis?...
   options:
   - {fileID: 1409332629}
@@ -4978,7 +5038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Wenn ich doch nur diese Wand irgendwie eindr\xFCcken..."
   options:
   - {fileID: 1410683894}
@@ -5223,7 +5285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Ich habe es gleich aufgeschrieben...
   options:
   - {fileID: 1487493155}
@@ -5374,7 +5438,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Tag 14
   options:
   - {fileID: 1495884563}
@@ -5525,7 +5591,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Das sagte er...
   options:
   - {fileID: 1573183084}
@@ -5632,7 +5700,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Ich habe geh\xF6rt, es solle einen Schl\xFCssel, versteckt hinter Zahlen
     geben..."
   options:
@@ -5738,7 +5808,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2242685464314553274}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Oder doch eine Eselsbr\xFCcke?..."
   options:
   - {fileID: 1583610433}
@@ -5825,7 +5897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: ...die Schriften hierzu findest du unter dem Tisch!
   options:
   - {fileID: 1586009233}
@@ -6021,7 +6095,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Ich habe alles geschafft, \xFCberall konnte ich seine R\xE4tsel l\xF6sen"
   options:
   - {fileID: 1601227865}
@@ -6127,7 +6203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Doch habe ich die W\xE4hrter oft etwas aufsagen geh\xF6rt:"
   options:
   - {fileID: 1612922525}
@@ -6266,7 +6344,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: So unterschiedlich bist du auch, alle gegeben Jahre!
   options:
   - {fileID: 1644803205}
@@ -6372,7 +6452,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Was damit gemeint ist, konnte ich nicht heraus finden.
   options:
   - {fileID: 1645126138}
@@ -6478,7 +6560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Ich habe noch etwas mehr aufgeschrieben...
   options:
   - {fileID: 1655107491}
@@ -6768,7 +6852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Tag 9
   options:
   - {fileID: 1699856050}
@@ -6875,7 +6961,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Ich werde eine Nachricht hinterlassen, f\xFCr diejenigen, die vielleicht
     nach mir kommen..."
   options:
@@ -6982,7 +7070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Was damit gemeint ist, konnte ich nichtmehr entziffern...
   options:
   - {fileID: 1778828309}
@@ -7088,7 +7178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "\"Oh Februar, Oh Februar, wie sch\xF6n du doch auch seiest."
   options:
   - {fileID: 1866123646}
@@ -7277,7 +7369,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Tag 4
   options:
   - {fileID: 1925444208}
@@ -7409,7 +7503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Er hat wohl irgendeinen Code ge\xE4ndert, sagte er zu den anderen W\xE4hrtern"
   options:
   - {fileID: 1942987387}
@@ -7625,7 +7721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Gezeichnet, Larry
   options:
   - {fileID: 1987345311}
@@ -7712,7 +7810,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Ich glaube, ich muss aufgeben und mich meinem Tod stellen...
   options:
   - {fileID: 2032553307}
@@ -7818,7 +7918,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Verstehst du den Sinn?
   options:
   - {fileID: 2072371532}
@@ -7922,7 +8024,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 45457464246886939}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Hey! Du darfst hier nicht durch!!!
   options:
   - {fileID: 884240967752950146}
@@ -7967,7 +8071,6 @@ GameObject:
   - component: {fileID: 884240967926552193}
   - component: {fileID: 884240967926552192}
   - component: {fileID: 884240967926552195}
-  - component: {fileID: 45457464246886939}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -8055,28 +8158,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &45457464246886939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884240967926552205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb7ea553dc32b248ae958415d993afa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 6760923220924640208, guid: 5a7c7f8277df248c8a582345a3004681,
-    type: 3}
-  textPosition: {x: -120, y: -280}
-  buttonPrefab: {fileID: 7510834247927383481, guid: ff81051abac644531937c483eda60cdb,
-    type: 3}
-  optionsOrigin: {x: 650, y: -280}
-  optionsOffset: 120
-  autoAssignPlayer: 1
-  player: {fileID: 0}
-  playerTag: Player
 --- !u!114 &355567306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8388,7 +8469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2242685464314553274}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Der Februar?
   options:
   - {fileID: 1439909051062738979}
@@ -8441,7 +8524,6 @@ GameObject:
   - component: {fileID: 1439909051284182816}
   - component: {fileID: 1439909051284182817}
   - component: {fileID: 1439909051284182818}
-  - component: {fileID: 2242685464314553274}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -8535,28 +8617,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2242685464314553274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439909051284182828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb7ea553dc32b248ae958415d993afa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 6760923220924640208, guid: 5a7c7f8277df248c8a582345a3004681,
-    type: 3}
-  textPosition: {x: -120, y: -280}
-  buttonPrefab: {fileID: 7510834247927383481, guid: ff81051abac644531937c483eda60cdb,
-    type: 3}
-  optionsOrigin: {x: 650, y: -280}
-  optionsOffset: 120
-  autoAssignPlayer: 1
-  player: {fileID: 0}
-  playerTag: Player
 --- !u!114 &1049981764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8700,7 +8760,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2980498236230148700}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Lieber Nachfolger
   options:
   - {fileID: 2718151562126778821}
@@ -8753,7 +8815,6 @@ GameObject:
   - component: {fileID: 2718151562590574278}
   - component: {fileID: 2718151562590574279}
   - component: {fileID: 2718151562590574276}
-  - component: {fileID: 2980498236230148700}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -8856,28 +8917,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2980498236230148700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2718151562590574282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb7ea553dc32b248ae958415d993afa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 6760923220924640208, guid: 5a7c7f8277df248c8a582345a3004681,
-    type: 3}
-  textPosition: {x: -120, y: -280}
-  buttonPrefab: {fileID: 7510834247927383481, guid: ff81051abac644531937c483eda60cdb,
-    type: 3}
-  optionsOrigin: {x: 650, y: -280}
-  optionsOffset: 120
-  autoAssignPlayer: 1
-  player: {fileID: 0}
-  playerTag: Player
 --- !u!1 &2766685405129063619
 GameObject:
   m_ObjectHideFlags: 0
@@ -8890,7 +8929,6 @@ GameObject:
   - component: {fileID: 2766685405129063631}
   - component: {fileID: 2766685405129063630}
   - component: {fileID: 2766685405129063629}
-  - component: {fileID: 3062789268254935125}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -9008,28 +9046,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3062789268254935125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2766685405129063619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb7ea553dc32b248ae958415d993afa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 6760923220924640208, guid: 5a7c7f8277df248c8a582345a3004681,
-    type: 3}
-  textPosition: {x: -120, y: -280}
-  buttonPrefab: {fileID: 7510834247927383481, guid: ff81051abac644531937c483eda60cdb,
-    type: 3}
-  optionsOrigin: {x: 650, y: -280}
-  optionsOffset: 120
-  autoAssignPlayer: 1
-  player: {fileID: 0}
-  playerTag: Player
 --- !u!1 &2766685405333326786
 GameObject:
   m_ObjectHideFlags: 0
@@ -9076,7 +9092,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 3062789268254935125}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Nun habe ich es schon so weit geschafft
   options:
   - {fileID: 2766685405333326796}
@@ -9196,7 +9214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  dialogProperties: {fileID: 45457464246886939}
+  dialogProperties: {fileID: 0}
   stayBackMessage: {fileID: 884240967752950144}
   playerResetPoint: {fileID: 3850824974042508824}
 --- !u!1 &3850824973391893137
@@ -10700,15 +10718,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6796805398523835098, guid: d6ade90f396755c42b43f8006323ec2c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6ade90f396755c42b43f8006323ec2c, type: 3}
---- !u!4 &1359375955405293280 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1359375955376413434, guid: d6ade90f396755c42b43f8006323ec2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 38329370}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1359375955405331136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1359375955376506586, guid: d6ade90f396755c42b43f8006323ec2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 38329370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1359375955405293280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1359375955376413434, guid: d6ade90f396755c42b43f8006323ec2c,
     type: 3}
   m_PrefabInstance: {fileID: 38329370}
   m_PrefabAsset: {fileID: 0}
@@ -12456,15 +12474,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5754540700685389708, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
---- !u!4 &5754540701432359029 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e,
-    type: 3}
-  m_PrefabInstance: {fileID: 931265498}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5754540701431936085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e,
+    type: 3}
+  m_PrefabInstance: {fileID: 931265498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5754540701432359029 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e,
     type: 3}
   m_PrefabInstance: {fileID: 931265498}
   m_PrefabAsset: {fileID: 0}
@@ -13314,15 +13332,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab52575a7bb2b244a9dd104afe101920, type: 3}
---- !u!1 &1604264726032295369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1604264725142624628, guid: ab52575a7bb2b244a9dd104afe101920,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258880189}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1604264726032792041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1604264725143045460, guid: ab52575a7bb2b244a9dd104afe101920,
+    type: 3}
+  m_PrefabInstance: {fileID: 1258880189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1604264726032295369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604264725142624628, guid: ab52575a7bb2b244a9dd104afe101920,
     type: 3}
   m_PrefabInstance: {fileID: 1258880189}
   m_PrefabAsset: {fileID: 0}
@@ -13415,15 +13433,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e12945ebe1b72244a54adef7e7dc627, type: 3}
---- !u!1 &5634942046174276195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5634942047087724044, guid: 2e12945ebe1b72244a54adef7e7dc627,
-    type: 3}
-  m_PrefabInstance: {fileID: 1454566511}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5634942046174639683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5634942047087761964, guid: 2e12945ebe1b72244a54adef7e7dc627,
+    type: 3}
+  m_PrefabInstance: {fileID: 1454566511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5634942046174276195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5634942047087724044, guid: 2e12945ebe1b72244a54adef7e7dc627,
     type: 3}
   m_PrefabInstance: {fileID: 1454566511}
   m_PrefabAsset: {fileID: 0}
@@ -13979,15 +13997,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c18611346c4c58945a94163404f2e1e2, type: 3}
---- !u!4 &7323286857741162309 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7323286858182524270, guid: c18611346c4c58945a94163404f2e1e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1706273323}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7323286857741323109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7323286858182877518, guid: c18611346c4c58945a94163404f2e1e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1706273323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7323286857741162309 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7323286858182524270, guid: c18611346c4c58945a94163404f2e1e2,
     type: 3}
   m_PrefabInstance: {fileID: 1706273323}
   m_PrefabAsset: {fileID: 0}
@@ -14382,15 +14400,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1604264725142624635, guid: ab52575a7bb2b244a9dd104afe101920, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ab52575a7bb2b244a9dd104afe101920, type: 3}
---- !u!1 &1604264726560856342 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1604264725142624628, guid: ab52575a7bb2b244a9dd104afe101920,
-    type: 3}
-  m_PrefabInstance: {fileID: 1804173410}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1604264726561211702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1604264725143045460, guid: ab52575a7bb2b244a9dd104afe101920,
+    type: 3}
+  m_PrefabInstance: {fileID: 1804173410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1604264726560856342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604264725142624628, guid: ab52575a7bb2b244a9dd104afe101920,
     type: 3}
   m_PrefabInstance: {fileID: 1804173410}
   m_PrefabAsset: {fileID: 0}
@@ -15821,15 +15839,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 95139111640682058, guid: f7902c99c75cad34f934860c6b6ddd9e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7902c99c75cad34f934860c6b6ddd9e, type: 3}
---- !u!4 &3854711043093630516 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4028250183184810, guid: f7902c99c75cad34f934860c6b6ddd9e,
-    type: 3}
-  m_PrefabInstance: {fileID: 3850824974183120798}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3851489631355946076 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1087969766243266, guid: f7902c99c75cad34f934860c6b6ddd9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3850824974183120798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3854711043093630516 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4028250183184810, guid: f7902c99c75cad34f934860c6b6ddd9e,
     type: 3}
   m_PrefabInstance: {fileID: 3850824974183120798}
   m_PrefabAsset: {fileID: 0}

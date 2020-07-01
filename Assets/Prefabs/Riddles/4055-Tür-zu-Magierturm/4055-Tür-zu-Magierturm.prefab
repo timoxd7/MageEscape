@@ -46,7 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Abgestellt, wo die ordnung Herrscht,
   options:
   - {fileID: 2127865648356267703}
@@ -233,7 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Aufgehangen, ob Mantel oder Umhang,
   options:
   - {fileID: 2127865648736824986}
@@ -339,7 +343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Dann musst du jetzt wohl dieses R\xE4tsel l\xF6sen. Hahaha..."
   options:
   - {fileID: 2127865648926692393}
@@ -445,7 +451,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: verraten wird es dir den Anfang,
   options:
   - {fileID: 2127865648959872867}
@@ -551,7 +559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Eine Menge des Lichtes ist im Gange,
   options:
   - {fileID: 2127865649140845536}
@@ -657,7 +667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Du findest dazu alles in diesem Gang auf dieser Ebene.
   options:
   - {fileID: 2127865649214843968}
@@ -763,7 +775,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Wenn du dir schon immer nicht den Code merken kannst,
   options:
   - {fileID: 2127865649351027182}
@@ -835,7 +849,6 @@ GameObject:
   - component: {fileID: 2127865649553238444}
   - component: {fileID: 2127865649553238445}
   - component: {fileID: 2127865649553238442}
-  - component: {fileID: 2127865649553238443}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -933,28 +946,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2127865649553238443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127865649553238441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb7ea553dc32b248ae958415d993afa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 6760923220924640208, guid: 5a7c7f8277df248c8a582345a3004681,
-    type: 3}
-  textPosition: {x: -120, y: -280}
-  buttonPrefab: {fileID: 7510834247927383481, guid: ff81051abac644531937c483eda60cdb,
-    type: 3}
-  optionsOrigin: {x: 650, y: -280}
-  optionsOffset: 120
-  autoAssignPlayer: 1
-  player: {fileID: 0}
-  playerTag: Player
 --- !u!1 &2127865649671698344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1024,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "Viel Spa\xDF... Haha..."
   options:
   - {fileID: 2127865649788971680}
@@ -1119,7 +1112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "F\xFCr Garry, der immer den Schl\xFCssel vergisst:"
   options:
   - {fileID: 2127865649983512086}
@@ -1206,7 +1201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: wird dir das Ende verraten.
   options:
   - {fileID: 2127865650194371162}
@@ -1312,7 +1309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 2127865649553238443}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: "gibt dir die Mitte des r\xE4tsels L\xF6sung,"
   options:
   - {fileID: 2127865650310772462}
