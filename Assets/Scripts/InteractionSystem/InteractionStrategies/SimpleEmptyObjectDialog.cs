@@ -1,6 +1,4 @@
 ﻿using MyBox;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SimpleEmptyObjectDialog : BaseInteraction
@@ -16,6 +14,11 @@ public class SimpleEmptyObjectDialog : BaseInteraction
     public bool useStandardText = true;
     [ConditionalField(nameof(useStandardText), true)]
     public string messageText = "Das werde ich wohl nicht benötigen";
+
+    [Header("Sound")]
+    public bool playSound = false;
+    [ConditionalField(nameof(playSound))]
+    public SoundSourcePlayer soundSourcePlayer;
 
     private DialogMessage dialogMessage;
 
@@ -40,6 +43,14 @@ public class SimpleEmptyObjectDialog : BaseInteraction
     {
         if (!useStandardText)
             dialogMessage.text = messageText;
+
+        if (soundSourcePlayer != null && playSound)
+        {
+            soundSourcePlayer.Play();
+        } else
+        {
+            Debug.LogError("No soundSourcePlayer given!");
+        }
 
         dialogMessage.Show();
     }
