@@ -20,12 +20,13 @@ public class ZoneLoader : MonoBehaviour
             Load(false);
         }
     }
-
+    [ButtonMethod]
     public void ActivateZone()
     {
         Load(true);
     }
 
+    [ButtonMethod]
     public void DeactivateZone()
     {
         Load(false);
