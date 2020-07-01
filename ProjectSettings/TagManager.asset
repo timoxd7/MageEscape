@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - SoundSystem
+  - EmptyObjectDialog
   layers:
   - Default
   - TransparentFX

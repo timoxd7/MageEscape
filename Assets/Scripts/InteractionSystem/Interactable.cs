@@ -9,11 +9,11 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     
     /* IBase */
     [Header("Properties")]
-    public bool isInteractable;
-    public bool holdToInteract;
+    public bool isInteractable = true;
+    public bool holdToInteract = false;
     [ConditionalField(nameof(holdToInteract))]
-    public float holdDuration;
-    public bool itemRequired;
+    public float holdDuration = 0.5f;
+    public bool itemRequired = false;
     [ConditionalField(nameof(itemRequired))]
     [Tooltip("The unique Id of the item required to use this interactable")]
     public string itemId;
