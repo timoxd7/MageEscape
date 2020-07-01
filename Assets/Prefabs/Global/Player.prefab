@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6780725592292929845}
   - component: {fileID: 4276454455776856400}
   - component: {fileID: 6113236260328363148}
+  - component: {fileID: 7848976282246834233}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -157,6 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bfe38bc1bc4d0da55001db4bfca559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interaction: {fileID: 6780725592292929845}
+  inventory: {fileID: 6113236260328363148}
 --- !u!114 &6113236260328363148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +173,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerContext: {fileID: 4276454455776856400}
+--- !u!114 &7848976282246834233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594957514225001857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7149b0a3ce3df00478512261312f72f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTexturesObject: {fileID: 8765203604804730845}
+  fadeImage: {fileID: 7800164902403754121}
+  fadeTime: 1
+  fadeOnStart: 1
 --- !u!1 &874185369156148119
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +569,7 @@ Canvas:
   m_GameObject: {fileID: 8765203604804730845}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 6312586590411751295}
   m_PlaneDistance: 0.4
   m_PixelPerfect: 1
@@ -560,7 +579,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_TargetDisplay: 0
 --- !u!114 &3043196625994432284
 MonoBehaviour:

@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1138242358565091811}
   - component: {fileID: 1138242358565091808}
-  - component: {fileID: 1138242358565091809}
+  - component: {fileID: 1712122937}
   m_Layer: 0
   m_Name: 3800 - breakingDoor
   m_TagString: Untagged
@@ -87,7 +87,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138242358565091810}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.717506, y: -8.727043, z: 25.96699}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -116,7 +116,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1138242358565091809
+--- !u!114 &1712122937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,11 +125,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1138242358565091810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1236df5537aa1cc49821f1f1dc50df81, type: 3}
+  m_Script: {fileID: 11500000, guid: c38ada7363ce1cf48b56c1af973fbefc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTo: 0
-  sceneObject: {fileID: 4087339906156327373}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1138242357863429664}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 194977126}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyThisAfterExecution: 1
+  executeAtStart: 0
 --- !u!114 &1138242357863429664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +172,7 @@ MonoBehaviour:
   holdDuration: 0
   itemRequired: 1
   itemId: boneToBreakDoor
-  detectionOption: 1
+  detectionOption: 4
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
@@ -177,39 +202,85 @@ MonoBehaviour:
           m_StringArgument: breakDoor
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5655742460417202924}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5655742460419130413}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 4087339906156327373}
-        m_MethodName: 
+      - m_Target: {fileID: 194977125}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5655742460419130412}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &194977124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087339906156327373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: e5d66e9a8f87fb24cb954eceb1afe23d, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 1
+  parentObject: {fileID: 0}
+--- !u!114 &194977125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087339906156327373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 194977124}
+  destroyIfNoClip: 1
+  playOnlyOnce: 1
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 0
+--- !u!114 &194977126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087339906156327373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineType: 0
+  eraseRenderer: 0
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &1138242356527587958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +322,8 @@ MonoBehaviour:
   autoDestroyThis: 1
   destroyOtherObject: 0
   otherObjectToDestroy: {fileID: 0}
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!1001 &1138242356527587955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -468,7 +541,7 @@ PrefabInstance:
     - target: {fileID: 4735221276782636782, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4735221276784898094, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
         type: 3}
@@ -480,10 +553,15 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 127
       objectReference: {fileID: 0}
+    - target: {fileID: 4735221276784898094, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4735221276784898095, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4735221276785060878, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
         type: 3}
@@ -557,21 +635,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5, type: 3}
+--- !u!1 &5655742460419130412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4735221276784898094, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1138242357880353794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5655742460419627020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4735221276785060878, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1138242357880353794}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &5655742460417202924 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4735221276782636782, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1138242357880353794}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &5655742460419130413 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 4735221276784898095, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5,
     type: 3}
   m_PrefabInstance: {fileID: 1138242357880353794}
   m_PrefabAsset: {fileID: 0}

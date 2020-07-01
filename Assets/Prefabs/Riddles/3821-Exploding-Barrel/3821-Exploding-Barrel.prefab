@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1361040708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361040709}
+  m_Layer: 0
+  m_Name: SoundOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1361040709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361040708}
+  m_LocalRotation: {x: 0.50000024, y: -0.49999976, z: -0.49999976, w: -0.50000024}
+  m_LocalPosition: {x: 27.589, y: 0.363, z: -4.685}
+  m_LocalScale: {x: 90, y: 90, z: 90}
+  m_Children: []
+  m_Father: {fileID: 2334317590475636087}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &2334317591948489463
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50,7 +80,13 @@ MonoBehaviour:
   uniqueId: fire_torch
   title: Torch on Fire
   description: An torch already ignited laying on the ground
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 051acd2c9bddd41e2bb6f0a646ae7156, type: 3}
+  consumable: 1
+  autoDestroyThis: 1
+  destroyOtherObject: 0
+  otherObjectToDestroy: {fileID: 0}
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!64 &1656648478
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80,7 +116,13 @@ MonoBehaviour:
   uniqueId: fire_torch_2
   title: Second Fire Torch
   description: Second torch to ignite wall explosion
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 051acd2c9bddd41e2bb6f0a646ae7156, type: 3}
+  consumable: 1
+  autoDestroyThis: 1
+  destroyOtherObject: 0
+  otherObjectToDestroy: {fileID: 0}
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1656648477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +510,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2334317590475636087}
   - component: {fileID: 2334317590475636084}
+  - component: {fileID: 609087580}
+  - component: {fileID: 609087581}
   m_Layer: 0
   m_Name: 3821-Exploding-Barrel
   m_TagString: Untagged
@@ -492,6 +536,7 @@ Transform:
   - {fileID: 2334317590324157034}
   - {fileID: 2334317590918104324}
   - {fileID: 2334317591563022551}
+  - {fileID: 1361040709}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -514,6 +559,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &609087580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334317590475636086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: cfed89b8bca29c442a1f1fc2b8a4bef4, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 0
+  parentObject: {fileID: 1361040708}
+--- !u!114 &609087581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334317590475636086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 609087580}
+  destroyIfNoClip: 1
+  playOnlyOnce: 1
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 0
 --- !u!1 &2334317590918104327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,15 +1735,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ba86548ddcd664e9df1d008a5c8f97, type: 3}
---- !u!1 &1196804003920908239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3530487434920885555, guid: 98ba86548ddcd664e9df1d008a5c8f97,
-    type: 3}
-  m_PrefabInstance: {fileID: 2334317591948489468}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1196804003921335279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3530487434921369875, guid: 98ba86548ddcd664e9df1d008a5c8f97,
+    type: 3}
+  m_PrefabInstance: {fileID: 2334317591948489468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1196804003920908239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3530487434920885555, guid: 98ba86548ddcd664e9df1d008a5c8f97,
     type: 3}
   m_PrefabInstance: {fileID: 2334317591948489468}
   m_PrefabAsset: {fileID: 0}

@@ -1,6 +1,4 @@
-﻿using System.Text;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
@@ -62,6 +60,7 @@ public class PauseMenu : MonoBehaviour
 
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        AudioListener.pause = false;
         gameIsPaused = false;
     }
 
@@ -70,6 +69,7 @@ public class PauseMenu : MonoBehaviour
         player.ReleasePlayer();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        AudioListener.pause = false;
         gameIsPaused = false;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -88,6 +88,7 @@ public class PauseMenu : MonoBehaviour
         
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.pause = true;
         gameIsPaused = true;
     }
 

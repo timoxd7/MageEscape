@@ -56,7 +56,7 @@ public class SoundSource : MonoBehaviour
         {
             if (!loopPlay)
             {
-                if (!audioSource.isPlaying && !paused)
+                if (!audioSource.isPlaying && !paused && !AudioListener.pause)
                 {
                     // Cleanup
                     soundSystem.RemovePlayingSource(this);

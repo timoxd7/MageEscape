@@ -58,16 +58,19 @@ public class HighlightDetection : BaseDetection
         if (!enabled)
             return;
 
-        foreach (Outline outlineInstance in outlineInstances)
+        if (!outlineInstances.IsNullOrEmpty())
         {
-            if (outlineInstance != null)
+            foreach (Outline outlineInstance in outlineInstances)
             {
-                outlineInstance.enabled = true;
-                // !!!
-            }
-            else
-            {
-                Debug.LogError("Can't create or locate outline Instance", gameObject);
+                if (outlineInstance != null)
+                {
+                    outlineInstance.enabled = true;
+                    // !!!
+                }
+                else
+                {
+                    Debug.LogError("Can't create or locate outline Instance", gameObject);
+                }
             }
         }
 
@@ -80,10 +83,13 @@ public class HighlightDetection : BaseDetection
         if (!enabled)
             return;
 
-        foreach (Outline outlineInstance in outlineInstances)
+        if (!outlineInstances.IsNullOrEmpty())
         {
-            if (outlineInstance != null)
-                outlineInstance.enabled = false;
+            foreach (Outline outlineInstance in outlineInstances)
+            {
+                if (outlineInstance != null)
+                    outlineInstance.enabled = false;
+            }
         }
 
         lastKnownHighlightVisible = false;
@@ -98,6 +104,9 @@ public class HighlightDetection : BaseDetection
 
         if (destroyOutlineInstancesOnDestruction)
         {
+            if (outlineInstances.IsNullOrEmpty())
+                return;
+
             foreach (Outline outlineInstance in outlineInstances)
             {
                 if (outlineInstance != null)

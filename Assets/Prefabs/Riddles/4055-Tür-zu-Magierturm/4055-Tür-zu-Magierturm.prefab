@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2127865648356267701}
   - component: {fileID: 2127865648356267703}
   - component: {fileID: 2127865648356267700}
+  - component: {fileID: 8503157262516638699}
   m_Layer: 0
   m_Name: Abgestellt, wo die ordnung Herrscht,
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865648356267703}
   - {fileID: 2127865648356267700}
+  - {fileID: 8503157262516638699}
 --- !u!114 &2127865648356267703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +88,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865648959872865}
+--- !u!114 &8503157262516638699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865648356267698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865648491742281
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +199,7 @@ GameObject:
   - component: {fileID: 2127865648736824984}
   - component: {fileID: 2127865648736824986}
   - component: {fileID: 2127865648736824987}
+  - component: {fileID: 4324025657638781709}
   m_Layer: 0
   m_Name: Aufgehangen, ob Mantel oder Umhang,
   m_TagString: Untagged
@@ -217,6 +238,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865648736824986}
   - {fileID: 2127865648736824987}
+  - {fileID: 4324025657638781709}
 --- !u!114 &2127865648736824986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +275,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865650310772460}
+--- !u!114 &4324025657638781709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865648736824985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865648926692388
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +305,7 @@ GameObject:
   - component: {fileID: 2127865648926692391}
   - component: {fileID: 2127865648926692393}
   - component: {fileID: 2127865648926692390}
+  - component: {fileID: 2395366112799701545}
   m_Layer: 0
   m_Name: "Dann musst du jetzt wohl dieses R\xE4tsel l\xF6sen. Hahaha..."
   m_TagString: Untagged
@@ -303,6 +344,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865648926692393}
   - {fileID: 2127865648926692390}
+  - {fileID: 2395366112799701545}
 --- !u!114 &2127865648926692393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +381,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865649351027180}
+--- !u!114 &2395366112799701545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865648926692388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865648959872862
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +411,7 @@ GameObject:
   - component: {fileID: 2127865648959872865}
   - component: {fileID: 2127865648959872867}
   - component: {fileID: 2127865648959872864}
+  - component: {fileID: 7898012041695616579}
   m_Layer: 0
   m_Name: verraten wird es dir den Anfang,
   m_TagString: Untagged
@@ -389,6 +450,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865648959872867}
   - {fileID: 2127865648959872864}
+  - {fileID: 7898012041695616579}
 --- !u!114 &2127865648959872867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +487,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865649140845534}
+--- !u!114 &7898012041695616579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865648959872862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865649140845535
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +517,7 @@ GameObject:
   - component: {fileID: 2127865649140845534}
   - component: {fileID: 2127865649140845536}
   - component: {fileID: 2127865649140845537}
+  - component: {fileID: 4287873485766488352}
   m_Layer: 0
   m_Name: Eine Menge des Lichtes ist im Gange,
   m_TagString: Untagged
@@ -475,6 +556,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865649140845536}
   - {fileID: 2127865649140845537}
+  - {fileID: 4287873485766488352}
 --- !u!114 &2127865649140845536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +593,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865649983512087}
+--- !u!114 &4287873485766488352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865649140845535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865649214844095
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +623,7 @@ GameObject:
   - component: {fileID: 2127865649214844094}
   - component: {fileID: 2127865649214843968}
   - component: {fileID: 2127865649214843969}
+  - component: {fileID: 7446893115356732218}
   m_Layer: 0
   m_Name: Du findest dazu alles in diesem Gang auf dieser Ebene.
   m_TagString: Untagged
@@ -561,6 +662,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865649214843968}
   - {fileID: 2127865649214843969}
+  - {fileID: 7446893115356732218}
 --- !u!114 &2127865649214843968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,6 +699,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865648926692391}
+--- !u!114 &7446893115356732218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865649214844095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865649351027181
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +729,7 @@ GameObject:
   - component: {fileID: 2127865649351027180}
   - component: {fileID: 2127865649351027182}
   - component: {fileID: 2127865649351027183}
+  - component: {fileID: 7587239328926141367}
   m_Layer: 0
   m_Name: Wenn du dir schon immer nicht den Code merken kannst,
   m_TagString: Untagged
@@ -647,6 +768,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865649351027182}
   - {fileID: 2127865649351027183}
+  - {fileID: 7587239328926141367}
 --- !u!114 &2127865649351027182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +805,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865650194371160}
+--- !u!114 &7587239328926141367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865649351027181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865649553238441
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,10 +945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb7ea553dc32b248ae958415d993afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textPrefab: {fileID: 6760923220924640208, guid: 711610d34e8112d4d9397ead6d30de62,
+  textPrefab: {fileID: 6760923220924640208, guid: 5a7c7f8277df248c8a582345a3004681,
     type: 3}
   textPosition: {x: -120, y: -280}
-  buttonPrefab: {fileID: 7510834247927383481, guid: cc5b81bdd8c39cc49901b524819de7ca,
+  buttonPrefab: {fileID: 7510834247927383481, guid: ff81051abac644531937c483eda60cdb,
     type: 3}
   optionsOrigin: {x: 650, y: -280}
   optionsOffset: 120
@@ -945,6 +1085,7 @@ GameObject:
   - component: {fileID: 2127865649983512089}
   - component: {fileID: 2127865649983512087}
   - component: {fileID: 2127865649983512086}
+  - component: {fileID: 22159176082049641}
   m_Layer: 0
   m_Name: "F\xFCr Garry, der immer den Schl\xFCssel vergisst:"
   m_TagString: Untagged
@@ -982,6 +1123,7 @@ MonoBehaviour:
   text: "F\xFCr Garry, der immer den Schl\xFCssel vergisst:"
   options:
   - {fileID: 2127865649983512086}
+  - {fileID: 22159176082049641}
 --- !u!114 &2127865649983512086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,6 +1142,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865649140845534}
+--- !u!114 &22159176082049641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865649983512084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865650194371161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1172,7 @@ GameObject:
   - component: {fileID: 2127865650194371160}
   - component: {fileID: 2127865650194371162}
   - component: {fileID: 2127865650194371163}
+  - component: {fileID: 7162990739097787985}
   m_Layer: 0
   m_Name: wird dir das Ende verraten.
   m_TagString: Untagged
@@ -1050,6 +1211,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865650194371162}
   - {fileID: 2127865650194371163}
+  - {fileID: 7162990739097787985}
 --- !u!114 &2127865650194371162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,6 +1248,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865648736824984}
+--- !u!114 &7162990739097787985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865650194371161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &2127865650310772461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1278,7 @@ GameObject:
   - component: {fileID: 2127865650310772460}
   - component: {fileID: 2127865650310772462}
   - component: {fileID: 2127865650310772463}
+  - component: {fileID: 3727679744515036296}
   m_Layer: 0
   m_Name: "gibt dir die Mitte des r\xE4tsels L\xF6sung,"
   m_TagString: Untagged
@@ -1136,6 +1317,7 @@ MonoBehaviour:
   options:
   - {fileID: 2127865650310772462}
   - {fileID: 2127865650310772463}
+  - {fileID: 3727679744515036296}
 --- !u!114 &2127865650310772462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,6 +1354,63 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 2127865648356267701}
+--- !u!114 &3727679744515036296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127865650310772461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
+--- !u!114 &1769942771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6792146355077407616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7de958a4b735dc740859a21fe8369514, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 1
+  parentObject: {fileID: 0}
+--- !u!114 &1769942772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6792146355077407616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 1769942771}
+  destroyIfNoClip: 1
+  playOnlyOnce: 0
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 0
 --- !u!114 &2127865649803380226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,6 +1449,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2127865649983512087}
         m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1769942772}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1382,15 +1632,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03020aab9adeeb54f9194380cf49b4a7, type: 3}
---- !u!1 &6991665736529232651 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8971399676813624536, guid: 03020aab9adeeb54f9194380cf49b4a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2127865648768845779}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6991665736529731371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8971399676813138168, guid: 03020aab9adeeb54f9194380cf49b4a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2127865648768845779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6991665736529232651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971399676813624536, guid: 03020aab9adeeb54f9194380cf49b4a7,
     type: 3}
   m_PrefabInstance: {fileID: 2127865648768845779}
   m_PrefabAsset: {fileID: 0}
@@ -1413,6 +1663,11 @@ PrefabInstance:
       propertyPath: description
       value: Key for the magic Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 178250772, guid: 04c52dc71c57d5b4085726a754d57ca5, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 795f2d6e6f4634c1aac78d8763ffcdcb,
+        type: 3}
     - target: {fileID: 500263194215899821, guid: 04c52dc71c57d5b4085726a754d57ca5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1899,15 +2154,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 571f5dec7e36f1d44bd714b42ba5c2ee, type: 3}
---- !u!1 &6792146355077407616 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4883379290849355137, guid: 571f5dec7e36f1d44bd714b42ba5c2ee,
-    type: 3}
-  m_PrefabInstance: {fileID: 2127865649803380225}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6792146355077644192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4883379290849458593, guid: 571f5dec7e36f1d44bd714b42ba5c2ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 2127865649803380225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6792146355077407616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4883379290849355137, guid: 571f5dec7e36f1d44bd714b42ba5c2ee,
     type: 3}
   m_PrefabInstance: {fileID: 2127865649803380225}
   m_PrefabAsset: {fileID: 0}
