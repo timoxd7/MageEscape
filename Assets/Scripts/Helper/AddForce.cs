@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using MyBox;
 using UnityEngine;
 
 public class AddForce : MonoBehaviour
@@ -9,6 +8,9 @@ public class AddForce : MonoBehaviour
 
     public void ApplyForce()
     {
+        if (rb == null)
+            rb = gameObject.GetOrAddComponent<Rigidbody>();
+
         rb.AddForce(force);
     }
 }

@@ -49,6 +49,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Was wohl das Ende des Schl\xFCssels bedeutet?"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 13322151}
   - {fileID: 13322150}
@@ -389,6 +392,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Ein R\xE4tsel dazu konnte ich h\xF6ren"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 104736852}
   - {fileID: 104736851}
@@ -542,6 +548,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "...oder besser, sprengen k\xF6nnte?"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 123958841}
   - {fileID: 123958840}
@@ -650,6 +659,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: hier zu entkommen...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 181472013}
   - {fileID: 181472015}
@@ -1000,6 +1012,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Mich verlassen so langsam meine Kr\xE4fte"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 354857625}
   - {fileID: 354857624}
@@ -1107,6 +1122,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Alle gegeben Jahre?
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 380254997}
   - {fileID: 380254996}
@@ -1196,6 +1214,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Tag 12
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 400787140}
   - {fileID: 400787139}
@@ -1304,6 +1325,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Ich habe es leider nicht geschafft
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 423286881}
   - {fileID: 423286883}
@@ -1451,6 +1475,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Tag 17
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 432617969}
   - {fileID: 432617968}
@@ -1558,6 +1585,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Welche Zahlen \xE4ndern sich wohl, alle gegeben Jahre?"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 443708798}
   - {fileID: 443708797}
@@ -1773,6 +1803,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Den Anfang, so meinte er, finde man an der Wand...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 465289800}
   - {fileID: 465289799}
@@ -1962,6 +1995,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Ich wei\xDF jetzt zwar, wie ich weiter komme"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 477039778}
   - {fileID: 477039777}
@@ -2115,6 +2151,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Tag 19
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 604551137}
   - {fileID: 604551136}
@@ -2332,6 +2371,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Doch nun, so nahe am Ziel, komme ich nicht mehr weiter...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 621099923}
   - {fileID: 621099922}
@@ -2511,6 +2553,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "so m\xF6ge ich ihm weiter helfen k\xF6nnen."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 652171834}
   - {fileID: 652171836}
@@ -2799,6 +2844,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Eine Wand, sie klang hohl, als ich gegen sie klopfte
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 708713412}
   - {fileID: 708713411}
@@ -2952,6 +3000,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Doch falls das hier jemand lesen sollte
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 777404745}
   - {fileID: 777404747}
@@ -3059,6 +3110,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: ...zumindest hier konnte ich nichts weiter finden...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 788840956}
   - {fileID: 788840955}
@@ -3148,6 +3202,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "So werden sie wissen, was sie tun m\xFCssen"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 820761474}
   - {fileID: 820761473}
@@ -3454,6 +3511,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Doch mit blo\xDFer Hand konnte ich sie nicht zerst\xF6ren..."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 915716041}
   - {fileID: 915716040}
@@ -3639,7 +3699,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3744,6 +3804,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Und fast hatte ich den Fluch von ihm befreien k\xF6nnen"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1091644245}
   - {fileID: 1091644244}
@@ -4051,6 +4114,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Tag 6
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1141640208}
   - {fileID: 1141640207}
@@ -4188,6 +4254,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Es muss ein Zahlenr\xE4tsel sein..."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1154601338}
 --- !u!114 &1154601338
@@ -4339,6 +4408,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Aber daf\xFCr m\xFCsste ich das Lampen-\xD6l abf\xFCllen k\xF6nnen..."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1158757371}
   - {fileID: 1158757370}
@@ -4447,6 +4519,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Ich habe heute einen W\xE4hrter reden h\xF6ren"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1181229820}
   - {fileID: 1181229819}
@@ -4600,6 +4675,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "So gibt dein anders seien, den Schl\xFCssel seines Endes!\""
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1191111464}
   - {fileID: 1191111466}
@@ -4708,6 +4786,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Doch das ist einfacher gesagt, als getan...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1200965035}
   - {fileID: 1200965034}
@@ -4941,7 +5022,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5001,6 +5082,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Er wollte mich hier raus lassen, wenn ich ihn nur befreien w\xFCrde..."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1302007275}
   - {fileID: 1302007274}
@@ -5109,6 +5193,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Tag 13
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1330139537}
   - {fileID: 1330139536}
@@ -5249,7 +5336,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5341,7 +5428,7 @@ Light:
     serializedVersion: 2
     m_Bits: 1024
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5433,7 +5520,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5537,6 +5624,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Vielleicht ein versteckter Hinweis?...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1409332629}
   - {fileID: 1409332628}
@@ -5626,6 +5716,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Wenn ich doch nur diese Wand irgendwie eindr\xFCcken..."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1410683894}
   - {fileID: 1410683893}
@@ -5727,7 +5820,7 @@ Transform:
   - {fileID: 490335350710266215}
   - {fileID: 2922107562956540136}
   m_Father: {fileID: 1913991112}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1471976252
 GameObject:
@@ -5873,6 +5966,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Ich habe es gleich aufgeschrieben...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1487493155}
   - {fileID: 1487493154}
@@ -6026,6 +6122,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Tag 14
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1495884563}
   - {fileID: 1495884562}
@@ -6179,6 +6278,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Das sagte er...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1573183084}
   - {fileID: 1573183083}
@@ -6289,6 +6391,9 @@ MonoBehaviour:
   dialogProperties: {fileID: 0}
   text: "Ich habe geh\xF6rt, es solle einen Schl\xFCssel, versteckt hinter Zahlen
     geben..."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1576385851}
   - {fileID: 1576385853}
@@ -6396,6 +6501,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Oder doch eine Eselsbr\xFCcke?..."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1583610433}
   - {fileID: 1583610432}
@@ -6485,6 +6593,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: ...die Schriften hierzu findest du unter dem Tisch!
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1586009233}
   - {fileID: 1586009235}
@@ -6683,6 +6794,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Ich habe alles geschafft, \xFCberall konnte ich seine R\xE4tsel l\xF6sen"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1601227865}
   - {fileID: 1601227864}
@@ -6791,6 +6905,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Doch habe ich die W\xE4hrter oft etwas aufsagen geh\xF6rt:"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1612922525}
   - {fileID: 1612922527}
@@ -6932,6 +7049,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: So unterschiedlich bist du auch, alle gegeben Jahre!
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1644803205}
   - {fileID: 1644803207}
@@ -7040,6 +7160,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Was damit gemeint ist, konnte ich nicht heraus finden.
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1645126138}
   - {fileID: 1645126140}
@@ -7148,6 +7271,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Ich habe noch etwas mehr aufgeschrieben...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1655107491}
   - {fileID: 1655107493}
@@ -7489,6 +7615,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Tag 9
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1699856050}
   - {fileID: 1699856049}
@@ -7599,6 +7728,9 @@ MonoBehaviour:
   dialogProperties: {fileID: 0}
   text: "Ich werde eine Nachricht hinterlassen, f\xFCr diejenigen, die vielleicht
     nach mir kommen..."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1729462314}
   - {fileID: 1729462313}
@@ -7707,6 +7839,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Was damit gemeint ist, konnte ich nichtmehr entziffern...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1778828309}
   - {fileID: 1778828311}
@@ -7815,6 +7950,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "\"Oh Februar, Oh Februar, wie sch\xF6n du doch auch seiest."
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1866123646}
   - {fileID: 1866123648}
@@ -7948,12 +8086,9 @@ Transform:
   - {fileID: 1130591419}
   - {fileID: 3949618021037765336}
   - {fileID: 800616029647056150}
-  - {fileID: 8669240702067686978}
-  - {fileID: 6129283680860304932}
-  - {fileID: 6129283682748860955}
-  - {fileID: 6129283682611752037}
   - {fileID: 1604264725974866076}
   - {fileID: 1427878945}
+  - {fileID: 5643223975491375388}
   m_Father: {fileID: 1632606549}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8006,6 +8141,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Tag 4
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1925444208}
   - {fileID: 2089535539}
@@ -8140,6 +8278,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: "Er hat wohl irgendeinen Code ge\xE4ndert, sagte er zu den anderen W\xE4hrtern"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1942987387}
   - {fileID: 1942987386}
@@ -8356,6 +8497,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Gezeichnet, Larry
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1987345311}
   - {fileID: 1987345313}
@@ -8445,6 +8589,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Ich glaube, ich muss aufgeben und mich meinem Tod stellen...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 2032553307}
   - {fileID: 2032553306}
@@ -8553,6 +8700,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Verstehst du den Sinn?
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 2072371532}
   - {fileID: 2072371534}
@@ -8659,6 +8809,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Hey! Du darfst hier nicht durch!!!
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 884240967752950146}
 --- !u!114 &884240967752950146
@@ -9115,6 +9268,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Der Februar?
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1439909051062738979}
   - {fileID: 1439909051062738990}
@@ -9456,6 +9612,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Lieber Nachfolger
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 2718151562126778821}
   - {fileID: 1523903904}
@@ -9788,6 +9947,9 @@ MonoBehaviour:
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
   text: Nun habe ich es schon so weit geschafft
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 2766685405333326796}
   - {fileID: 2766685405333326788}
@@ -9924,7 +10086,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3850824973391893136
 Transform:
@@ -11412,15 +11574,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6796805398523835098, guid: d6ade90f396755c42b43f8006323ec2c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6ade90f396755c42b43f8006323ec2c, type: 3}
---- !u!4 &1359375955405293280 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1359375955376413434, guid: d6ade90f396755c42b43f8006323ec2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 38329370}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1359375955405331136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1359375955376506586, guid: d6ade90f396755c42b43f8006323ec2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 38329370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1359375955405293280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1359375955376413434, guid: d6ade90f396755c42b43f8006323ec2c,
     type: 3}
   m_PrefabInstance: {fileID: 38329370}
   m_PrefabAsset: {fileID: 0}
@@ -11525,7 +11687,12 @@ PrefabInstance:
     - target: {fileID: 2922107562325671189, guid: 55320ad6284175349b1008aaf7238c7a,
         type: 3}
       propertyPath: m_Lightmapping
-      value: 1
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922107562325671189, guid: 55320ad6284175349b1008aaf7238c7a,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 2922107563029984134, guid: 55320ad6284175349b1008aaf7238c7a,
         type: 3}
@@ -11858,81 +12025,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 300174057}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &324924532
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1913991112}
-    m_Modifications:
-    - target: {fileID: 6129283682364654641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_Name
-      value: Spear
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.43578
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.215
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.552205
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fae58f9aaf72c194cb3776beafb8b753, type: 3}
---- !u!4 &6129283682611752037 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-    type: 3}
-  m_PrefabInstance: {fileID: 324924532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &340666241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12213,156 +12305,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17d5fff6df349f44aaaafb4929bfe469,
     type: 3}
   m_PrefabInstance: {fileID: 437831263}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &456004106
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1913991112}
-    m_Modifications:
-    - target: {fileID: 6129283682364654641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_Name
-      value: Spear (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.43578
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.221
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.888
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fae58f9aaf72c194cb3776beafb8b753, type: 3}
---- !u!4 &6129283682748860955 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-    type: 3}
-  m_PrefabInstance: {fileID: 456004106}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &598865861
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1913991112}
-    m_Modifications:
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.412
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.562
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.50000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.49999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669240701490058663, guid: 797162f1e2611d14bac618083727de40,
-        type: 3}
-      propertyPath: m_Name
-      value: WeaponRack_Big
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 797162f1e2611d14bac618083727de40, type: 3}
---- !u!4 &8669240702067686978 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8669240701490022791, guid: 797162f1e2611d14bac618083727de40,
-    type: 3}
-  m_PrefabInstance: {fileID: 598865861}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &606143303
 PrefabInstance:
@@ -12806,15 +12748,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ebd52a346641ab469fe9220a7c27ff8, type: 3}
---- !u!4 &5905313354316622571 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5905313355104743899, guid: 9ebd52a346641ab469fe9220a7c27ff8,
-    type: 3}
-  m_PrefabInstance: {fileID: 822795056}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5905313354316920523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5905313355104841211, guid: 9ebd52a346641ab469fe9220a7c27ff8,
+    type: 3}
+  m_PrefabInstance: {fileID: 822795056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5905313354316622571 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5905313355104743899, guid: 9ebd52a346641ab469fe9220a7c27ff8,
     type: 3}
   m_PrefabInstance: {fileID: 822795056}
   m_PrefabAsset: {fileID: 0}
@@ -13053,7 +12995,7 @@ PrefabInstance:
     - target: {fileID: 1604264725143045460, guid: ab52575a7bb2b244a9dd104afe101920,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1604264725143045460, guid: ab52575a7bb2b244a9dd104afe101920,
         type: 3}
@@ -13082,15 +13024,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab52575a7bb2b244a9dd104afe101920, type: 3}
---- !u!1 &1604264725974893756 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1604264725142624628, guid: ab52575a7bb2b244a9dd104afe101920,
-    type: 3}
-  m_PrefabInstance: {fileID: 918330824}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1604264725974866076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1604264725143045460, guid: ab52575a7bb2b244a9dd104afe101920,
+    type: 3}
+  m_PrefabInstance: {fileID: 918330824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1604264725974893756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604264725142624628, guid: ab52575a7bb2b244a9dd104afe101920,
     type: 3}
   m_PrefabInstance: {fileID: 918330824}
   m_PrefabAsset: {fileID: 0}
@@ -13174,15 +13116,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5754540700685389708, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
---- !u!4 &5754540701432359029 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e,
-    type: 3}
-  m_PrefabInstance: {fileID: 931265498}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5754540701431936085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e,
+    type: 3}
+  m_PrefabInstance: {fileID: 931265498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5754540701432359029 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e,
     type: 3}
   m_PrefabInstance: {fileID: 931265498}
   m_PrefabAsset: {fileID: 0}
@@ -14133,15 +14075,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e12945ebe1b72244a54adef7e7dc627, type: 3}
---- !u!1 &5634942046174276195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5634942047087724044, guid: 2e12945ebe1b72244a54adef7e7dc627,
-    type: 3}
-  m_PrefabInstance: {fileID: 1454566511}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5634942046174639683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5634942047087761964, guid: 2e12945ebe1b72244a54adef7e7dc627,
+    type: 3}
+  m_PrefabInstance: {fileID: 1454566511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5634942046174276195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5634942047087724044, guid: 2e12945ebe1b72244a54adef7e7dc627,
     type: 3}
   m_PrefabInstance: {fileID: 1454566511}
   m_PrefabAsset: {fileID: 0}
@@ -14506,15 +14448,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 571f5dec7e36f1d44bd714b42ba5c2ee, type: 3}
---- !u!4 &4883379289280381074 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4883379290849458593, guid: 571f5dec7e36f1d44bd714b42ba5c2ee,
-    type: 3}
-  m_PrefabInstance: {fileID: 1603942707}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4883379289280027826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4883379290849355137, guid: 571f5dec7e36f1d44bd714b42ba5c2ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 1603942707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4883379289280381074 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4883379290849458593, guid: 571f5dec7e36f1d44bd714b42ba5c2ee,
     type: 3}
   m_PrefabInstance: {fileID: 1603942707}
   m_PrefabAsset: {fileID: 0}
@@ -15112,81 +15054,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1804173410}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1806757429
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1913991112}
-    m_Modifications:
-    - target: {fileID: 6129283682364654641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_Name
-      value: Spear (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.43578
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.217
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.234
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fae58f9aaf72c194cb3776beafb8b753, type: 3}
---- !u!4 &6129283680860304932 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6129283682364954641, guid: fae58f9aaf72c194cb3776beafb8b753,
-    type: 3}
-  m_PrefabInstance: {fileID: 1806757429}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1894769349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15521,6 +15388,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2035572524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1629636204334724588
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1913991112}
+    m_Modifications:
+    - target: {fileID: 2481205462653486566, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_Name
+      value: SpearHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5369346a7bf901249a8049fdc0a18d72, type: 3}
+--- !u!4 &5643223975491375388 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6398879703899120880, guid: 5369346a7bf901249a8049fdc0a18d72,
+    type: 3}
+  m_PrefabInstance: {fileID: 1629636204334724588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3850824973648562704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15582,15 +15524,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2532f10600de29418d706af66b4b7d3, type: 3}
---- !u!1 &3852461769238144276 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1778427119070980, guid: f2532f10600de29418d706af66b4b7d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 3850824973648562704}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3846098665303685282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4774848186364594, guid: f2532f10600de29418d706af66b4b7d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3850824973648562704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3852461769238144276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1778427119070980, guid: f2532f10600de29418d706af66b4b7d3,
     type: 3}
   m_PrefabInstance: {fileID: 3850824973648562704}
   m_PrefabAsset: {fileID: 0}
@@ -15731,7 +15673,7 @@ PrefabInstance:
     - target: {fileID: 936655011711489263, guid: 5e10be2f5a748844dbd0b2b7e6fafd4a,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e10be2f5a748844dbd0b2b7e6fafd4a, type: 3}
