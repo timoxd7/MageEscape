@@ -25,6 +25,12 @@ public class DialogMessage : MonoBehaviour
     public List<DialogOption> options;
 
 
+    [Header("Sound Play")]
+    public bool playSoundOnShow = false;
+    [ConditionalField(nameof(playSoundOnShow))]
+    public SoundSourcePlayer soundSourcePlayer;
+
+
     private List<SelfDestruct> currentlyShownObjects;
     private bool currentShownState = false;
 
@@ -126,6 +132,9 @@ public class DialogMessage : MonoBehaviour
                 currentlyShownObjects.Add(optionDestruct);
             }
         }
+
+        if (playSoundOnShow && soundSourcePlayer != null)
+            soundSourcePlayer.Play();
     }
 
     public void Hide()
