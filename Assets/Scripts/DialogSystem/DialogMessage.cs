@@ -158,7 +158,7 @@ public class DialogMessage : MonoBehaviour
         {
             if (currentObject != null)
             {
-                Debug.Log("Destruct: ", currentObject);
+                //Debug.Log("Destruct: ", currentObject);
                 currentObject.DestroyThis();
             } else
                 Debug.LogError("Object already destroyed (?)!", this);
