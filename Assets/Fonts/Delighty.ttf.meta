@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 716e7963f69134bc983fe77594949ed3
+guid: c8b2910b50ddf4dc1b3ecc62aba022e1
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: attack of the cucumbers
+  fontName: Delighty
   fontNames:
-  - attack of the cucumbers
+  - Delighty
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
