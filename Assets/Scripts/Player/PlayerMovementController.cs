@@ -72,7 +72,8 @@ public class PlayerMovementController : MonoBehaviour
     {
         // Add horizontal movement speed
         Vector3 move = character.right * horizontalSpeed.x + character.forward * horizontalSpeed.y;
-        float moveAbsolute = move.magnitude;
+        Vector2 horizontalMove = new Vector2(move.x, move.z);
+        float moveAbsolute = horizontalMove.magnitude;
         move *= movementSpeed;
 
         if (sprintEnabled)
