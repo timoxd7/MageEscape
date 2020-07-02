@@ -16,6 +16,9 @@ public class DialogMessage : MonoBehaviour
     [Header("Text")]
     [Tooltip("The Text in the Middle of the dialog for the current Message")]
     public string text;
+    public string nextOptionText = "Weiter";
+    public string backOptionText = "Zurück";
+    public string closeOptionText = "Schließen";
     
 
     [Header("Options")]
@@ -173,4 +176,125 @@ public class DialogMessage : MonoBehaviour
             dialogProperties = dialogPropertiesObject.GetComponent<DialogProperties>();
         }
     }
+
+#if UNITY_EDITOR
+    [ButtonMethod]
+    [ExecuteInEditMode]
+    public void AddMessageBehind()
+    {
+        GameObject emptyObject = new GameObject();
+        GameObject nextMessageObject = Instantiate(emptyObject, transform.parent);
+        DestroyImmediate(emptyObject);
+        nextMessageObject.name = "NewNextMessage";
+        DialogMessage nextMessage = nextMessageObject.AddComponent<DialogMessage>();
+        if (nextMessage.options.IsNullOrEmpty())
+            nextMessage.options = new List<DialogOption>();
+
+        // Add Close, Previous and Next to new Messag
+        DialogOption nextOption = nextMessageObject.AddComponent<DialogOption>();
+        nextOption.optionName = nextOptionText;
+        nextOption.eventType = DialogOption.EventType.DialogMessage;
+        nextMessage.options.Add(nextOption);
+
+        DialogOption backOption = nextMessageObject.AddComponent<DialogOption>();
+        backOption.optionName = backOptionText;
+        backOption.eventType = DialogOption.EventType.DialogMessage;
+        backOption.dialogMessage = this;
+        nextMessage.options.Add(backOption);
+
+        DialogOption closeOption = nextMessageObject.AddComponent<DialogOption>();
+        closeOption.optionName = closeOptionText;
+        closeOption.eventType = DialogOption.EventType.Close;
+        nextMessage.options.Add(closeOption);
+
+
+        // Add message to this next option
+        DialogOption[] possiblyNext = gameObject.GetComponents<DialogOption>();
+
+        bool nextOptionFound = false;
+        if (!possiblyNext.IsNullOrEmpty())
+        {
+            for (int i = 0; i < possiblyNext.Length; i++)
+            {
+                if (possiblyNext[i].optionName == nextOptionText)
+                {
+                    possiblyNext[i].eventType = DialogOption.EventType.DialogMessage;
+                    possiblyNext[i].dialogMessage = nextMessage;
+                    nextOptionFound = true;
+                }
+            }
+        }
+
+        if (!nextOptionFound)
+        {
+            DialogOption thisNextOption = gameObject.AddComponent<DialogOption>();
+            thisNextOption.optionName = nextOptionText;
+            thisNextOption.eventType = DialogOption.EventType.DialogMessage;
+            thisNextOption.dialogMessage = nextMessage;
+
+            if (options.IsNullOrEmpty())
+                options = new List<DialogOption>();
+
+            options.Insert(0, thisNextOption);
+        }
+    }
+
+    [ButtonMethod]
+    [ExecuteInEditMode]
+    public void ApplyTitleAsText()
+    {
+        text = gameObject.name;
+    }
+
+    [ButtonMethod]
+    [ExecuteInEditMode]
+    public void AddAllOptions()
+    {
+        DialogOption[] foundOptions = gameObject.GetComponents<DialogOption>();
+
+        int oldOptionsCount = options.Count;
+        int arrayLength = foundOptions.Length;
+        for (int i = oldOptionsCount; i < arrayLength + oldOptionsCount; i++)
+        {
+            options.Add(foundOptions[i]);
+        }
+    }
+
+    [ButtonMethod]
+    [ExecuteInEditMode]
+    public void RemoveAllOptionReferences()
+    {
+        if (!options.IsNullOrEmpty())
+            options.Clear();
+    }
+
+    [ButtonMethod]
+    [ExecuteInEditMode]
+    public void RemoveAllOptions()
+    {
+        RemoveAllOptionReferences();
+
+        DialogOption[] optionsToDelete = gameObject.GetComponents<DialogOption>();
+
+        if (!optionsToDelete.IsNullOrEmpty())
+        {
+            for (int i = 0; i < optionsToDelete.Length; i++)
+            {
+                DestroyImmediate(optionsToDelete[i]);
+            }
+        }
+    }
+
+    [ButtonMethod]
+    [ExecuteInEditMode]
+    public void AddCloseOption()
+    {
+        DialogOption closeOption = gameObject.AddComponent<DialogOption>();
+
+        closeOption.optionName = closeOptionText;
+        closeOption.eventType = DialogOption.EventType.Close;
+
+        options.Add(closeOption);
+    }
+#endif
 }

@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogProperties: {fileID: 6339799184680704460}
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
   text: Example
   options:
   - {fileID: 6566097554023651925}
@@ -78,7 +80,6 @@ GameObject:
   - component: {fileID: 6566097554155187542}
   - component: {fileID: 6566097554155187543}
   - component: {fileID: 6566097554155187540}
-  - component: {fileID: 6339799184680704460}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -166,25 +167,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6339799184680704460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6566097554155187546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb7ea553dc32b248ae958415d993afa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 6760923220924640208, guid: 5a7c7f8277df248c8a582345a3004681,
-    type: 3}
-  textPosition: {x: -200, y: -280}
-  buttonPrefab: {fileID: 7510834247927383481, guid: ff81051abac644531937c483eda60cdb,
-    type: 3}
-  optionsOrigin: {x: 700, y: -280}
-  optionsOffset: 100
-  autoAssignPlayer: 1
-  player: {fileID: 0}
-  playerTag: Player
