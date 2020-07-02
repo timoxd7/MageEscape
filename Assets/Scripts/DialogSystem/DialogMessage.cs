@@ -3,7 +3,6 @@ using MyBox;
 using TMPro;
 using UnityEngine;
 
-[RequireComponent(typeof(Canvas))]
 public class DialogMessage : MonoBehaviour
 {
     [Header("Properties")]
