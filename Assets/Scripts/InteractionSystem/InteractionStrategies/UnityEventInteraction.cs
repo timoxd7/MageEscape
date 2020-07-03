@@ -7,6 +7,11 @@ public class UnityEventInteraction : BaseInteraction
 
     public override void OnInteraction(PlayerContext context)
     {
+        InvokeWithoutInteraction();
+    }
+
+    public void InvokeWithoutInteraction()
+    {
         if (unityEvent == null)
         {
             Debug.LogError("No UnityEvent given!", this);

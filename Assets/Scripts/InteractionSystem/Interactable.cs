@@ -139,7 +139,8 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
                     context.inventory.RemoveItem(required.UniqeId);
                 }
                 interactionBehaviour.OnInteraction(context);
-            } else if (addNoRequiredItemInteraction)
+            } 
+            else if (addNoRequiredItemInteraction)
             {
                 noItemInteractionBehaviour.OnInteraction(context);
             }

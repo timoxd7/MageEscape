@@ -35,6 +35,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &4270132068486540538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +72,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &2033721780692168286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +109,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1 &2408090714645622608
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +269,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1 &4815829536489989812
 GameObject:
   m_ObjectHideFlags: 0

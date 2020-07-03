@@ -1,13 +1,11 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ColorRiddleManager : MonoBehaviour
 {
     private List<RiddleColor> values;
-    private const string PassPhrase = "rbbgbrgr";
+    public string PassPhrase = "rrbgbrgr";
     
     public UnityEvent unityEvent;
 
@@ -53,7 +51,7 @@ public class ColorRiddleManager : MonoBehaviour
             case RiddleColor.Green:
                 return "g"; 
             default:
-                return "X";
+                return "-";
         }
     }
 }
