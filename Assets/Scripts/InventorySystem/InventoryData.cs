@@ -41,4 +41,9 @@ public class InventoryData
     {
         return _items.Count;
     }
+    
+    public List<Item> GetAll()
+    {
+        return _items;
+    }
 }

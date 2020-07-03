@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryController : BaseObservable
@@ -28,6 +29,11 @@ public class InventoryController : BaseObservable
             Debug.Log("Inventory Full");
             return false;
         }
+        if (null != _inventoryData.Contains(item.UniqeId))
+        {
+            Debug.Log("Inventory already contains " + item.UniqeId);
+            return false;
+        }
 
         _inventoryData.Add(item);
         Notify();
@@ -45,6 +51,11 @@ public class InventoryController : BaseObservable
     {
         Item contains = _inventoryData.Contains(itemId);
         return contains;
+    }
+
+    public List<Item> GetAllItems()
+    {
+        return _inventoryData.GetAll();
     }
 
     #endregion
