@@ -35,6 +35,7 @@ public class DialogMessage : MonoBehaviour
     private bool currentShownState = false;
 
 
+    [ButtonMethod]
     public void Show()
     {
         if (currentShownState)
@@ -137,6 +138,7 @@ public class DialogMessage : MonoBehaviour
             soundSourcePlayer.Play();
     }
 
+    [ButtonMethod]
     public void Hide()
     {
         if (!currentShownState)
