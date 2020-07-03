@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using MyBox;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -37,6 +39,13 @@ public class PlayerMovementController : MonoBehaviour
     public bool sneakEnabled = true;
     public bool sprintEnabled = true;
 
+    [Header("Sound")]
+    public float stepSoundDistance = 1f;
+    public float stepSoundSneakMultiplyer = 1f;
+    public float stepSoundRunMultiplyer = 1f;
+    public List<SoundSourcePlayer> stepSounds;
+    public List<SoundSourcePlayer> jumpSounds;
+
 
     private Vector2 horizontalSpeed;
     private float yVelocity = 0f;
@@ -49,6 +58,9 @@ public class PlayerMovementController : MonoBehaviour
     private bool sneaking = false;
     private float currentHeight;
 
+    // Incremental Move Distance since last sound
+    private float unusedMoveDistance = 0f;
+
     private void Start()
     {
         normalHeight = characterController.height;
@@ -60,6 +72,8 @@ public class PlayerMovementController : MonoBehaviour
     {
         // Add horizontal movement speed
         Vector3 move = character.right * horizontalSpeed.x + character.forward * horizontalSpeed.y;
+        Vector2 horizontalMove = new Vector2(move.x, move.z);
+        float moveAbsolute = horizontalMove.magnitude;
         move *= movementSpeed;
 
         if (sprintEnabled)
@@ -67,6 +81,7 @@ public class PlayerMovementController : MonoBehaviour
             if ((sprinting && !sneaking) || (sprinting && sneaking && !lockSprintAtSneaking))
             {
                 move *= sprintMultiplyer;
+                moveAbsolute *= sprintMultiplyer * stepSoundSneakMultiplyer;
             }
 
         }
@@ -74,6 +89,7 @@ public class PlayerMovementController : MonoBehaviour
         if (sneaking && sneakEnabled)
         {
             move *= sneakingSpeedMultiplyer;
+            moveAbsolute *= sneakingSpeedMultiplyer * stepSoundSneakMultiplyer;
         }
 
         // Add gravity
@@ -94,6 +110,15 @@ public class PlayerMovementController : MonoBehaviour
 
         // Apply movement to character
         characterController.Move(move * Time.deltaTime);
+
+        // Apply Sound
+        unusedMoveDistance += moveAbsolute;
+
+        if (unusedMoveDistance >= stepSoundDistance)
+        {
+            unusedMoveDistance -= stepSoundDistance;
+            PlayStepSound();
+        }
 
 
         // Apply Sneeking if needed
@@ -170,6 +195,7 @@ public class PlayerMovementController : MonoBehaviour
             if (isGrounded)
             {
                 yVelocity = Mathf.Sqrt(currentJumpHeight * -2f * gravity); // Because physics!
+                PlayJumpSound();
             }
         }
     }
@@ -177,5 +203,42 @@ public class PlayerMovementController : MonoBehaviour
     private void CheckGrounding()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+    }
+
+    private void PlayStepSound()
+    {
+        if (!stepSounds.IsNullOrEmpty())
+        {
+            PlayRandom(stepSounds);
+        } else
+        {
+            Debug.LogError("No StepSounds given!", this);
+        }
+    }
+
+    private void PlayJumpSound()
+    {
+        if (!jumpSounds.IsNullOrEmpty())
+        {
+            PlayRandom(jumpSounds);
+        } else
+        {
+            Debug.LogError("No JumpSounds given!");
+        }
+    }
+
+    private void PlayRandom(List<SoundSourcePlayer> soundSourcePlayer)
+    {
+        if (soundSourcePlayer.Count == 0)
+            return;
+
+        int randomIndex = Random.Range(0, soundSourcePlayer.Count);
+
+        if (randomIndex > soundSourcePlayer.Count - 1)
+            randomIndex = soundSourcePlayer.Count - 1;
+        else if (randomIndex < 0)
+            randomIndex = 0;
+
+        soundSourcePlayer[randomIndex].Play();
     }
 }

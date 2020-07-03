@@ -25,10 +25,17 @@ public class DialogMessage : MonoBehaviour
     public List<DialogOption> options;
 
 
+    [Header("Sound Play")]
+    public bool playSoundOnShow = false;
+    [ConditionalField(nameof(playSoundOnShow))]
+    public SoundSourcePlayer soundSourcePlayer;
+
+
     private List<SelfDestruct> currentlyShownObjects;
     private bool currentShownState = false;
 
 
+    [ButtonMethod]
     public void Show()
     {
         if (currentShownState)
@@ -126,8 +133,12 @@ public class DialogMessage : MonoBehaviour
                 currentlyShownObjects.Add(optionDestruct);
             }
         }
+
+        if (playSoundOnShow && soundSourcePlayer != null)
+            soundSourcePlayer.Play();
     }
 
+    [ButtonMethod]
     public void Hide()
     {
         if (!currentShownState)

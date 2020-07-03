@@ -34,6 +34,10 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     public InteractionOption interactionOption;
     [ConditionalField(nameof(interactionOption), false, InteractionOption.Custom)]
     public BaseInteraction interactionBehaviour;
+    [ConditionalField(nameof(itemRequired))]
+    public bool addNoRequiredItemInteraction = false;
+    [ConditionalField(nameof(addNoRequiredItemInteraction))]
+    public BaseInteraction noItemInteractionBehaviour;
 
     private bool lastDetectionState = false;
 
@@ -61,6 +65,8 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
             case InteractionOption.Custom:
                 if (interactionBehaviour == null)
                     Debug.LogError("No BaseInteraction assigned to Interactable", gameObject);
+                if (noItemInteractionBehaviour == null && addNoRequiredItemInteraction)
+                    Debug.LogError("No BaseInteraction for no Item assigned to Interactable", gameObject);
                 break;
             case InteractionOption.CustomAuto:
                 interactionBehaviour = gameObject.GetComponent<BaseInteraction>();
@@ -133,6 +139,9 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
                     context.inventory.RemoveItem(required.UniqeId);
                 }
                 interactionBehaviour.OnInteraction(context);
+            } else if (addNoRequiredItemInteraction)
+            {
+                noItemInteractionBehaviour.OnInteraction(context);
             }
         }
         else

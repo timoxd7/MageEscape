@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 149449097}
   - component: {fileID: 149449096}
   m_Layer: 0
-  m_Name: Damit du mich befreien kannst...
+  m_Name: Setze den Zauberspruch zusammen und bring mir eine Kristallkugel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &149449094
 MonoBehaviour:
@@ -55,6 +55,8 @@ MonoBehaviour:
   options:
   - {fileID: 149449097}
   - {fileID: 149449096}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &149449097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +92,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 1118896730}
+  dialogMessage: {fileID: 4024878036087293264}
 --- !u!1 &151057118
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +148,8 @@ MonoBehaviour:
   options:
   - {fileID: 151057122}
   - {fileID: 151057121}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &151057122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +241,8 @@ MonoBehaviour:
   options:
   - {fileID: 189166639}
   - {fileID: 189166638}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &189166639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +334,8 @@ MonoBehaviour:
   options:
   - {fileID: 199847857}
   - {fileID: 199847856}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &199847857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +427,8 @@ MonoBehaviour:
   options:
   - {fileID: 229214079}
   - {fileID: 229214078}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &229214079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +520,8 @@ MonoBehaviour:
   options:
   - {fileID: 234976848}
   - {fileID: 234976847}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &234976848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,6 +613,8 @@ MonoBehaviour:
   options:
   - {fileID: 285866912}
   - {fileID: 285866911}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &285866912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +704,8 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 323157938}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &323157938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,6 +779,8 @@ MonoBehaviour:
   options:
   - {fileID: 475415239}
   - {fileID: 475415238}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &475415239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,6 +872,8 @@ MonoBehaviour:
   options:
   - {fileID: 587745449}
   - {fileID: 587745448}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &587745449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,6 +965,8 @@ MonoBehaviour:
   options:
   - {fileID: 599259467}
   - {fileID: 599259466}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &599259467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,6 +1058,8 @@ MonoBehaviour:
   options:
   - {fileID: 638108188}
   - {fileID: 638108187}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &638108188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,6 +1151,8 @@ MonoBehaviour:
   options:
   - {fileID: 695945529}
   - {fileID: 695945528}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &695945529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,6 +1244,8 @@ MonoBehaviour:
   options:
   - {fileID: 754648836}
   - {fileID: 754648835}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &754648836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,7 +1295,7 @@ GameObject:
   - component: {fileID: 771423990}
   - component: {fileID: 771423989}
   m_Layer: 0
-  m_Name: Ja... Du bist der erste!
+  m_Name: Ja... Du bist der Erste!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1302,13 +1330,15 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Ja... Du bist der erste!
+  text: Ja... Du bist der Erste!
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 771423990}
   - {fileID: 771423989}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &771423990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1400,6 +1430,8 @@ MonoBehaviour:
   options:
   - {fileID: 776069640}
   - {fileID: 776069639}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &776069640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,7 +1481,7 @@ GameObject:
   - component: {fileID: 791862720}
   - component: {fileID: 791862719}
   m_Layer: 0
-  m_Name: Ausversehen ...
+  m_Name: ausversehen ...
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1484,13 +1516,15 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Ausversehen ...
+  text: ausversehen ...
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 791862720}
   - {fileID: 791862719}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &791862720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,6 +1616,8 @@ MonoBehaviour:
   options:
   - {fileID: 803053142}
   - {fileID: 803053141}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &803053142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1673,6 +1709,8 @@ MonoBehaviour:
   options:
   - {fileID: 862947958}
   - {fileID: 862947957}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &862947958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,6 +1802,8 @@ MonoBehaviour:
   options:
   - {fileID: 864775627}
   - {fileID: 864775626}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &864775627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,6 +1893,8 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 867794941}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &867794941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1926,6 +1968,8 @@ MonoBehaviour:
   options:
   - {fileID: 948418195}
   - {fileID: 948418194}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &948418195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,6 +2061,8 @@ MonoBehaviour:
   options:
   - {fileID: 969723448}
   - {fileID: 969723447}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &969723448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2108,6 +2154,8 @@ MonoBehaviour:
   options:
   - {fileID: 1023083880}
   - {fileID: 1023083879}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1023083880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2157,7 +2205,7 @@ GameObject:
   - component: {fileID: 1032317836}
   - component: {fileID: 1032317835}
   m_Layer: 0
-  m_Name: Ich habe ihn vor langer Zeit in dieser Welt verteilt...
+  m_Name: Die einzelnen Teile dazu sind auf meiner gesamten Residenz verteilt.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2192,13 +2240,15 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Ich habe ihn vor langer Zeit in dieser Welt verteilt...
+  text: Die einzelnen Teile dazu sind auf meiner gesamten Residenz verteilt.
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1032317836}
   - {fileID: 1032317835}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1032317836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2290,6 +2340,8 @@ MonoBehaviour:
   options:
   - {fileID: 1053539580}
   - {fileID: 1053539579}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1053539580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2381,6 +2433,8 @@ MonoBehaviour:
   options:
   - {fileID: 1070422848}
   - {fileID: 1070422847}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1070422848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,7 +2484,7 @@ GameObject:
   - component: {fileID: 1118896733}
   - component: {fileID: 1118896732}
   m_Layer: 0
-  m_Name: "Und ein Schmuckst\xFCck... oder besser... Eine Wahrsager-Kugel!"
+  m_Name: Und noch was... Ich hab meine Kristallkugel fallen gelassen...
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2465,13 +2519,15 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: "Und ein Schmuckst\xFCck... oder besser... Eine Wahrsager-Kugel!"
+  text: Und noch was... Ich hab meine Kristallkugel fallen gelassen...
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1118896733}
   - {fileID: 1118896732}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1118896733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2489,7 +2545,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 149449094}
+  dialogMessage: {fileID: 4024878036087293264}
 --- !u!114 &1118896732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,7 +2595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1135849611
 MonoBehaviour:
@@ -2563,6 +2619,8 @@ MonoBehaviour:
   options:
   - {fileID: 1135849610}
   - {fileID: 1135849609}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1135849610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2654,6 +2712,8 @@ MonoBehaviour:
   options:
   - {fileID: 1209877641}
   - {fileID: 1209877640}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1209877641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,6 +2805,8 @@ MonoBehaviour:
   options:
   - {fileID: 1216460512}
   - {fileID: 1216460511}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1216460512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2836,6 +2898,8 @@ MonoBehaviour:
   options:
   - {fileID: 1324686069}
   - {fileID: 1324686068}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1324686069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2927,6 +2991,8 @@ MonoBehaviour:
   options:
   - {fileID: 1348787096}
   - {fileID: 1348787095}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1348787096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3018,6 +3084,8 @@ MonoBehaviour:
   options:
   - {fileID: 1351949605}
   - {fileID: 1351949604}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1351949605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3109,6 +3177,8 @@ MonoBehaviour:
   options:
   - {fileID: 1366661050}
   - {fileID: 1366661049}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1366661050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3200,6 +3270,8 @@ MonoBehaviour:
   options:
   - {fileID: 1373666485}
   - {fileID: 1373666484}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1373666485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3249,7 +3321,7 @@ GameObject:
   - component: {fileID: 1386627955}
   - component: {fileID: 1386627954}
   m_Layer: 0
-  m_Name: Jetzt musst du es nur noch schaffen,
+  m_Name: Jetzt musst du es nur noch schaffen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3284,13 +3356,15 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Jetzt musst du es nur noch schaffen,
+  text: Jetzt musst du es nur noch schaffen
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1386627955}
   - {fileID: 1386627954}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1386627955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3382,6 +3456,8 @@ MonoBehaviour:
   options:
   - {fileID: 1535369434}
   - {fileID: 1535369433}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1535369434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3473,6 +3549,8 @@ MonoBehaviour:
   options:
   - {fileID: 1564871546}
   - {fileID: 1564871545}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1564871546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3564,6 +3642,8 @@ MonoBehaviour:
   options:
   - {fileID: 1597956028}
   - {fileID: 1597956027}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1597956028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3613,7 +3693,7 @@ GameObject:
   - component: {fileID: 1606955427}
   - component: {fileID: 1606955426}
   m_Layer: 0
-  m_Name: Um mich von diesem Fluch zu befreien.
+  m_Name: um mich von diesem Fluch zu befreien.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3648,13 +3728,15 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Um mich von diesem Fluch zu befreien.
+  text: um mich von diesem Fluch zu befreien.
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1606955427}
   - {fileID: 1606955426}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1606955427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3746,6 +3828,8 @@ MonoBehaviour:
   options:
   - {fileID: 1709018159}
   - {fileID: 1709018158}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1709018159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3837,6 +3921,8 @@ MonoBehaviour:
   options:
   - {fileID: 1769129959}
   - {fileID: 1769129958}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1769129959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3928,6 +4014,8 @@ MonoBehaviour:
   options:
   - {fileID: 1843317961}
   - {fileID: 1843317960}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1843317961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4019,6 +4107,8 @@ MonoBehaviour:
   options:
   - {fileID: 1847937013}
   - {fileID: 1847937012}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1847937013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4068,7 +4158,7 @@ GameObject:
   - component: {fileID: 1874723525}
   - component: {fileID: 1874723524}
   m_Layer: 0
-  m_Name: Du brauchst nur einen Spruch...
+  m_Name: Du brauchst aber noch einen Zauberspruch...
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4103,13 +4193,15 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Du brauchst nur einen Spruch...
+  text: Du brauchst aber noch einen Zauberspruch...
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1874723525}
   - {fileID: 1874723524}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1874723525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4236,6 +4328,8 @@ MonoBehaviour:
   options:
   - {fileID: 2010031232}
   - {fileID: 2010031231}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &2010031232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4327,6 +4421,8 @@ MonoBehaviour:
   options:
   - {fileID: 2028778528}
   - {fileID: 2028778527}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &2028778528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4418,6 +4514,8 @@ MonoBehaviour:
   options:
   - {fileID: 2038137990}
   - {fileID: 2038137989}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &2038137990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4509,6 +4607,8 @@ MonoBehaviour:
   options:
   - {fileID: 2045362801}
   - {fileID: 2045362800}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &2045362801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4600,6 +4700,8 @@ MonoBehaviour:
   options:
   - {fileID: 2073572284}
   - {fileID: 2073572283}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &2073572284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4691,6 +4793,8 @@ MonoBehaviour:
   options:
   - {fileID: 2087114792}
   - {fileID: 2087114791}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &2087114792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4931,6 +5035,7 @@ RectTransform:
   - {fileID: 1874723526}
   - {fileID: 1032317837}
   - {fileID: 1118896734}
+  - {fileID: 7400126581845602042}
   - {fileID: 149449098}
   - {fileID: 1135849608}
   m_Father: {fileID: 2115812912}
@@ -5054,6 +5159,8 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1000055971773783181}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &1000055971773783181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5072,6 +5179,101 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 695945526}
+--- !u!1 &2519725212562097794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7400126581845602042}
+  - component: {fileID: 4024878036087293264}
+  - component: {fileID: 3980636492528506159}
+  - component: {fileID: 6612045624322167195}
+  m_Layer: 0
+  m_Name: "Aber ich m\xFCsste in meinem privatem Raum noch irgendwo eine rumliegen
+    haben"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7400126581845602042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519725212562097794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1000055971466881925}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4024878036087293264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519725212562097794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
+  text: "Aber ich m\xFCsste in meinem privatem Raum noch irgendwo eine rumliegen
+    haben"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
+  options:
+  - {fileID: 3980636492528506159}
+  - {fileID: 6612045624322167195}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
+--- !u!114 &3980636492528506159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519725212562097794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: Weiter
+  eventType: 3
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 149449094}
+--- !u!114 &6612045624322167195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519725212562097794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Zur\xFCck"
+  eventType: 3
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 1118896730}
 --- !u!1 &8251187310068161173
 GameObject:
   m_ObjectHideFlags: 0
@@ -5245,6 +5447,8 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 8251187310072032663}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
 --- !u!114 &8251187310072032663
 MonoBehaviour:
   m_ObjectHideFlags: 0
