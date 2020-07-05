@@ -7,6 +7,7 @@ public class MagierInteraction : BaseInteraction
     public GameObject glassSphere;
     public Animator magicianAnimator;
     public string freeMagicianTrigger = "FreeMagician";
+    public MagierFlyAnimation flyAnimator;
     public GameObject fogToDisable;
     public GameObject poisonFogToDisable;
     public DialogMessage glassSphereNotice;
@@ -65,6 +66,7 @@ public class MagierInteraction : BaseInteraction
     public void UnlockMagician()
     {
         magicianAnimator.SetTrigger(freeMagicianTrigger);
+        flyAnimator.UnFly();
         fogToDisable.SetActive(false);
         poisonFogToDisable.SetActive(false);
     }

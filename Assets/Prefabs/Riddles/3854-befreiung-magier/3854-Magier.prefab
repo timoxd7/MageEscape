@@ -24,10 +24,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2757674556569592193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.756, z: 0}
+  m_LocalPosition: {x: 0, y: -1.0096, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4098358224420230548}
+  - {fileID: 5017795922213123092}
   m_Father: {fileID: 4098358223708069077}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1783,7 +1783,7 @@ Transform:
   m_Children:
   - {fileID: 4098358223692960512}
   - {fileID: 4098358223345930877}
-  m_Father: {fileID: 4636142338220656014}
+  m_Father: {fileID: 5017795922213123092}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4098358224420230549
@@ -1816,8 +1816,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.73034763, y: 1.6868868, z: 0.72742474}
-  m_Center: {x: 0.004760205, y: -0.007856846, z: -0.060432673}
+  m_Size: {x: 0.73034763, y: 1.945137, z: 0.72742474}
+  m_Center: {x: 0.004760205, y: 0.9579716, z: -0.060432673}
 --- !u!114 &1946836794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,6 +1856,7 @@ MonoBehaviour:
   glassSphere: {fileID: 0}
   magicianAnimator: {fileID: 4098358224420230549}
   freeMagicianTrigger: FreeMagician
+  flyAnimator: {fileID: 3532279787378930949}
   fogToDisable: {fileID: 1269121688768826}
   poisonFogToDisable: {fileID: 4443693776997564431}
   glassSphereNotice: {fileID: 5485198023647464034}
@@ -2523,6 +2524,55 @@ Transform:
   m_Father: {fileID: 4098358224822015574}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5029901977516158041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5017795922213123092}
+  - component: {fileID: 3532279787378930949}
+  m_Layer: 0
+  m_Name: FlyRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5017795922213123092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5029901977516158041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4098358224420230548}
+  m_Father: {fileID: 4636142338220656014}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3532279787378930949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5029901977516158041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8244c1e0134bd041a54b2c6d25a5921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circleTime: 2
+  maxY: 2
+  minY: 1
+  zeroY: 0
+  flyDownTime: 3
 --- !u!1 &5485198023647464046
 GameObject:
   m_ObjectHideFlags: 0
