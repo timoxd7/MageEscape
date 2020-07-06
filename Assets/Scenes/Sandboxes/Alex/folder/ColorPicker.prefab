@@ -2899,6 +2899,10 @@ MonoBehaviour:
   otherObjectToDestroy: {fileID: 0}
   playSound: 0
   soundSourcePlayer: {fileID: 0}
+  addUnityEvent: 0
+  unityEventAfterCollection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2776513262232262417
 MonoBehaviour:
   m_ObjectHideFlags: 0

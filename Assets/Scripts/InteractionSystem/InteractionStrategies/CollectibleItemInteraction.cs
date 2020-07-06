@@ -1,5 +1,6 @@
 using MyBox;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollectibleItemInteraction : BaseInteraction
 {
@@ -18,12 +19,18 @@ public class CollectibleItemInteraction : BaseInteraction
     public bool playSound = false;
     [ConditionalField(nameof(playSound))]
     public SoundSourcePlayer soundSourcePlayer;
+
+    public bool addUnityEvent = false;
+    [ConditionalField(nameof(addUnityEvent))]
+    public UnityEvent unityEventAfterCollection;
     
     public override void OnInteraction(PlayerContext context)
     {
         Item item = new Item(uniqueId, title, description, icon, consumable);
         if (context.inventory.AddItem(item))
         {
+            Debug.Log("Putting " + title + " into the inventory.");
+
             if (playSound)
             {
                 if (soundSourcePlayer != null)
@@ -32,7 +39,14 @@ public class CollectibleItemInteraction : BaseInteraction
                 }
             }
 
-            Debug.Log("Putting " + title + " into the inventory.");
+            if (addUnityEvent)
+            {
+                if (unityEventAfterCollection != null)
+                {
+                    unityEventAfterCollection.Invoke();
+                }
+            }
+
             if (autoDestroyThis)
             {
                 Destroy(gameObject);

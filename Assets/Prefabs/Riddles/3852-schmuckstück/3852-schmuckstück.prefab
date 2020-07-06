@@ -218,6 +218,7 @@ MonoBehaviour:
   - {fileID: 7561125216460824062}
   - {fileID: 7561125215828970781}
   - {fileID: 7561125215831520164}
+  searchAlsoInChildren: 0
 --- !u!1 &1499002529738530216
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,13 +298,17 @@ MonoBehaviour:
   uniqueId: glass_sphere
   title: Glass Sphere to listen to the Future
   description: Glass Sphere to listen to the Future
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 526091eed5853d347b04fe1016ffe919, type: 3}
   consumable: 1
   autoDestroyThis: 1
   destroyOtherObject: 0
   otherObjectToDestroy: {fileID: 0}
   playSound: 0
   soundSourcePlayer: {fileID: 0}
+  addUnityEvent: 0
+  unityEventAfterCollection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1689902442856189223
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -402,6 +402,10 @@ MonoBehaviour:
   otherObjectToDestroy: {fileID: 0}
   playSound: 1
   soundSourcePlayer: {fileID: 1789501184}
+  addUnityEvent: 0
+  unityEventAfterCollection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1138242356527587955
 PrefabInstance:
   m_ObjectHideFlags: 0

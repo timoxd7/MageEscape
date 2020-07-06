@@ -7,6 +7,7 @@ using UnityEngine;
 public class DisableInteractableOnTrigger : MonoBehaviour
 {
     public List<GameObject> interactables;
+    public bool searchAlsoInChildren = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,7 +24,7 @@ public class DisableInteractableOnTrigger : MonoBehaviour
 
                     if (interactable != null)
                         interactable.enabled = false;
-                    else
+                    else if (searchAlsoInChildren)
                     {
                         interactable = currentInteractable.GetComponentInChildren<Interactable>();
 

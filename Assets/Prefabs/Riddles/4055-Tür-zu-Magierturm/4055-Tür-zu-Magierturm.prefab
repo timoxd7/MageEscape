@@ -59,6 +59,11 @@ MonoBehaviour:
   - {fileID: 8503157262516638699}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865648356267703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +258,11 @@ MonoBehaviour:
   - {fileID: 4324025657638781709}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865648736824986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +376,11 @@ MonoBehaviour:
   - {fileID: 2395366112799701545}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865648926692393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +494,11 @@ MonoBehaviour:
   - {fileID: 7898012041695616579}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865648959872867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,6 +612,11 @@ MonoBehaviour:
   - {fileID: 4287873485766488352}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865649140845536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +730,11 @@ MonoBehaviour:
   - {fileID: 7446893115356732218}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865649214843968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,6 +848,11 @@ MonoBehaviour:
   - {fileID: 7587239328926141367}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865649351027182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,6 +1106,11 @@ MonoBehaviour:
   - {fileID: 2127865649788971681}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865649788971680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,6 +1204,11 @@ MonoBehaviour:
   - {fileID: 22159176082049641}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865649983512086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,6 +1304,11 @@ MonoBehaviour:
   - {fileID: 7162990739097787985}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865650194371162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,6 +1422,11 @@ MonoBehaviour:
   - {fileID: 3727679744515036296}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2127865650310772462
 MonoBehaviour:
   m_ObjectHideFlags: 0

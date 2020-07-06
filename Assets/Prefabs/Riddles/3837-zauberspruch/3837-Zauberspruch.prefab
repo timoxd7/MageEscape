@@ -1002,6 +1002,10 @@ MonoBehaviour:
   otherObjectToDestroy: {fileID: 0}
   playSound: 0
   soundSourcePlayer: {fileID: 0}
+  addUnityEvent: 0
+  unityEventAfterCollection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8594919885127424225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2662,11 +2666,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe411d371f0847e4bb5623d12146b7b0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.721
+      value: 18.6689
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe411d371f0847e4bb5623d12146b7b0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.6427
+      value: 5.5968
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe411d371f0847e4bb5623d12146b7b0, type: 3}
       propertyPath: m_LocalPosition.z

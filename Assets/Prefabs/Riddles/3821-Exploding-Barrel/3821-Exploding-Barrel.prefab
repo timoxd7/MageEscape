@@ -160,6 +160,10 @@ MonoBehaviour:
   otherObjectToDestroy: {fileID: 0}
   playSound: 1
   soundSourcePlayer: {fileID: 2000269008}
+  addUnityEvent: 0
+  unityEventAfterCollection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &1656648478
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -196,6 +200,10 @@ MonoBehaviour:
   otherObjectToDestroy: {fileID: 0}
   playSound: 0
   soundSourcePlayer: {fileID: 0}
+  addUnityEvent: 0
+  unityEventAfterCollection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1656648477
 MonoBehaviour:
   m_ObjectHideFlags: 0

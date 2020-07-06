@@ -182,16 +182,6 @@ PrefabInstance:
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4829350152875416908}
-    - target: {fileID: 1684076709551551264, guid: 898e06b415a69ee44acffd30cff06600,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3266734980643441075, guid: 898e06b415a69ee44acffd30cff06600,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6947475052346405528, guid: 898e06b415a69ee44acffd30cff06600,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -381,11 +371,6 @@ PrefabInstance:
     - target: {fileID: 4098358223708069077, guid: d3d6e5e7ac7ef684889b561a15076b81,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485198023844805984, guid: d3d6e5e7ac7ef684889b561a15076b81,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
