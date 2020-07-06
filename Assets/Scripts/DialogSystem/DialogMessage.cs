@@ -188,6 +188,18 @@ public class DialogMessage : MonoBehaviour
         currentlyShownObjects = null;
     }
 
+    public void OnDisable()
+    {
+        if (currentShownState)
+            Hide();
+    }
+
+    public void OnDestroy()
+    {
+        if (currentShownState)
+            Hide();
+    }
+
     private void GetProperties()
     {
         GameObject dialogPropertiesObject = GameObject.FindGameObjectWithTag(dialogPropertiesTag);
