@@ -1,7 +1,7 @@
 ﻿using MyBox;
 using UnityEngine;
 
-public class AddForce : BaseInteraction
+public class AddForce : MonoBehaviour
 {
     public Rigidbody rb;
     public Vector3 force;
@@ -12,10 +12,5 @@ public class AddForce : BaseInteraction
             rb = gameObject.GetOrAddComponent<Rigidbody>();
 
         rb.AddForce(force);
-    }
-
-    public override void OnInteraction(PlayerContext context)
-    {
-        ApplyForce();
     }
 }

@@ -157,6 +157,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &5520681396244784814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +220,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &5520681396192094424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +283,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1001 &5520681394552382697
 PrefabInstance:
   m_ObjectHideFlags: 0

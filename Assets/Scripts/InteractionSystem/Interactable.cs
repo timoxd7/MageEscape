@@ -198,6 +198,7 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     public void Enable()
     {
+        Debug.Log("Enabled now");
         enabled = true;
     }
 

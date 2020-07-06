@@ -59,6 +59,11 @@ MonoBehaviour:
   - {fileID: 97791149}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &97791151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +258,11 @@ MonoBehaviour:
   - {fileID: 189924914}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &189924916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,6 +618,11 @@ MonoBehaviour:
   - {fileID: 381887904}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &381887905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,6 +790,11 @@ MonoBehaviour:
   - {fileID: 891838373}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &891838375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,49 +930,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1999715388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6098996795035973101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignDialog: 1
-  emptyObjectDialogTag: EmptyObjectDialog
-  emptyObjectDialog: {fileID: 0}
-  useStandardText: 0
-  messageText: "\"Gr\xFCne Dinge haben immer zwei Dinge identischer Farben an ihrer
-    Seite. Ganz im Gegenteil: Die blauen und roten Dinge\""
-  playSound: 0
-  soundSourcePlayer: {fileID: 0}
---- !u!114 &1999715389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6098996795035973101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractable: 1
-  holdToInteract: 0
-  holdDuration: 0.5
-  itemRequired: 0
-  itemId: 
-  detectionOption: 1
-  detectionBehaviour: {fileID: 0}
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
-  addNoRequiredItemInteraction: 0
-  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1 &956989766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +989,11 @@ MonoBehaviour:
   - {fileID: 956989768}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &956989770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1066,48 +1048,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 0}
---- !u!114 &1701757464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699375680625800135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractable: 1
-  holdToInteract: 0
-  holdDuration: 0.5
-  itemRequired: 0
-  itemId: 
-  detectionOption: 1
-  detectionBehaviour: {fileID: 0}
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
-  addNoRequiredItemInteraction: 0
-  noItemInteractionBehaviour: {fileID: 0}
---- !u!114 &1701757465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699375680625800135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignDialog: 1
-  emptyObjectDialogTag: EmptyObjectDialog
-  emptyObjectDialog: {fileID: 0}
-  useStandardText: 0
-  messageText: '"Blau sei gegeben!"'
-  playSound: 0
-  soundSourcePlayer: {fileID: 0}
 --- !u!1 &998911072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1188,11 @@ MonoBehaviour:
   - {fileID: 1012113780}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1012113782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,55 +1247,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 0}
---- !u!114 &309487322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6098996794890479185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb174161331bb0479fd7f330e6c9e02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1201529203}
-        m_MethodName: Show
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &309487323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6098996794890479185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractable: 1
-  holdToInteract: 0
-  holdDuration: 0.5
-  itemRequired: 0
-  itemId: 
-  detectionOption: 1
-  detectionBehaviour: {fileID: 0}
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
-  addNoRequiredItemInteraction: 0
-  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1 &1051489413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1576,11 @@ MonoBehaviour:
   - {fileID: 1201529204}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1201529205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,6 +1676,11 @@ MonoBehaviour:
   - {fileID: 1360667765}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1360667767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1888,6 +1794,11 @@ MonoBehaviour:
   - {fileID: 1375391399}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1375391401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2163,6 +2074,11 @@ MonoBehaviour:
   - {fileID: 1521390168}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1521390170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2393,6 +2309,11 @@ MonoBehaviour:
   - {fileID: 1707214494}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1707214496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2506,6 +2427,11 @@ MonoBehaviour:
   - {fileID: 1869519408}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1869519410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2560,48 +2486,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 0}
---- !u!114 &1823439750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050632827205717388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignDialog: 1
-  emptyObjectDialogTag: EmptyObjectDialog
-  emptyObjectDialog: {fileID: 0}
-  useStandardText: 0
-  messageText: "\"Rot und Gr\xFCn verstehen sich nicht mit Ihresgleichen\""
-  playSound: 0
-  soundSourcePlayer: {fileID: 0}
---- !u!114 &1823439751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050632827205717388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractable: 1
-  holdToInteract: 0
-  holdDuration: 0.5
-  itemRequired: 0
-  itemId: 
-  detectionOption: 1
-  detectionBehaviour: {fileID: 0}
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
-  addNoRequiredItemInteraction: 0
-  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1 &2146513346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2683,6 +2567,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1701757464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699375680625800135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0.5
+  itemRequired: 0
+  itemId: 
+  detectionOption: 1
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
+--- !u!114 &1701757465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699375680625800135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignDialog: 1
+  emptyObjectDialogTag: EmptyObjectDialog
+  emptyObjectDialog: {fileID: 0}
+  useStandardText: 0
+  messageText: '"Blau sei gegeben!"'
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
+--- !u!114 &1823439750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050632827205717388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignDialog: 1
+  emptyObjectDialogTag: EmptyObjectDialog
+  emptyObjectDialog: {fileID: 0}
+  useStandardText: 0
+  messageText: "\"Rot und Gr\xFCn verstehen sich nicht mit Ihresgleichen\""
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
+--- !u!114 &1823439751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050632827205717388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0.5
+  itemRequired: 0
+  itemId: 
+  detectionOption: 1
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &2776513261276201830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,6 +3003,98 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &309487322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098996794890479185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb174161331bb0479fd7f330e6c9e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1201529203}
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &309487323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098996794890479185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0.5
+  itemRequired: 0
+  itemId: 
+  detectionOption: 1
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
+--- !u!114 &1999715388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098996795035973101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignDialog: 1
+  emptyObjectDialogTag: EmptyObjectDialog
+  emptyObjectDialog: {fileID: 0}
+  useStandardText: 0
+  messageText: "\"Gr\xFCne Dinge haben immer zwei Dinge identischer Farben an ihrer
+    Seite. Ganz im Gegenteil: Die blauen und roten Dinge\""
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
+--- !u!114 &1999715389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098996795035973101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0.5
+  itemRequired: 0
+  itemId: 
+  detectionOption: 1
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1 &6970841784912300563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4183,15 +4243,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f86dc25794fda774aa908152821e0248, type: 3}
---- !u!4 &4628465084919255914 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7400456941558662964, guid: f86dc25794fda774aa908152821e0248,
-    type: 3}
-  m_PrefabInstance: {fileID: 2776513261615748190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4628465084919615306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7400456941558438676, guid: f86dc25794fda774aa908152821e0248,
+    type: 3}
+  m_PrefabInstance: {fileID: 2776513261615748190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4628465084919255914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7400456941558662964, guid: f86dc25794fda774aa908152821e0248,
     type: 3}
   m_PrefabInstance: {fileID: 2776513261615748190}
   m_PrefabAsset: {fileID: 0}

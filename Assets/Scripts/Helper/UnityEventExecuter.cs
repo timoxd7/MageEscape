@@ -19,6 +19,7 @@ public class UnityEventExecuter : MonoBehaviour
         }
     }
 
+    [ButtonMethod]
     public void Execute()
     {
         if (delay)

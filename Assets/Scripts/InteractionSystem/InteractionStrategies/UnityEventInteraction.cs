@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using MyBox;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class UnityEventInteraction : BaseInteraction
@@ -10,6 +11,7 @@ public class UnityEventInteraction : BaseInteraction
         InvokeWithoutInteraction();
     }
 
+    [ButtonMethod]
     public void InvokeWithoutInteraction()
     {
         if (unityEvent == null)

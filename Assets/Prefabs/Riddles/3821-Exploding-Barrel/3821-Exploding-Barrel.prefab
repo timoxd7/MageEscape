@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361040709}
   m_Layer: 0
-  m_Name: SoundOrigin
+  m_Name: SoundOrigin Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,6 +30,77 @@ Transform:
   m_Father: {fileID: 2334317590475636087}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &2000269005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000269006}
+  - component: {fileID: 2000269008}
+  - component: {fileID: 2000269007}
+  m_Layer: 0
+  m_Name: SoundOrigin PickUpTorch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2000269006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000269005}
+  m_LocalRotation: {x: 0.0009202957, y: -0.38111448, z: 0.00079371186, w: 0.9245271}
+  m_LocalPosition: {x: 31.300001, y: 0.100000024, z: 0.8000002}
+  m_LocalScale: {x: 100, y: 100.00006, z: 100.00006}
+  m_Children: []
+  m_Father: {fileID: 2334317590475636087}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0.132, y: -44.805, z: 0.044000003}
+--- !u!114 &2000269008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000269005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 2000269007}
+  destroyIfNoClip: 1
+  playOnlyOnce: 1
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 0
+--- !u!114 &2000269007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000269005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 20ef804ab77295c40b3cfaffdcea82dc, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 1
+  parentObject: {fileID: 0}
 --- !u!64 &2334317591948489463
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65,6 +136,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &2334317591948489459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,8 +158,8 @@ MonoBehaviour:
   autoDestroyThis: 1
   destroyOtherObject: 0
   otherObjectToDestroy: {fileID: 0}
-  playSound: 0
-  soundSourcePlayer: {fileID: 0}
+  playSound: 1
+  soundSourcePlayer: {fileID: 2000269008}
 --- !u!64 &1656648478
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -144,6 +217,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1 &2333355939807341311
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +415,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &2333355940047946676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +614,7 @@ Transform:
   - {fileID: 2334317590918104324}
   - {fileID: 2334317591563022551}
   - {fileID: 1361040709}
+  - {fileID: 2000269006}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -572,7 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: cfed89b8bca29c442a1f1fc2b8a4bef4, type: 3}
-  volumeMultiplyer: 1
+  volumeMultiplyer: 2
   useThisObject: 0
   parentObject: {fileID: 1361040708}
 --- !u!114 &609087581
@@ -587,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundType: 2
+  soundType: 4
   soundSystem: {fileID: 0}
   searchIfNoSoundSystem: 1
   soundSystemTag: SoundSystem
@@ -597,7 +675,7 @@ MonoBehaviour:
   playOnlyOnce: 1
   playOnStart: 0
   loopPlay: 0
-  continouslyUpdate: 0
+  continouslyUpdate: 1
 --- !u!1 &2334317590918104327
 GameObject:
   m_ObjectHideFlags: 0

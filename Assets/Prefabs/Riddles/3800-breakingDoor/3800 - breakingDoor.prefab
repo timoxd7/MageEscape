@@ -1,5 +1,76 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1789501181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1789501182}
+  - component: {fileID: 1789501184}
+  - component: {fileID: 1789501183}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1789501182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789501181}
+  m_LocalRotation: {x: -0.65126604, y: -0.14322975, z: -0.111392856, w: 0.7368375}
+  m_LocalPosition: {x: 5.5428643, y: 7.187, z: -13.817744}
+  m_LocalScale: {x: 140.00002, y: 139.99998, z: 140}
+  m_Children: []
+  m_Father: {fileID: 1138242358565091811}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -97.403, y: 149.198, z: -169.987}
+--- !u!114 &1789501184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789501181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 1789501183}
+  destroyIfNoClip: 1
+  playOnlyOnce: 1
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 0
+--- !u!114 &1789501183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789501181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 20ef804ab77295c40b3cfaffdcea82dc, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 1
+  parentObject: {fileID: 0}
 --- !u!1 &1138242356935475882
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +165,7 @@ Transform:
   - {fileID: 1138242357183650101}
   - {fileID: 1138242356935475883}
   - {fileID: 5655742459616185981}
+  - {fileID: 1789501182}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -155,6 +227,65 @@ MonoBehaviour:
         m_CallState: 2
   destroyThisAfterExecution: 1
   executeAtStart: 0
+  delay: 0
+  delayTime: 1
+--- !u!114 &194977124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087339906156327373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: e5d66e9a8f87fb24cb954eceb1afe23d, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 1
+  parentObject: {fileID: 0}
+--- !u!114 &194977125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087339906156327373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 194977124}
+  destroyIfNoClip: 1
+  playOnlyOnce: 1
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 1
+--- !u!114 &194977126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087339906156327373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineType: 0
+  eraseRenderer: 0
+  outlinedObjects: []
+  doNotAutoAddThisIfEmpty: 0
+  autoAddThis: 0
+  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &1138242357863429664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +307,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &1138242357863429667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,63 +357,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &194977124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4087339906156327373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: e5d66e9a8f87fb24cb954eceb1afe23d, type: 3}
-  volumeMultiplyer: 1
-  useThisObject: 1
-  parentObject: {fileID: 0}
---- !u!114 &194977125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4087339906156327373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundType: 2
-  soundSystem: {fileID: 0}
-  searchIfNoSoundSystem: 1
-  soundSystemTag: SoundSystem
-  soundClips:
-  - {fileID: 194977124}
-  destroyIfNoClip: 1
-  playOnlyOnce: 1
-  playOnStart: 0
-  loopPlay: 0
-  continouslyUpdate: 0
---- !u!114 &194977126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4087339906156327373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2f3b6dca4c4a58a2d189373bedc5b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineType: 0
-  eraseRenderer: 0
-  outlinedObjects: []
-  doNotAutoAddThisIfEmpty: 0
-  autoAddThis: 0
-  destroyOutlineInstancesOnDestruction: 1
 --- !u!114 &1138242356527587958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +378,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &1138242356527587959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,8 +400,8 @@ MonoBehaviour:
   autoDestroyThis: 1
   destroyOtherObject: 0
   otherObjectToDestroy: {fileID: 0}
-  playSound: 0
-  soundSourcePlayer: {fileID: 0}
+  playSound: 1
+  soundSourcePlayer: {fileID: 1789501184}
 --- !u!1001 &1138242356527587955
 PrefabInstance:
   m_ObjectHideFlags: 0

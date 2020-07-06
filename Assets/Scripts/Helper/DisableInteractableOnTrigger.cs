@@ -24,7 +24,14 @@ public class DisableInteractableOnTrigger : MonoBehaviour
                     if (interactable != null)
                         interactable.enabled = false;
                     else
-                        Debug.LogError("No interactable on GameObject!", this);
+                    {
+                        interactable = currentInteractable.GetComponentInChildren<Interactable>();
+
+                        if (interactable != null)
+                            interactable.enabled = false;
+                        else
+                            Debug.LogError("No interactable on object!", this);
+                    }
                 }
             }
         }
