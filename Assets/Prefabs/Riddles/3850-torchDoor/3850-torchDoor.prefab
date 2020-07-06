@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &3808695315360606858
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552010462959420513}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e49eb049e4574084983996e558a133aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &932946663792029986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,6 +42,47 @@ MonoBehaviour:
   interactionBehaviour: {fileID: 0}
   addNoRequiredItemInteraction: 0
   noItemInteractionBehaviour: {fileID: 0}
+--- !u!114 &3370412029014326230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552010462959420513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38ada7363ce1cf48b56c1af973fbefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1552010463670542717}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6060171995099858915}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyThisAfterExecution: 1
+  executeAtStart: 0
+  delay: 1
+  delayTime: 0.5
 --- !u!114 &3372076564183161402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,9 +109,9 @@ MonoBehaviour:
           m_StringArgument: openDoor
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1552010463670542717}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 3370412029014326230}
+        m_MethodName: Execute
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -60,18 +120,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6060171995099858915}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 3808695315360606858}
+        m_MethodName: SetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: RotateCandle
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8976688191071000648
+--- !u!114 &8492291340212181686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552010463416037404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignDialog: 1
+  emptyObjectDialogTag: EmptyObjectDialog
+  emptyObjectDialog: {fileID: 0}
+  useStandardText: 0
+  messageText: "Diese Lampe f\xFChlt sich locker an"
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
+--- !u!114 &6988540015327231822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,11 +169,30 @@ MonoBehaviour:
   itemId: 
   detectionOption: 1
   detectionBehaviour: {fileID: 0}
-  interactionOption: 2
+  interactionOption: 4
   interactionBehaviour: {fileID: 0}
   addNoRequiredItemInteraction: 0
   noItemInteractionBehaviour: {fileID: 0}
---- !u!114 &2744894143508501276
+--- !u!114 &2393127206678310609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552010464648514673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignDialog: 1
+  emptyObjectDialogTag: EmptyObjectDialog
+  emptyObjectDialog: {fileID: 0}
+  useStandardText: 0
+  messageText: "Diese Lampe f\xFChlt sich locker an"
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
+--- !u!114 &1658431204891247325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +211,7 @@ MonoBehaviour:
   itemId: 
   detectionOption: 1
   detectionBehaviour: {fileID: 0}
-  interactionOption: 2
+  interactionOption: 4
   interactionBehaviour: {fileID: 0}
   addNoRequiredItemInteraction: 0
   noItemInteractionBehaviour: {fileID: 0}
@@ -237,9 +335,9 @@ Transform:
   m_LocalPosition: {x: 37.598915, y: -90.61182, z: 38.153873}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6060171995192484446}
-  - {fileID: 6060171995701329256}
   - {fileID: 1552010462959589441}
+  - {fileID: 6060171995701329256}
+  - {fileID: 6060171995192484446}
   - {fileID: 1552010463416265788}
   - {fileID: 1552010464649007185}
   m_Father: {fileID: 0}
@@ -276,7 +374,8 @@ GameObject:
   - component: {fileID: 6060171995192484385}
   - component: {fileID: 6060171995192484386}
   - component: {fileID: 6060171995192484387}
-  - component: {fileID: 6060171995192484445}
+  - component: {fileID: 53745065615372099}
+  - component: {fileID: 6009935656836863735}
   m_Layer: 0
   m_Name: Candle_Wall (41)
   m_TagString: Untagged
@@ -298,7 +397,7 @@ Transform:
   - {fileID: 6060171994356818100}
   - {fileID: 6060171995941846279}
   m_Father: {fileID: 6060171995677301534}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!33 &6060171995192484385
 MeshFilter:
@@ -359,10 +458,29 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c04865966f8d8ae409e19627bacc4ee4, type: 3}
---- !u!114 &6060171995192484445
+--- !u!114 &53745065615372099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060171995192484447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignDialog: 1
+  emptyObjectDialogTag: EmptyObjectDialog
+  emptyObjectDialog: {fileID: 0}
+  useStandardText: 0
+  messageText: "Diese Lampe f\xFChlt sich locker an"
+  playSound: 0
+  soundSourcePlayer: {fileID: 0}
+--- !u!114 &6009935656836863735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,12 +494,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 1
   holdToInteract: 0
-  holdDuration: 0
+  holdDuration: 0.5
   itemRequired: 0
   itemId: 
   detectionOption: 1
   detectionBehaviour: {fileID: 0}
-  interactionOption: 2
+  interactionOption: 4
   interactionBehaviour: {fileID: 0}
   addNoRequiredItemInteraction: 0
   noItemInteractionBehaviour: {fileID: 0}
@@ -619,6 +737,11 @@ PrefabInstance:
       propertyPath: m_Lightmapping
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4725356937742542617, guid: c559a22601843db4c927941c06a8b94b,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4725356937742542618, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_Name
@@ -732,7 +855,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 113386648, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 113386649, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -770,15 +893,20 @@ PrefabInstance:
       propertyPath: m_Lightmapping
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4725356937742542617, guid: c559a22601843db4c927941c06a8b94b,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4725356937742542618, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_Name
-      value: Candle_Wall (40)
+      value: Candle_Wall Rotatable Trigger
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742542618, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
@@ -798,27 +926,27 @@ PrefabInstance:
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.499999
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5000011
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5000011
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.49999887
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
@@ -828,12 +956,12 @@ PrefabInstance:
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742777146, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90.00001
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937744546266, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
@@ -858,7 +986,7 @@ PrefabInstance:
     - target: {fileID: 4725356938390733318, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c559a22601843db4c927941c06a8b94b, type: 3}
@@ -874,15 +1002,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6060171995061986171}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1552010463670542717 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4725356938390733318, guid: c559a22601843db4c927941c06a8b94b,
-    type: 3}
-  m_PrefabInstance: {fileID: 6060171995061986171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6060171995099858915 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 113386648, guid: c559a22601843db4c927941c06a8b94b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6060171995061986171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1552010463670542717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4725356938390733318, guid: c559a22601843db4c927941c06a8b94b,
     type: 3}
   m_PrefabInstance: {fileID: 6060171995061986171}
   m_PrefabAsset: {fileID: 0}
@@ -932,6 +1060,11 @@ PrefabInstance:
     - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_Lightmapping
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725356937742542617, guid: c559a22601843db4c927941c06a8b94b,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4725356937742542618, guid: c559a22601843db4c927941c06a8b94b,
         type: 3}
