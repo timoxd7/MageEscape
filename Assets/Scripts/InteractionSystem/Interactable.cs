@@ -39,7 +39,8 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
     [ConditionalField(nameof(addNoRequiredItemInteraction))]
     public BaseInteraction noItemInteractionBehaviour;
 
-    private bool lastDetectionState = false;
+    private bool lastRealDetectionState = false;
+    private bool lastNoticedDetectionState = false;
 
     #endregion
 
@@ -153,33 +154,56 @@ public class Interactable : MonoBehaviour, IInteractable, IDetectable
 
     public void OnDetectionEnter()
     {
+        lastNoticedDetectionState = true;
+
         if (!enabled)
         {
             return;
         }
 
         detectionBehaviour.OnDetectionEnter();
-        lastDetectionState = true;
+        lastRealDetectionState = true;
     }
 
     public void OnDetectionExit()
     {
+        lastNoticedDetectionState = false;
+
         if (!enabled)
         {
             return;
         }
 
         detectionBehaviour.OnDetectionExit();
-        lastDetectionState = false;
+        lastRealDetectionState = false;
+    }
+
+    private void OnEnable()
+    {
+        if (lastNoticedDetectionState)
+        {
+            detectionBehaviour.OnDetectionEnter();
+            lastRealDetectionState = true;
+        }
     }
 
     public void OnDisable()
     {
-        if (lastDetectionState)
+        if (lastRealDetectionState)
         {
             detectionBehaviour.OnDetectionExit();
-            lastDetectionState = false;
+            lastRealDetectionState = false;
         }
+    }
+
+    public void Enable()
+    {
+        enabled = true;
+    }
+
+    public void Disable()
+    {
+        enabled = false;
     }
 
     #endregion

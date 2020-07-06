@@ -57,6 +57,11 @@ MonoBehaviour:
   - {fileID: 93225265}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &93225266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +157,11 @@ MonoBehaviour:
   - {fileID: 461926240}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &461926242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +308,11 @@ MonoBehaviour:
   - {fileID: 697096270}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &697096272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,6 +426,11 @@ MonoBehaviour:
   - {fileID: 750614602}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &750614604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,6 +544,11 @@ MonoBehaviour:
   - {fileID: 919933791}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &919933793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111111011}
   m_Layer: 5
-  m_Name: Right
+  m_Name: Right -> Under Story
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,8 +629,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1469830925}
+  m_Children: []
   m_Father: {fileID: 1684076709551551264}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -666,6 +690,11 @@ MonoBehaviour:
   - {fileID: 1188463755}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1188463756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,79 +720,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188463753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &1469830924
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1469830925}
-  - component: {fileID: 1469830927}
-  - component: {fileID: 1469830926}
-  m_Layer: 5
-  m_Name: Du hast es geschafft!
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1469830925
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469830924}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1111111011}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1469830927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469830924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Du hast es geschafft!
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 1469830926}
-  playSoundOnShow: 0
-  soundSourcePlayer: {fileID: 0}
---- !u!114 &1469830926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469830924}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
@@ -834,6 +790,11 @@ MonoBehaviour:
   - {fileID: 1607700635}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1607700637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,6 +908,11 @@ MonoBehaviour:
   - {fileID: 1741734153}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1741734155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1338,6 +1304,11 @@ MonoBehaviour:
   - {fileID: 1684076709035050032}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &1684076709035050036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,6 +2024,11 @@ MonoBehaviour:
   - {fileID: 3266734980621369011}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &3266734980621369011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2248,6 +2224,11 @@ MonoBehaviour:
   - {fileID: 6238144574718887396}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &6238144574718887396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,15 +2706,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe411d371f0847e4bb5623d12146b7b0, type: 3}
---- !u!1 &9491281890075239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: fe411d371f0847e4bb5623d12146b7b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 9491281890043079}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9491281889918535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: fe411d371f0847e4bb5623d12146b7b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 9491281890043079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9491281890075239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: fe411d371f0847e4bb5623d12146b7b0,
     type: 3}
   m_PrefabInstance: {fileID: 9491281890043079}
   m_PrefabAsset: {fileID: 0}

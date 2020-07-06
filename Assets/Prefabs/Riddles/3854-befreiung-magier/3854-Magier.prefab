@@ -2585,7 +2585,7 @@ GameObject:
   - component: {fileID: 5485198023647464034}
   - component: {fileID: 5485198023647464032}
   m_Layer: 0
-  m_Name: "Du ben\xF6tigst noch meine magische Kugel!"
+  m_Name: Du musst noch meine magische Kugel auf den Tisch stellen!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2620,7 +2620,7 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: "Du ben\xF6tigst noch meine magische Kugel!"
+  text: Du musst noch meine magische Kugel auf den Tisch stellen!
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
@@ -2628,6 +2628,11 @@ MonoBehaviour:
   - {fileID: 5485198023647464032}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &5485198023647464032
 MonoBehaviour:
   m_ObjectHideFlags: 0

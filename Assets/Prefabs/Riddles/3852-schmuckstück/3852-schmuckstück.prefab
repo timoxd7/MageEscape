@@ -282,29 +282,6 @@ Transform:
   m_Father: {fileID: 1499002529738530215}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1499002529204715458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268719261098582086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractable: 1
-  holdToInteract: 0
-  holdDuration: 0.5
-  itemRequired: 0
-  itemId: 
-  detectionOption: 1
-  detectionBehaviour: {fileID: 0}
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
-  addNoRequiredItemInteraction: 0
-  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &1499002529204715459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +304,29 @@ MonoBehaviour:
   otherObjectToDestroy: {fileID: 0}
   playSound: 0
   soundSourcePlayer: {fileID: 0}
+--- !u!114 &1689902442856189223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268719261098582086}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0.5
+  itemRequired: 0
+  itemId: 
+  detectionOption: 1
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!54 &1499002529279626009
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -406,9 +406,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1499002529204715458}
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 1689902442856189223}
+        m_MethodName: Enable
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -416,17 +416,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1499002529279626011}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!54 &1499002529726237968
 Rigidbody:

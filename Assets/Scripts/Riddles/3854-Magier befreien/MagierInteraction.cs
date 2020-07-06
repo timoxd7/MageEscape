@@ -20,13 +20,21 @@ public class MagierInteraction : BaseInteraction
 
     private string currentPhrase = "";
     private int currentWordCount = 0;
+    private bool magicianFreed = false;
 
     public override void OnInteraction(PlayerContext context)
     {
-        if (!glassSphere.activeSelf)
-            glassSphereNotice.Show();
+        if (magicianFreed)
+        {
+            keywordCorrect.Show();
+        }
         else
-            keywordInputInit.Show();
+        {
+            if (!glassSphere.activeSelf)
+                glassSphereNotice.Show();
+            else
+                keywordInputInit.Show();
+        }
     }
 
     public void AddWord(string word)
@@ -42,7 +50,6 @@ public class MagierInteraction : BaseInteraction
             if (currentPhrase == keyphrase)
             {
                 UnlockMagician();
-                keywordCorrect.Show();
             } else
             {
                 keywordInputNext.text = "...";
@@ -69,5 +76,6 @@ public class MagierInteraction : BaseInteraction
         flyAnimator.UnFly();
         fogToDisable.SetActive(false);
         poisonFogToDisable.SetActive(false);
+        magicianFreed = true;
     }
 }

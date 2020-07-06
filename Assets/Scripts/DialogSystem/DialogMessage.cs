@@ -30,6 +30,16 @@ public class DialogMessage : MonoBehaviour
     [ConditionalField(nameof(playSoundOnShow))]
     public SoundSourcePlayer soundSourcePlayer;
 
+#if UNITY_EDITOR
+    [Header("Next Message Automation")]
+    public bool autoAssignNext = true;
+    [ConditionalField(nameof(autoAssignNext))]
+    public bool autoAddNext = true;
+    public bool autoAddNextOnNext = true;
+    public bool autoAddPreviousOnNext = true;
+    public bool autoAddCloseOnNext = true;
+#endif
+
 
     private List<SelfDestruct> currentlyShownObjects;
     private bool currentShownState = false;
@@ -200,52 +210,73 @@ public class DialogMessage : MonoBehaviour
         if (nextMessage.options.IsNullOrEmpty())
             nextMessage.options = new List<DialogOption>();
 
-        // Add Close, Previous and Next to new Messag
-        DialogOption nextOption = nextMessageObject.AddComponent<DialogOption>();
-        nextOption.optionName = nextOptionText;
-        nextOption.eventType = DialogOption.EventType.DialogMessage;
-        nextMessage.options.Add(nextOption);
-
-        DialogOption backOption = nextMessageObject.AddComponent<DialogOption>();
-        backOption.optionName = backOptionText;
-        backOption.eventType = DialogOption.EventType.DialogMessage;
-        backOption.dialogMessage = this;
-        nextMessage.options.Add(backOption);
-
-        DialogOption closeOption = nextMessageObject.AddComponent<DialogOption>();
-        closeOption.optionName = closeOptionText;
-        closeOption.eventType = DialogOption.EventType.Close;
-        nextMessage.options.Add(closeOption);
-
-
-        // Add message to this next option
-        DialogOption[] possiblyNext = gameObject.GetComponents<DialogOption>();
-
-        bool nextOptionFound = false;
-        if (!possiblyNext.IsNullOrEmpty())
+        if (autoAddNextOnNext)
         {
-            for (int i = 0; i < possiblyNext.Length; i++)
-            {
-                if (possiblyNext[i].optionName == nextOptionText)
-                {
-                    possiblyNext[i].eventType = DialogOption.EventType.DialogMessage;
-                    possiblyNext[i].dialogMessage = nextMessage;
-                    nextOptionFound = true;
-                }
-            }
+            // Add Close, Previous and Next to new Messag
+            DialogOption nextOption = nextMessageObject.AddComponent<DialogOption>();
+            nextOption.optionName = nextOptionText;
+            nextOption.eventType = DialogOption.EventType.DialogMessage;
+            nextMessage.options.Add(nextOption);
         }
 
-        if (!nextOptionFound)
+        if (autoAddPreviousOnNext)
         {
-            DialogOption thisNextOption = gameObject.AddComponent<DialogOption>();
-            thisNextOption.optionName = nextOptionText;
-            thisNextOption.eventType = DialogOption.EventType.DialogMessage;
-            thisNextOption.dialogMessage = nextMessage;
+            DialogOption backOption = nextMessageObject.AddComponent<DialogOption>();
+            backOption.optionName = backOptionText;
+            backOption.eventType = DialogOption.EventType.DialogMessage;
+            backOption.dialogMessage = this;
+            nextMessage.options.Add(backOption);
+        }
 
-            if (options.IsNullOrEmpty())
-                options = new List<DialogOption>();
+        if (autoAddCloseOnNext)
+        {
+            DialogOption closeOption = nextMessageObject.AddComponent<DialogOption>();
+            closeOption.optionName = closeOptionText;
+            closeOption.eventType = DialogOption.EventType.Close;
+            nextMessage.options.Add(closeOption);
+        }
 
-            options.Insert(0, thisNextOption);
+        nextMessage.autoAssignNext = autoAssignNext;
+        nextMessage.autoAddNext = autoAddNext;
+        nextMessage.autoAddNextOnNext = autoAddNextOnNext;
+        nextMessage.autoAddPreviousOnNext = autoAddPreviousOnNext;
+        nextMessage.autoAddCloseOnNext = autoAddCloseOnNext;
+
+
+    // Add message to this next option
+    DialogOption[] possiblyNext = gameObject.GetComponents<DialogOption>();
+
+        if (autoAssignNext)
+        {
+            bool nextOptionFound = false;
+            if (!possiblyNext.IsNullOrEmpty())
+            {
+                for (int i = 0; i < possiblyNext.Length; i++)
+                {
+                    if (possiblyNext[i].optionName == nextOptionText)
+                    {
+                        possiblyNext[i].eventType = DialogOption.EventType.DialogMessage;
+                        possiblyNext[i].dialogMessage = nextMessage;
+                        nextOptionFound = true;
+                    }
+                }
+            }
+
+            if (autoAddNext)
+            {
+                if (!nextOptionFound)
+                {
+                    DialogOption thisNextOption = gameObject.AddComponent<DialogOption>();
+                    thisNextOption.optionName = nextOptionText;
+                    thisNextOption.eventType = DialogOption.EventType.DialogMessage;
+                    thisNextOption.dialogMessage = nextMessage;
+
+                    if (options.IsNullOrEmpty())
+                        options = new List<DialogOption>();
+
+                    options.Insert(0, thisNextOption);
+                }
+            }
         }
     }
 
@@ -297,12 +328,30 @@ public class DialogMessage : MonoBehaviour
 
     [ButtonMethod]
     [ExecuteInEditMode]
+    public void AddNextOption()
+    {
+        DialogOption nextOption = gameObject.AddComponent<DialogOption>();
+
+        nextOption.optionName = nextOptionText;
+        nextOption.eventType = DialogOption.EventType.DialogMessage;
+
+        if (options.IsNullOrEmpty())
+            options = new List<DialogOption>();
+
+        options.Add(nextOption);
+    }
+
+    [ButtonMethod]
+    [ExecuteInEditMode]
     public void AddCloseOption()
     {
         DialogOption closeOption = gameObject.AddComponent<DialogOption>();
 
         closeOption.optionName = closeOptionText;
         closeOption.eventType = DialogOption.EventType.Close;
+
+        if (options.IsNullOrEmpty())
+            options = new List<DialogOption>();
 
         options.Add(closeOption);
     }
