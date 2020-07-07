@@ -1,16 +1,30 @@
 using System.Collections.Generic;
 using UnityEngine;
+using MyBox;
 
 public class GetColorInteraction : BaseInteraction
 {
     public RiddleColor color;
     public Sprite sprite;
 
+    public bool playSound = false;
+    [ConditionalField(nameof(playSound))]
+    public SoundSourcePlayer soundSourcePlayer;
+
     public override void OnInteraction(PlayerContext context)
     {
+        if (playSound)
+        {
+            if (soundSourcePlayer != null)
+            {
+                soundSourcePlayer.Play();
+            }
+        }
+
         Item glass = GetGlassFromInventory(context);
         if (glass != null)
         {
+
             string uniqueId;
             string title;
             string description = "Jetzt ist in dem Glass etwas drin...";

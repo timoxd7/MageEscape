@@ -129,6 +129,8 @@ GameObject:
   - component: {fileID: 8933063814091279872}
   - component: {fileID: 8933063814091279873}
   - component: {fileID: 7226039969772061925}
+  - component: {fileID: 3017344100293171346}
+  - component: {fileID: 5121722999554417730}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -219,6 +221,47 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   colorRiddleManager: {fileID: 0}
   key: -1
+  playSound: 1
+  soundSourcePlayer: {fileID: 3017344100293171346}
+--- !u!114 &3017344100293171346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8933063814091279875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 5121722999554417730}
+  destroyIfNoClip: 1
+  playOnlyOnce: 0
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 0
+--- !u!114 &5121722999554417730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8933063814091279875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 1fb442c4ca9c71f4181ab0189333b9a2, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 1
+  parentObject: {fileID: 0}
 --- !u!1 &8933063815160768330
 GameObject:
   m_ObjectHideFlags: 0

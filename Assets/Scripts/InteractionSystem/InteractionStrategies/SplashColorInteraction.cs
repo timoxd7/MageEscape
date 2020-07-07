@@ -1,4 +1,5 @@
 using UnityEngine;
+using MyBox;
 
 public class SplashColorInteraction : BaseInteraction
 {
@@ -12,6 +13,10 @@ public class SplashColorInteraction : BaseInteraction
 
     public int key = -1;
     private RiddleColor value = RiddleColor.None;
+
+    public bool playSound = false;
+    [ConditionalField(nameof(playSound))]
+    public SoundSourcePlayer soundSourcePlayer;
 
     public void Start()
     {
@@ -37,16 +42,37 @@ public class SplashColorInteraction : BaseInteraction
         {
             ChangeSprite(blueSplash);
             value = RiddleColor.Blue;
+            if (playSound)
+            {
+                if (soundSourcePlayer != null)
+                {
+                    soundSourcePlayer.Play();
+                }
+            }
         }
         else if (null != context.inventory.ContainsItem("glass_red"))
         {
             ChangeSprite(redSplash);
             value = RiddleColor.Red;
+            if (playSound)
+            {
+                if (soundSourcePlayer != null)
+                {
+                    soundSourcePlayer.Play();
+                }
+            }
         }
         else if (null != context.inventory.ContainsItem("glass_green"))
         {
             ChangeSprite(greenSplash);
             value = RiddleColor.Green;
+             if (playSound)
+        {
+            if (soundSourcePlayer != null)
+            {
+                soundSourcePlayer.Play();
+            }
+        }
         }
         colorRiddleManager.UpdateState(key, value);
     }
