@@ -764,7 +764,7 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 396957718}
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -843,7 +843,7 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 431012366}
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 642542811}
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 672499526}
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1099025838}
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -1886,7 +1886,7 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1326998893}
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -2127,7 +2127,7 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1373310668}
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -2443,7 +2443,7 @@ MonoBehaviour:
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 1713080991}
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -2737,7 +2737,7 @@ MonoBehaviour:
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options: []
-  playSoundOnShow: 0
+  playSoundOnShow: 1
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
   autoAddNext: 1
@@ -3075,6 +3075,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Dance
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   dialogMessage: {fileID: 740155836}
