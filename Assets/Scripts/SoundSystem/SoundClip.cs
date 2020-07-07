@@ -4,6 +4,7 @@ using UnityEngine;
 public class SoundClip : MonoBehaviour
 {
     public AudioClip audioClip;
+    [Range(0f, 1f)]
     public float volumeMultiplyer = 1.0f;
 
     [Tooltip("Use this GameObject as the Parent for this SoundClip")]

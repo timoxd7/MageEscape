@@ -81,7 +81,7 @@ public class PlayerMovementController : MonoBehaviour
             if ((sprinting && !sneaking) || (sprinting && sneaking && !lockSprintAtSneaking))
             {
                 move *= sprintMultiplyer;
-                moveAbsolute *= sprintMultiplyer * stepSoundSneakMultiplyer;
+                moveAbsolute *= sprintMultiplyer * stepSoundRunMultiplyer;
             }
 
         }
