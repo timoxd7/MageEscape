@@ -161,11 +161,16 @@ MonoBehaviour:
   jumpEnabled: 1
   sneakEnabled: 1
   sprintEnabled: 1
-  stepSoundDistance: 1
+  stepSoundDistance: 30
   stepSoundSneakMultiplyer: 1
   stepSoundRunMultiplyer: 1
-  stepSounds: []
-  jumpSounds: []
+  stepSounds:
+  - {fileID: 6065714723436896028}
+  - {fileID: 7606613455611844194}
+  - {fileID: 7865818047084252489}
+  - {fileID: 7316658288304403537}
+  jumpSounds:
+  - {fileID: 7878550731181880372}
 --- !u!114 &6780725592292929845
 MonoBehaviour:
   m_ObjectHideFlags: 0
