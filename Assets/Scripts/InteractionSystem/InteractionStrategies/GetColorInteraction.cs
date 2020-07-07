@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MyBox;
+using UnityEngine.Events;
 
 public class GetColorInteraction : BaseInteraction
 {
@@ -10,6 +11,8 @@ public class GetColorInteraction : BaseInteraction
     public bool playSound = false;
     [ConditionalField(nameof(playSound))]
     public SoundSourcePlayer soundSourcePlayer;
+
+    public UnityEvent ifNoGlassGiven;
 
     public override void OnInteraction(PlayerContext context)
     {
@@ -50,6 +53,17 @@ public class GetColorInteraction : BaseInteraction
             Item newGlass = new Item(uniqueId, title, description, sprite);
             context.inventory.RemoveItem(glass.UniqeId);
             context.inventory.AddItem(newGlass);
+        }
+        else
+        {
+            if (null != ifNoGlassGiven)
+            {
+                ifNoGlassGiven.Invoke();
+            }
+            else
+            {
+                Debug.LogError("No Alternate Event given", gameObject);
+            } 
         }
     }
 
