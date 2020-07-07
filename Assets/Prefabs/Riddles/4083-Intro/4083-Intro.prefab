@@ -1,429 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &117126394
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 117126399}
-  - component: {fileID: 117126395}
-  - component: {fileID: 117126398}
-  - component: {fileID: 117126397}
-  - component: {fileID: 117126396}
-  m_Layer: 0
-  m_Name: Wo bin ich?...
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &117126399
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117126394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2840061223907093867}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &117126395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117126394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Wo bin ich?...
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 117126398}
-  - {fileID: 117126397}
-  - {fileID: 117126396}
---- !u!114 &117126398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117126394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 1695554097}
---- !u!114 &117126397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117126394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 215458563}
---- !u!114 &117126396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117126394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &215458562
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 215458567}
-  - component: {fileID: 215458563}
-  - component: {fileID: 215458566}
-  - component: {fileID: 215458565}
-  - component: {fileID: 215458564}
-  m_Layer: 0
-  m_Name: Was?...
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &215458567
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215458562}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2840061223907093867}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &215458563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215458562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Was?...
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 215458566}
-  - {fileID: 215458565}
-  - {fileID: 215458564}
---- !u!114 &215458566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215458562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 117126395}
---- !u!114 &215458565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215458562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 2036490219}
---- !u!114 &215458564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215458562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &861378237
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 861378238}
-  - component: {fileID: 861378241}
-  - component: {fileID: 861378240}
-  - component: {fileID: 861378239}
-  m_Layer: 0
-  m_Name: Mit W A S D kann ich laufen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &861378238
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861378237}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2840061223907093867}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &861378241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861378237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Mit W A S D kann ich laufen
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 861378240}
-  - {fileID: 861378239}
---- !u!114 &861378240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861378237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!114 &861378239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861378237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 2026796063}
---- !u!1 &951126826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 951126831}
-  - component: {fileID: 951126827}
-  - component: {fileID: 951126830}
-  - component: {fileID: 951126829}
-  - component: {fileID: 951126828}
-  m_Layer: 0
-  m_Name: Das sollte wohl ersteinmal reichen...
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &951126831
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951126826}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7203890624640004737}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &951126827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951126826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Das sollte wohl ersteinmal reichen...
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 951126830}
-  - {fileID: 951126829}
-  - {fileID: 951126828}
---- !u!114 &951126830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951126826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 1528498293}
---- !u!114 &951126829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951126826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 1130845983}
---- !u!114 &951126828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951126826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
 --- !u!1 &975886869
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +62,7 @@ MonoBehaviour:
   executeAtStart: 1
   delay: 1
   delayTime: 1
---- !u!1 &977480017
+--- !u!1 &694460888428300813
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,39 +70,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 977480022}
-  - component: {fileID: 977480018}
-  - component: {fileID: 977480021}
-  - component: {fileID: 977480020}
-  - component: {fileID: 977480019}
+  - component: {fileID: 8098809457498979651}
+  - component: {fileID: 4700711025635006029}
+  - component: {fileID: 8772395379760898202}
+  - component: {fileID: 2904946900366800444}
   m_Layer: 0
-  m_Name: Ich kann mich nicht mehr erinnern...
+  m_Name: Wieso bin ich eingesperrt?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &977480022
+--- !u!4 &8098809457498979651
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977480017}
+  m_GameObject: {fileID: 694460888428300813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2840061223907093867}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &977480018
+--- !u!114 &4700711025635006029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977480017}
+  m_GameObject: {fileID: 694460888428300813}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
@@ -535,39 +110,27 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Ich kann mich nicht mehr erinnern...
+  text: Wieso bin ich eingesperrt?
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
-  - {fileID: 977480021}
-  - {fileID: 977480020}
-  - {fileID: 977480019}
---- !u!114 &977480021
+  - {fileID: 8772395379760898202}
+  - {fileID: 2904946900366800444}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
+--- !u!114 &8772395379760898202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977480017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 2026796063}
---- !u!114 &977480020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977480017}
+  m_GameObject: {fileID: 694460888428300813}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
@@ -578,956 +141,14 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 1695554097}
---- !u!114 &977480019
+  dialogMessage: {fileID: 4618775417343256597}
+--- !u!114 &2904946900366800444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977480017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &1130845982
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1130845987}
-  - component: {fileID: 1130845983}
-  - component: {fileID: 1130845986}
-  - component: {fileID: 1130845985}
-  - component: {fileID: 1130845984}
-  m_Layer: 0
-  m_Name: "Mit SHIFT (gro\xDFschreibtaste) kann ich sprinten"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1130845987
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130845982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7203890624640004737}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1130845983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130845982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: "Mit SHIFT (gro\xDFschreibtaste) kann ich sprinten"
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 1130845986}
-  - {fileID: 1130845985}
-  - {fileID: 1130845984}
---- !u!114 &1130845986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130845982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 951126827}
---- !u!114 &1130845985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130845982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 1888719132}
---- !u!114 &1130845984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130845982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &1528498289
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1528498290}
-  - component: {fileID: 1528498293}
-  - component: {fileID: 1528498295}
-  - component: {fileID: 1528498292}
-  - component: {fileID: 1528498291}
-  m_Layer: 0
-  m_Name: "Ich sollte als n\xE4chstes versuchen, hier heraus zu kommen!"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1528498290
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528498289}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7203890624640004737}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1528498293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528498289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: "Ich sollte als n\xE4chstes versuchen, hier heraus zu kommen!"
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 1528498295}
-  - {fileID: 1528498292}
-  - {fileID: 1528498291}
---- !u!114 &1528498295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528498289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 1577887520}
---- !u!114 &1528498292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528498289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 951126827}
---- !u!114 &1528498291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528498289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &1577887519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1577887524}
-  - component: {fileID: 1577887520}
-  - component: {fileID: 1577887523}
-  - component: {fileID: 1577887522}
-  - component: {fileID: 1577887521}
-  m_Layer: 0
-  m_Name: Ah, fast vergessen!
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1577887524
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577887519}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7203890624640004737}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1577887520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577887519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Ah, fast vergessen!
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 1577887523}
-  - {fileID: 1577887522}
-  - {fileID: 1577887521}
---- !u!114 &1577887523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577887519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 2047533857}
---- !u!114 &1577887522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577887519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 1528498293}
---- !u!114 &1577887521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577887519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &1695554096
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1695554101}
-  - component: {fileID: 1695554097}
-  - component: {fileID: 1695554100}
-  - component: {fileID: 1695554099}
-  - component: {fileID: 1695554098}
-  m_Layer: 0
-  m_Name: Wie bin ich hier her gekommen?
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1695554101
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695554096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2840061223907093867}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1695554097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695554096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Wie bin ich hier her gekommen?
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 1695554100}
-  - {fileID: 1695554099}
-  - {fileID: 1695554098}
---- !u!114 &1695554100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695554096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 977480018}
---- !u!114 &1695554099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695554096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 117126395}
---- !u!114 &1695554098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695554096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &1706075048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1706075049}
-  - component: {fileID: 1706075051}
-  - component: {fileID: 1706075050}
-  m_Layer: 0
-  m_Name: AfterMovementIntro
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1706075049
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706075048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.98, y: 0.498, z: -0.98}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7203890624640004737}
-  m_Father: {fileID: 6816899743114195931}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1706075051
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706075048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.81739616, y: 4.24788, z: 3.7982218}
-  m_Center: {x: 0.07249498, y: 1.6239402, z: -0.02513802}
---- !u!114 &1706075050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706075048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 006f58de258efd341990c12f8c14fd55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7203890624560366979}
-        m_MethodName: Show
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  objectTag: Player
-  onlyOnce: 1
---- !u!1 &1888719131
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1888719136}
-  - component: {fileID: 1888719132}
-  - component: {fileID: 1888719135}
-  - component: {fileID: 1888719134}
-  - component: {fileID: 1888719133}
-  m_Layer: 0
-  m_Name: Mit Q kann ich mich ducken
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1888719136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888719131}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7203890624640004737}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1888719132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888719131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Mit Q kann ich mich ducken
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 1888719135}
-  - {fileID: 1888719134}
-  - {fileID: 1888719133}
---- !u!114 &1888719135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888719131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 1130845983}
---- !u!114 &1888719134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888719131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 7203890624560366979}
---- !u!114 &1888719133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888719131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &2026796062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2026796067}
-  - component: {fileID: 2026796063}
-  - component: {fileID: 2026796066}
-  - component: {fileID: 2026796065}
-  - component: {fileID: 2026796064}
-  m_Layer: 0
-  m_Name: Ich sollte wohl erstmal hier raus gehen, vielleicht ist da ja jemand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2026796067
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026796062}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2840061223907093867}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2026796063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026796062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Ich sollte wohl erstmal hier raus gehen, vielleicht ist da ja jemand
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 2026796066}
-  - {fileID: 2026796065}
-  - {fileID: 2026796064}
---- !u!114 &2026796066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026796062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 861378241}
---- !u!114 &2026796065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026796062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 977480018}
---- !u!114 &2026796064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026796062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &2036490218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2036490223}
-  - component: {fileID: 2036490219}
-  - component: {fileID: 2036490222}
-  - component: {fileID: 2036490221}
-  - component: {fileID: 2036490220}
-  m_Layer: 0
-  m_Name: Wie?...
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2036490223
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036490218}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2840061223907093867}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2036490219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036490218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Wie?...
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 2036490222}
-  - {fileID: 2036490221}
-  - {fileID: 2036490220}
---- !u!114 &2036490222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036490218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: Weiter
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 215458563}
---- !u!114 &2036490221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036490218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 2840061224195512937}
---- !u!114 &2036490220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036490218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &2047533853
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2047533854}
-  - component: {fileID: 2047533857}
-  - component: {fileID: 2047533856}
-  - component: {fileID: 2047533855}
-  m_Layer: 0
-  m_Name: Mit der linken Maustaste oder E kann ich mit sachen Interagieren!
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2047533854
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047533853}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7203890624640004737}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2047533857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047533853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignGlobalProperties: 1
-  dialogPropertiesTag: GlobalDialogProperties
-  dialogProperties: {fileID: 0}
-  text: Mit der linken Maustaste oder E kann ich mit sachen Interagieren!
-  nextOptionText: Weiter
-  backOptionText: "Zur\xFCck"
-  closeOptionText: "Schlie\xDFen"
-  options:
-  - {fileID: 2047533856}
-  - {fileID: 2047533855}
---- !u!114 &2047533856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047533853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Zur\xFCck"
-  eventType: 3
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 1577887520}
---- !u!114 &2047533855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047533853}
+  m_GameObject: {fileID: 694460888428300813}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
@@ -1567,7 +188,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 975886870}
-  - {fileID: 1706075049}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1602,13 +222,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2840061224195512932}
-  - {fileID: 2036490223}
-  - {fileID: 215458567}
-  - {fileID: 117126399}
-  - {fileID: 1695554101}
-  - {fileID: 977480022}
-  - {fileID: 2026796067}
-  - {fileID: 861378238}
+  - {fileID: 5570678320780242741}
+  - {fileID: 4269429118875765868}
+  - {fileID: 8098809457498979651}
   m_Father: {fileID: 975886870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1688,9 +304,8 @@ GameObject:
   - component: {fileID: 2840061224195512932}
   - component: {fileID: 2840061224195512937}
   - component: {fileID: 2840061224195512934}
-  - component: {fileID: 2840061224195512939}
   m_Layer: 0
-  m_Name: Oh...
+  m_Name: Wie?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1725,13 +340,19 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Oh...
+  text: Wie?
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
   - {fileID: 2840061224195512934}
-  - {fileID: 2840061224195512939}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
 --- !u!114 &2840061224195512934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,26 +370,8 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 2036490219}
---- !u!114 &2840061224195512939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2840061224195512933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &7203890624560366991
+  dialogMessage: {fileID: 707053912273697189}
+--- !u!1 &3938361896911952712
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1776,38 +379,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7203890624560366990}
-  - component: {fileID: 7203890624560366979}
-  - component: {fileID: 7203890624560366993}
-  - component: {fileID: 7203890624560366992}
+  - component: {fileID: 4269429118875765868}
+  - component: {fileID: 4618775417343256597}
+  - component: {fileID: 7714486369112593051}
+  - component: {fileID: 5684363691124211425}
   m_Layer: 0
-  m_Name: Gut, so funktioniert das laufen
+  m_Name: Wie bin ich hier hergekommen?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7203890624560366990
+--- !u!4 &4269429118875765868
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203890624560366991}
+  m_GameObject: {fileID: 3938361896911952712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7203890624640004737}
-  m_RootOrder: 0
+  m_Father: {fileID: 2840061223907093867}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7203890624560366979
+--- !u!114 &4618775417343256597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203890624560366991}
+  m_GameObject: {fileID: 3938361896911952712}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
@@ -1816,20 +419,27 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Gut, so funktioniert das laufen
+  text: Wie bin ich hier hergekommen?
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
-  - {fileID: 7203890624560366993}
-  - {fileID: 7203890624560366992}
---- !u!114 &7203890624560366993
+  - {fileID: 5684363691124211425}
+  - {fileID: 7714486369112593051}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
+--- !u!114 &7714486369112593051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203890624560366991}
+  m_GameObject: {fileID: 3938361896911952712}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
@@ -1840,26 +450,26 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 1888719132}
---- !u!114 &7203890624560366992
+  dialogMessage: {fileID: 4700711025635006029}
+--- !u!114 &5684363691124211425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203890624560366991}
+  m_GameObject: {fileID: 3938361896911952712}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
+  optionName: "Zur\xFCck"
+  eventType: 3
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 0}
---- !u!1 &7203890624640004750
+  dialogMessage: {fileID: 707053912273697189}
+--- !u!1 &5388806774800388799
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1867,100 +477,93 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7203890624640004737}
-  - component: {fileID: 7203890624640004738}
-  - component: {fileID: 7203890624640004739}
-  - component: {fileID: 7203890624640004736}
-  m_Layer: 5
-  m_Name: Dialog
+  - component: {fileID: 5570678320780242741}
+  - component: {fileID: 707053912273697189}
+  - component: {fileID: 5428689488612372683}
+  - component: {fileID: 2500894358210191689}
+  m_Layer: 0
+  m_Name: Was?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7203890624640004737
-RectTransform:
+--- !u!4 &5570678320780242741
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203890624640004750}
+  m_GameObject: {fileID: 5388806774800388799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 7203890624560366990}
-  - {fileID: 1888719136}
-  - {fileID: 1130845987}
-  - {fileID: 951126831}
-  - {fileID: 1528498290}
-  - {fileID: 1577887524}
-  - {fileID: 2047533854}
-  m_Father: {fileID: 1706075049}
-  m_RootOrder: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2840061223907093867}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!223 &7203890624640004738
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203890624640004750}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!114 &7203890624640004739
+--- !u!114 &707053912273697189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203890624640004750}
+  m_GameObject: {fileID: 5388806774800388799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!114 &7203890624640004736
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
+  text: Was?
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
+  options:
+  - {fileID: 2500894358210191689}
+  - {fileID: 5428689488612372683}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
+--- !u!114 &5428689488612372683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203890624640004750}
+  m_GameObject: {fileID: 5388806774800388799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  optionName: Weiter
+  eventType: 3
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 4618775417343256597}
+--- !u!114 &2500894358210191689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5388806774800388799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Zur\xFCck"
+  eventType: 3
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 2840061224195512937}
