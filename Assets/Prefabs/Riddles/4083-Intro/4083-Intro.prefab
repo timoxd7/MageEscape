@@ -115,8 +115,8 @@ MonoBehaviour:
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
-  - {fileID: 8772395379760898202}
   - {fileID: 2904946900366800444}
+  - {fileID: 8772395379760898202}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
@@ -424,8 +424,8 @@ MonoBehaviour:
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
-  - {fileID: 5684363691124211425}
   - {fileID: 7714486369112593051}
+  - {fileID: 5684363691124211425}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
@@ -522,8 +522,8 @@ MonoBehaviour:
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
-  - {fileID: 2500894358210191689}
   - {fileID: 5428689488612372683}
+  - {fileID: 2500894358210191689}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
