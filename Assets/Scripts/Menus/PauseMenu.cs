@@ -107,8 +107,8 @@ public class PauseMenu : MonoBehaviour
     public void UpdateGeneralVolume()
     {
         general = generalVolume.value;
-        defaultSound.volume = general;
-        playerSound.volume = general;
+        defaultSound.volume = general * effects;
+        playerSound.volume = general * effects;
         environmentSound.volume = general * effects;
         ambientSound.volume = general * music;
         explosionsSound.volume = general * effects;
@@ -123,6 +123,8 @@ public class PauseMenu : MonoBehaviour
     public void UpdateEffectVolume()
     {
         effects = effectsVolume.value;
+        defaultSound.volume = general * effects;
+        playerSound.volume = general * effects;
         environmentSound.volume = general * effects;
         explosionsSound.volume = general * effects;
     }
