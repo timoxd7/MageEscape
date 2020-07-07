@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &149449094
 MonoBehaviour:
@@ -229,7 +229,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &229214076
 MonoBehaviour:
@@ -327,7 +327,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &234976845
 MonoBehaviour:
@@ -503,7 +503,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &475415236
 MonoBehaviour:
@@ -868,7 +868,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &791862717
 MonoBehaviour:
@@ -1257,7 +1257,7 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: "Ich bin ein gro\xDFer Magier und regiere \xFCber alles was du siehst!"
+  text: "Ich bin ein gro\xDFer Magier und regiere \xFCber ein gro\xDFes Land!"
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
@@ -1339,7 +1339,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1032317833
 MonoBehaviour:
@@ -1536,7 +1536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1118896730
 MonoBehaviour:
@@ -1634,7 +1634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1135849611
 MonoBehaviour:
@@ -1733,7 +1733,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1216460509
 MonoBehaviour:
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 1373666482}
+  dialogMessage: {fileID: 2365186284917032786}
 --- !u!1 &1324686065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1930,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1348787093
 MonoBehaviour:
@@ -2108,7 +2108,7 @@ GameObject:
   - component: {fileID: 1373666485}
   - component: {fileID: 1373666484}
   m_Layer: 0
-  m_Name: "Also au\xDFer Garry, Larry und Harry..."
+  m_Name: "Also au\xDFer Garry und Harry. Von Larry hab ich nichts mehr geh\xF6rt..."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: "Also au\xDFer Garry, Larry und Harry..."
+  text: "Also au\xDFer Garry und Harry. Von Larry hab ich nichts mehr geh\xF6rt..."
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
@@ -2174,7 +2174,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 1216460509}
+  dialogMessage: {fileID: 2365186284917032786}
 --- !u!114 &1373666484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2295,7 +2295,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1597956025
 MonoBehaviour:
@@ -2523,7 +2523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1874723522
 MonoBehaviour:
@@ -2654,7 +2654,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2010031229
 MonoBehaviour:
@@ -3280,6 +3280,7 @@ RectTransform:
   - {fileID: 1053539581}
   - {fileID: 1351949606}
   - {fileID: 1373666486}
+  - {fileID: 4864086335180731220}
   - {fileID: 1216460513}
   - {fileID: 2010031233}
   - {fileID: 475415240}
@@ -3503,7 +3504,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1000055971466881925}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4024878036087293264
 MonoBehaviour:
@@ -3668,6 +3669,124 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 862947955}
+--- !u!1 &6776054011736425111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4864086335180731220}
+  - component: {fileID: 2365186284917032786}
+  - component: {fileID: 5943510869725451117}
+  - component: {fileID: 7705400996595412729}
+  - component: {fileID: 2903347465696644796}
+  m_Layer: 0
+  m_Name: Ich hoffe es geht ihm gut...
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4864086335180731220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776054011736425111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1000055971466881925}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2365186284917032786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776054011736425111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
+  text: Ich hoffe es geht ihm gut...
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
+  options:
+  - {fileID: 5943510869725451117}
+  - {fileID: 7705400996595412729}
+  - {fileID: 2903347465696644796}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
+--- !u!114 &5943510869725451117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776054011736425111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: Weiter
+  eventType: 3
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 1216460509}
+--- !u!114 &7705400996595412729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776054011736425111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Zur\xFCck"
+  eventType: 3
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 1373666482}
+--- !u!114 &2903347465696644796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776054011736425111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &7632752446515926438
 GameObject:
   m_ObjectHideFlags: 0
