@@ -46,7 +46,10 @@ public class PlayerAccessibility : MonoBehaviour
         }
 
         if (enableMouse)
+        {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     [ButtonMethod]
@@ -74,6 +77,7 @@ public class PlayerAccessibility : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None; // Because its buggy...
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private bool CheckReferences()
