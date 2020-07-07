@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using MyBox;
 using UnityEngine;
 
 public class MoveBarrel : MonoBehaviour
@@ -7,6 +6,10 @@ public class MoveBarrel : MonoBehaviour
     public Animator barrelAnimator;
     public string moveBarrelTrigger;
     public string playerTag;
+
+    public bool playSound = false;
+    [ConditionalField(nameof(playSound))]
+    public SoundSourcePlayer soundSourcePlayer;
 
     private bool playerInside;
 
@@ -20,6 +23,9 @@ public class MoveBarrel : MonoBehaviour
             if (barrelAnimator != null)
             {
                 barrelAnimator.SetTrigger(moveBarrelTrigger);
+
+                if (playSound && soundSourcePlayer != null)
+                    soundSourcePlayer.Play();
             } else
             {
                 Debug.LogError("No Animator given!", this);
