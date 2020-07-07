@@ -2751,48 +2751,6 @@ MonoBehaviour:
   messageText: '"Blau sei gegeben!"'
   playSound: 0
   soundSourcePlayer: {fileID: 0}
---- !u!114 &1823439750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050632827205717388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignDialog: 1
-  emptyObjectDialogTag: EmptyObjectDialog
-  emptyObjectDialog: {fileID: 0}
-  useStandardText: 0
-  messageText: "\"Rot und Gr\xFCn verstehen sich nicht mit Ihresgleichen\""
-  playSound: 1
-  soundSourcePlayer: {fileID: 910490093}
---- !u!114 &1823439751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050632827205717388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractable: 1
-  holdToInteract: 0
-  holdDuration: 0.5
-  itemRequired: 0
-  itemId: 
-  detectionOption: 1
-  detectionBehaviour: {fileID: 0}
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
-  addNoRequiredItemInteraction: 0
-  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &910490092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2832,29 +2790,32 @@ MonoBehaviour:
   playOnStart: 0
   loopPlay: 0
   continouslyUpdate: 1
---- !u!114 &2776513261276201830
+--- !u!114 &1823439750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501121595228252515}
+  m_GameObject: {fileID: 1050632827205717388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97aa7f4c82a64369abd2fa7bca1a0c42, type: 3}
+  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
-  sprite: {fileID: 21300000, guid: 6af52b42437a6467c923cf478119be7a, type: 3}
+  autoAssignDialog: 1
+  emptyObjectDialogTag: EmptyObjectDialog
+  emptyObjectDialog: {fileID: 0}
+  useStandardText: 0
+  messageText: "\"Rot und Gr\xFCn verstehen sich nicht mit Ihresgleichen\""
   playSound: 1
-  soundSourcePlayer: {fileID: 2004346646}
---- !u!114 &2776513261276201831
+  soundSourcePlayer: {fileID: 910490093}
+--- !u!114 &1823439751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501121595228252515}
+  m_GameObject: {fileID: 1050632827205717388}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
@@ -2910,29 +2871,29 @@ MonoBehaviour:
   playOnStart: 0
   loopPlay: 0
   continouslyUpdate: 0
---- !u!114 &4270132068486540538
+--- !u!114 &2776513261276201830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501121595470711236}
+  m_GameObject: {fileID: 1501121595228252515}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97aa7f4c82a64369abd2fa7bca1a0c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 1
-  sprite: {fileID: 21300000, guid: a2a5fd499d6744a20951b6b91b04efb7, type: 3}
+  color: 0
+  sprite: {fileID: 21300000, guid: 6af52b42437a6467c923cf478119be7a, type: 3}
   playSound: 1
-  soundSourcePlayer: {fileID: 558884967}
---- !u!114 &8159650578490926123
+  soundSourcePlayer: {fileID: 2004346646}
+--- !u!114 &2776513261276201831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501121595470711236}
+  m_GameObject: {fileID: 1501121595228252515}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
@@ -2988,29 +2949,29 @@ MonoBehaviour:
   playOnStart: 0
   loopPlay: 0
   continouslyUpdate: 0
---- !u!114 &2033721780692168286
+--- !u!114 &4270132068486540538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501121595931168936}
+  m_GameObject: {fileID: 1501121595470711236}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97aa7f4c82a64369abd2fa7bca1a0c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 2
-  sprite: {fileID: 21300000, guid: 27f196f20f53e4418b9e11b52e4ef10b, type: 3}
+  color: 1
+  sprite: {fileID: 21300000, guid: a2a5fd499d6744a20951b6b91b04efb7, type: 3}
   playSound: 1
-  soundSourcePlayer: {fileID: 1599503582}
---- !u!114 &5624806961611101957
+  soundSourcePlayer: {fileID: 558884967}
+--- !u!114 &8159650578490926123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501121595931168936}
+  m_GameObject: {fileID: 1501121595470711236}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
@@ -3066,6 +3027,45 @@ MonoBehaviour:
   playOnStart: 0
   loopPlay: 0
   continouslyUpdate: 0
+--- !u!114 &2033721780692168286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501121595931168936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97aa7f4c82a64369abd2fa7bca1a0c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  sprite: {fileID: 21300000, guid: 27f196f20f53e4418b9e11b52e4ef10b, type: 3}
+  playSound: 1
+  soundSourcePlayer: {fileID: 1599503582}
+--- !u!114 &5624806961611101957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501121595931168936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
+  holdToInteract: 0
+  holdDuration: 0.5
+  itemRequired: 0
+  itemId: 
+  detectionOption: 1
+  detectionBehaviour: {fileID: 0}
+  interactionOption: 4
+  interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1 &2408090714645622608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3589,6 +3589,45 @@ MonoBehaviour:
   playOnStart: 0
   loopPlay: 0
   continouslyUpdate: 1
+--- !u!114 &124514596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098996795035973101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7de958a4b735dc740859a21fe8369514, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 1
+  parentObject: {fileID: 0}
+--- !u!114 &124514597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098996795035973101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 124514596}
+  destroyIfNoClip: 1
+  playOnlyOnce: 0
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 1
 --- !u!114 &1999715388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3632,45 +3671,6 @@ MonoBehaviour:
   interactionBehaviour: {fileID: 0}
   addNoRequiredItemInteraction: 0
   noItemInteractionBehaviour: {fileID: 0}
---- !u!114 &124514596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6098996795035973101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 7de958a4b735dc740859a21fe8369514, type: 3}
-  volumeMultiplyer: 1
-  useThisObject: 1
-  parentObject: {fileID: 0}
---- !u!114 &124514597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6098996795035973101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundType: 2
-  soundSystem: {fileID: 0}
-  searchIfNoSoundSystem: 1
-  soundSystemTag: SoundSystem
-  soundClips:
-  - {fileID: 124514596}
-  destroyIfNoClip: 1
-  playOnlyOnce: 0
-  playOnStart: 0
-  loopPlay: 0
-  continouslyUpdate: 1
 --- !u!1 &6970841784912300563
 GameObject:
   m_ObjectHideFlags: 0
