@@ -90,7 +90,8 @@ public class InteractionController : MonoBehaviour
                         playerContext.InteractionData.CurrentInteractable = detected;
                     }
                 }
-            } else
+            } 
+            else
             {
                 Debug.Log("Ray hit Object on interaction Layer but it has no Interactable!", gameObject);
             }
