@@ -26,6 +26,9 @@
 # Visual Studio cache directory
 .vs/
 
+# Visual Studio Code cache directory
+.vscode/
+
 # Gradle cache directory
 .gradle/
 
@@ -68,3 +71,13 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Jetbrains
+/.idea
+
+# KSEditorLogs
+/KSEditorLogs
+
+# ProBuilder and ProGrinds Settings
+/ProjectSettings/Packages/com.unity.probuilder/
+/ProjectSettings/Packages/com.unity.progrids/

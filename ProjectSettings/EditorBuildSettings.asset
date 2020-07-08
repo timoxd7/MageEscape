@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Production/MainMenu/MainMenu.unity
+    guid: d193e6a0bbec3f24d9c47fe4bf99093c
+  - enabled: 1
+    path: Assets/Scenes/Production/MagicTower/MagicTower.unity
+    guid: edfaf202c55ae2b4e8f70121c7337da5
   m_configObjects: {}
