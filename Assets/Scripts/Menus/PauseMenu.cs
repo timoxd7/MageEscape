@@ -12,11 +12,11 @@ public class PauseMenu : MonoBehaviour
 
     [Header("Sliders for Sound")]
     public Slider generalVolume;
-    public static float general;
+    public static float general = 1f;
     public Slider musicVolume;
-    public static float music;
+    public static float music = 1f;
     public Slider effectsVolume;
-    public static float effects;
+    public static float effects = 1f;
 
     [Header("SoundProperties")]
     public SoundProperty defaultSound;
@@ -30,12 +30,13 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        generalVolume.value = MainMenus.general;
-        musicVolume.value = MainMenus.music;
-        effectsVolume.value = MainMenus.effects;
-        general = generalVolume.value;
-        music = musicVolume.value;
-        effects = effectsVolume.value;
+        generalVolume.value = general;
+        musicVolume.value = music;
+        effectsVolume.value = effects;
+
+        UpdateGeneralVolume();
+        UpdateMusicVolume();
+        UpdateEffectVolume();
     }
 
     public void PausePressed()

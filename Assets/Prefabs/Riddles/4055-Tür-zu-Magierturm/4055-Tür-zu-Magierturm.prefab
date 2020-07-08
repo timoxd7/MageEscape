@@ -559,8 +559,8 @@ MonoBehaviour:
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
-  - {fileID: 2127865649351027183}
   - {fileID: 7587239328926141367}
+  - {fileID: 2127865649351027183}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
@@ -585,7 +585,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 0}
+  dialogMessage: {fileID: 2127865648736824984}
 --- !u!114 &7587239328926141367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 10763dfa2839f2b4b9ae10034992bd96, type: 3}
-  volumeMultiplyer: 0.2
+  volumeMultiplyer: 0.294
   useThisObject: 1
   parentObject: {fileID: 0}
 --- !u!114 &1901864469
@@ -1180,7 +1180,8 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Verschlossen. Rechts danaben ist aber ien Zahlencode
+  text: "Diese T\xFCr ist verschlossen. Sie scheint sich aber nicht durch einen normalen
+    Schl\xFCssel \xF6ffnen zu lassen"
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"

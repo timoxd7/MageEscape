@@ -1,33 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR;
 
 public class MainMenus : MonoBehaviour
 {
-
-    public GameObject optionsMenu;
-    public GameObject mainMenu;
     public Slider generalVolume;
     public Slider musicVolume;
     public Slider effectsVolume;
-    public static float general;
-    public static float music;
-    public static float effects;
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        general = generalVolume.value;
-        music = musicVolume.value;
-        effects = effectsVolume.value;
+        generalVolume.value = PauseMenu.general;
+        musicVolume.value = PauseMenu.music;
+        effectsVolume.value = PauseMenu.effects;
     }
 
-    public void Back()
+    public void UpdateGeneral()
     {
-        optionsMenu.SetActive(false);
-        mainMenu.SetActive(true);
+        PauseMenu.general = generalVolume.value;
     }
 
+    public void UpdateMusic()
+    {
+        PauseMenu.music = musicVolume.value;
+    }
+
+    public void UpdateEffects()
+    {
+        PauseMenu.effects = effectsVolume.value;
+    }
 }

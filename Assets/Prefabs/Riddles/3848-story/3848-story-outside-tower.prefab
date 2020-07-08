@@ -3681,7 +3681,6 @@ GameObject:
   - component: {fileID: 2365186284917032786}
   - component: {fileID: 5943510869725451117}
   - component: {fileID: 7705400996595412729}
-  - component: {fileID: 2903347465696644796}
   m_Layer: 0
   m_Name: Ich hoffe es geht ihm gut...
   m_TagString: Untagged
@@ -3725,7 +3724,6 @@ MonoBehaviour:
   options:
   - {fileID: 5943510869725451117}
   - {fileID: 7705400996595412729}
-  - {fileID: 2903347465696644796}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
   autoAssignNext: 1
@@ -3769,24 +3767,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 1373666482}
---- !u!114 &2903347465696644796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776054011736425111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  dialogMessage: {fileID: 0}
 --- !u!1 &7632752446515926438
 GameObject:
   m_ObjectHideFlags: 0

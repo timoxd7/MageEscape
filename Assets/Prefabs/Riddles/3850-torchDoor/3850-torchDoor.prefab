@@ -90,6 +90,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &957186761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552010462959420513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 056f0cd02e77e844ea386685623db6b1, type: 3}
+  volumeMultiplyer: 1
+  useThisObject: 1
+  parentObject: {fileID: 0}
+--- !u!114 &957186763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552010462959420513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 2
+  soundSystem: {fileID: 0}
+  searchIfNoSoundSystem: 1
+  soundSystemTag: SoundSystem
+  soundClips:
+  - {fileID: 957186761}
+  destroyIfNoClip: 1
+  playOnlyOnce: 1
+  playOnStart: 0
+  loopPlay: 0
+  continouslyUpdate: 1
 --- !u!114 &932946663792029986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,45 +274,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &957186761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552010462959420513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a33e04cc51a0d4393b9c9a8a21bcb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 056f0cd02e77e844ea386685623db6b1, type: 3}
-  volumeMultiplyer: 1.7
-  useThisObject: 1
-  parentObject: {fileID: 0}
---- !u!114 &957186763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552010462959420513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c8ac07e46679042b34e7ece505ac36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundType: 2
-  soundSystem: {fileID: 0}
-  searchIfNoSoundSystem: 1
-  soundSystemTag: SoundSystem
-  soundClips:
-  - {fileID: 957186761}
-  destroyIfNoClip: 1
-  playOnlyOnce: 1
-  playOnStart: 0
-  loopPlay: 0
-  continouslyUpdate: 1
 --- !u!114 &6988540015327231822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,8 +1049,7 @@ GameObject:
   - component: {fileID: 6566097554695844464}
   - component: {fileID: 6566097554695844466}
   m_Layer: 0
-  m_Name: "Diese T\xFCr ist verschlossen. Ich kann aber eine kleine Schrift erkennen:
-    Das Licht wird dir den Weg weisen"
+  m_Name: 'Hier steht etwas: Das Licht wird dir den Weg weisen'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1085,8 +1084,7 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: "Diese T\xFCr ist verschlossen. Ich kann aber eine kleine Schrift erkennen:
-    Das Licht wird dir den Weg weisen"
+  text: 'Hier steht etwas: Das Licht wird dir den Weg weisen'
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
