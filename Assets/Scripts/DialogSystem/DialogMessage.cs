@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using MyBox;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class DialogMessage : MonoBehaviour
@@ -217,7 +218,10 @@ public class DialogMessage : MonoBehaviour
         GameObject emptyObject = new GameObject();
         GameObject nextMessageObject = Instantiate(emptyObject, transform.parent);
         DestroyImmediate(emptyObject);
+
+        Undo.RecordObject(nextMessageObject, "Change Message Name");
         nextMessageObject.name = "NewNextMessage";
+        Undo.RecordObject(nextMessageObject, "Add Options");
         DialogMessage nextMessage = nextMessageObject.AddComponent<DialogMessage>();
         if (nextMessage.options.IsNullOrEmpty())
             nextMessage.options = new List<DialogOption>();
@@ -248,18 +252,21 @@ public class DialogMessage : MonoBehaviour
             nextMessage.options.Add(closeOption);
         }
 
+        Undo.RecordObject(nextMessage, "Autoassing Values");
         nextMessage.autoAssignNext = autoAssignNext;
         nextMessage.autoAddNext = autoAddNext;
         nextMessage.autoAddNextOnNext = autoAddNextOnNext;
         nextMessage.autoAddPreviousOnNext = autoAddPreviousOnNext;
         nextMessage.autoAddCloseOnNext = autoAddCloseOnNext;
 
-
-    // Add message to this next option
-    DialogOption[] possiblyNext = gameObject.GetComponents<DialogOption>();
+        
+        // Add message to this next option
+        DialogOption[] possiblyNext = gameObject.GetComponents<DialogOption>();
 
         if (autoAssignNext)
         {
+            Undo.RecordObject(this, "Add Next reference");
+
             bool nextOptionFound = false;
             if (!possiblyNext.IsNullOrEmpty())
             {
@@ -296,6 +303,7 @@ public class DialogMessage : MonoBehaviour
     [ExecuteInEditMode]
     public void ApplyTitleAsText()
     {
+        Undo.RecordObject(this, "Applying title as text");
         text = gameObject.name;
     }
 
@@ -303,6 +311,8 @@ public class DialogMessage : MonoBehaviour
     [ExecuteInEditMode]
     public void AddAllOptions()
     {
+        Undo.RecordObject(this, "Adding all Options");
+
         DialogOption[] foundOptions = gameObject.GetComponents<DialogOption>();
 
         int oldOptionsCount = options.Count;
@@ -318,7 +328,10 @@ public class DialogMessage : MonoBehaviour
     public void RemoveAllOptionReferences()
     {
         if (!options.IsNullOrEmpty())
+        {
+            Undo.RecordObject(this, "Removing all Option References");
             options.Clear();
+        }
     }
 
     [ButtonMethod]
@@ -331,6 +344,8 @@ public class DialogMessage : MonoBehaviour
 
         if (!optionsToDelete.IsNullOrEmpty())
         {
+            Undo.RecordObject(this, "Removing all Options");
+
             for (int i = 0; i < optionsToDelete.Length; i++)
             {
                 DestroyImmediate(optionsToDelete[i]);
@@ -342,6 +357,8 @@ public class DialogMessage : MonoBehaviour
     [ExecuteInEditMode]
     public void AddNextOption()
     {
+        Undo.RecordObject(this, "Autoadd next Option");
+
         DialogOption nextOption = gameObject.AddComponent<DialogOption>();
 
         nextOption.optionName = nextOptionText;
@@ -357,6 +374,8 @@ public class DialogMessage : MonoBehaviour
     [ExecuteInEditMode]
     public void AddCloseOption()
     {
+        Undo.RecordObject(this, "Autoadd close Option");
+
         DialogOption closeOption = gameObject.AddComponent<DialogOption>();
 
         closeOption.optionName = closeOptionText;

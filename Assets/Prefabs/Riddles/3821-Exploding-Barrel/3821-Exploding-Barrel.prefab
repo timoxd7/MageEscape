@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionName: Close
+  optionName: "Schlie\xDFen"
   eventType: 1
   unityEvent:
     m_PersistentCalls:

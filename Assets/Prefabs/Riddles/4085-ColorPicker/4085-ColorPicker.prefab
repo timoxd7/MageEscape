@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionName: Close
+  optionName: "Schlie\xDFen"
   eventType: 1
   unityEvent:
     m_PersistentCalls:
@@ -3406,7 +3406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionName: Close
+  optionName: "Schlie\xDFen"
   eventType: 1
   unityEvent:
     m_PersistentCalls:
@@ -4605,7 +4605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionName: Close
+  optionName: "Schlie\xDFen"
   eventType: 1
   unityEvent:
     m_PersistentCalls:
@@ -5197,11 +5197,56 @@ PrefabInstance:
       propertyPath: soundSystem
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000029802276
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000068545336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01235
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00088
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119164230366199674, guid: 44a2e9e26048131488041a59ceb227e7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -179.99998
+      objectReference: {fileID: 0}
     - target: {fileID: 2127865648768845782, guid: 44a2e9e26048131488041a59ceb227e7,
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8e661e73be9f4174a907d4ea31cd1c4e, type: 2}
+      objectReference: {fileID: 9100000, guid: bd05d8e71cdd04e42b92fac32958ea7e, type: 2}
     - target: {fileID: 2127865648768845783, guid: 44a2e9e26048131488041a59ceb227e7,
         type: 3}
       propertyPath: isInteractable
@@ -5731,6 +5776,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 197270968975284708}
     m_Modifications:
+    - target: {fileID: 6566097554023651925, guid: e810396b8533a74499185fc47994f882,
+        type: 3}
+      propertyPath: optionName
+      value: "Schlie\xDFen"
+      objectReference: {fileID: 0}
     - target: {fileID: 6566097554023651927, guid: e810396b8533a74499185fc47994f882,
         type: 3}
       propertyPath: text

@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionName: Close
+  optionName: "Schlie\xDFen"
   eventType: 1
   unityEvent:
     m_PersistentCalls:
@@ -540,6 +540,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1970099775257417942, guid: 3367c4abb998d470c920ee223ee8bfbf,
+        type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 5660271003324529639}
     - target: {fileID: 2323687595940000935, guid: 3367c4abb998d470c920ee223ee8bfbf,
         type: 3}
       propertyPath: continouslyUpdate
@@ -580,3 +585,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1282462086958118689}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5660271003324529639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6863883880530791622, guid: 3367c4abb998d470c920ee223ee8bfbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1282462086958118689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795419235257883301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e309fc8d57b485ab582a8fc77374e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
