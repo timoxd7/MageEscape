@@ -6,6 +6,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class DialogFixToolkit : MonoBehaviour
 {
+#if UNITY_EDITOR
+
     [Header("Settings")]
     public string labelToSearchFor = "Close";
     public string newLabel = "Schließen";
@@ -107,4 +109,5 @@ public class DialogFixToolkit : MonoBehaviour
             }
         }
     }
+#endif
 }
