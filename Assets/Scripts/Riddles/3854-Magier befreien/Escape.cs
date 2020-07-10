@@ -11,7 +11,7 @@ public class Escape : MonoBehaviour
     public PlayerAccessibility playerAccessibility;
     public GameObject playerCamera;
     public LevelLoader levelLoader;
-    public string mainMenuScene = "MainMenu";
+    public string levelToLoadAfterEnd = "Credits";
 
     [Header("Zones")]
     public List<ZoneLoader> zonesToEnable;
@@ -66,7 +66,7 @@ public class Escape : MonoBehaviour
         {
             playerAccessibility.ReleasePlayer();
             playerAccessibility.LockPlayer();
-            levelLoader.LoadLevel(mainMenuScene);
+            levelLoader.LoadLevel(levelToLoadAfterEnd);
         }
     }
 
