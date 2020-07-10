@@ -31,6 +31,7 @@ public class DialogMessage : MonoBehaviour
     [ConditionalField(nameof(playSoundOnShow))]
     public SoundSourcePlayer soundSourcePlayer;
 
+
 #if UNITY_EDITOR
     [Header("Next Message Automation")]
     public bool autoAssignNext = true;
@@ -44,6 +45,7 @@ public class DialogMessage : MonoBehaviour
 
     private List<SelfDestruct> currentlyShownObjects;
     private bool currentShownState = false;
+    private static List<DialogMessage> currentlyShownMessages;
 
 
     [ButtonMethod]
@@ -75,6 +77,11 @@ public class DialogMessage : MonoBehaviour
         {
             Hide();
         }
+
+        if (currentlyShownMessages == null)
+            currentlyShownMessages = new List<DialogMessage>();
+
+        currentlyShownMessages.Add(this);
 
         GameObject textObject = Instantiate(dialogProperties.textPrefab, gameObject.transform);
         RectTransform textTransform = textObject.GetComponent<RectTransform>();
@@ -164,11 +171,23 @@ public class DialogMessage : MonoBehaviour
         if (dialogProperties == null || !dialogProperties.Validate())
         {
             Debug.LogError("No or broken DialogProperties attached!", this);
-            return;
+        } else
+        {
+            dialogProperties.player.ReleasePlayer();
         }
 
         currentShownState = false;
-        dialogProperties.player.ReleasePlayer();
+
+        if (currentlyShownMessages.IsNullOrEmpty())
+        {
+            Debug.LogError("Message not in shown messages (?)", this);
+        } else if (currentlyShownMessages.Contains(this))
+        {
+            currentlyShownMessages.Remove(this);
+        } else
+        {
+            Debug.LogError("Message not in shown messages (?) (2)", this);
+        }
 
         if (currentlyShownObjects.IsNullOrEmpty())
         {
@@ -187,6 +206,11 @@ public class DialogMessage : MonoBehaviour
         }
 
         currentlyShownObjects = null;
+    }
+
+    public static bool AnyMessageShown()
+    {
+        return !currentlyShownMessages.IsNullOrEmpty();
     }
 
     public void OnDisable()

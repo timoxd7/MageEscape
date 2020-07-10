@@ -837,10 +837,21 @@ MonoBehaviour:
   otherObjectToDestroy: {fileID: 0}
   playSound: 1
   soundSourcePlayer: {fileID: 628878167383561142}
-  addUnityEvent: 0
+  addUnityEvent: 1
   unityEventAfterCollection:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &530073689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3253,6 +3264,25 @@ MonoBehaviour:
   volumeMultiplyer: 1
   useThisObject: 1
   parentObject: {fileID: 0}
+--- !u!114 &3356523085295236051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105981648683558693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignDialog: 1
+  emptyObjectDialogTag: EmptyObjectDialog
+  emptyObjectDialog: {fileID: 0}
+  useStandardText: 0
+  messageText: '"Blau sei gegeben."'
+  playSound: 1
+  soundSourcePlayer: {fileID: 3553286195555001799}
 --- !u!114 &8888258098621469300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3276,25 +3306,6 @@ MonoBehaviour:
   interactionBehaviour: {fileID: 0}
   addNoRequiredItemInteraction: 0
   noItemInteractionBehaviour: {fileID: 0}
---- !u!114 &3356523085295236051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4105981648683558693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d945fc5aa618b8e409a8b59134b0b4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignDialog: 1
-  emptyObjectDialogTag: '"Blau sei gegeben."'
-  emptyObjectDialog: {fileID: 0}
-  useStandardText: 1
-  messageText: "Das werde ich wohl nicht ben\xF6tigen"
-  playSound: 1
-  soundSourcePlayer: {fileID: 3553286195555001799}
 --- !u!114 &3553286193764265828
 MonoBehaviour:
   m_ObjectHideFlags: 0
