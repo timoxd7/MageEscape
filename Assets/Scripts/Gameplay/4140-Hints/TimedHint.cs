@@ -13,6 +13,7 @@ public class TimedHint : MonoBehaviour
     public UnityEvent unityEvent;
 
     private bool riddleEntered = false;
+    private bool riddleDone = false;
     private Timer timeSinceEnter;
 
     void Update()
@@ -42,7 +43,7 @@ public class TimedHint : MonoBehaviour
 
     public void RiddleStart()
     {
-        if (riddleEntered)
+        if (riddleEntered || riddleDone)
             return;
 
         timeSinceEnter = new Timer();
@@ -54,11 +55,10 @@ public class TimedHint : MonoBehaviour
     public void RiddleDone()
     {
         riddleEntered = false;
+        riddleDone = true;
 
         if (executeUnityEventOnDone)
             if (unityEvent != null)
                 unityEvent.Invoke();
-
-        Destroy(this);
     }
 }

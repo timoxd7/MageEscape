@@ -3,6 +3,7 @@ using MyBox;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogMessage : MonoBehaviour
 {
@@ -30,6 +31,11 @@ public class DialogMessage : MonoBehaviour
     public bool playSoundOnShow = false;
     [ConditionalField(nameof(playSoundOnShow))]
     public SoundSourcePlayer soundSourcePlayer;
+
+    [Header("Untiy Event")]
+    public bool triggerUnityEventOnShow = false;
+    [ConditionalField(nameof(triggerUnityEventOnShow))]
+    public UnityEvent unityEvent;
 
 
 #if UNITY_EDITOR
@@ -154,6 +160,9 @@ public class DialogMessage : MonoBehaviour
 
         if (playSoundOnShow && soundSourcePlayer != null)
             soundSourcePlayer.Play();
+
+        if (triggerUnityEventOnShow && unityEvent != null)
+            unityEvent.Invoke();
     }
 
     [ButtonMethod]
