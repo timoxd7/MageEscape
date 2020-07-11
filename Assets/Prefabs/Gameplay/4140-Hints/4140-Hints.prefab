@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e794e66c18283468dc8d8a59d041a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForHint: 420
+  timeForHint: 600
   hintMessage: {fileID: 4376738019772698965}
   executeUnityEventOnDone: 0
   unityEvent:
@@ -164,11 +164,12 @@ GameObject:
   m_Component:
   - component: {fileID: 152311554}
   - component: {fileID: 152311550}
-  - component: {fileID: 152311551}
+  - component: {fileID: 8102646406652062157}
   - component: {fileID: 152311552}
+  - component: {fileID: 152311551}
   m_Layer: 0
   m_Name: "Zudem sind drei B\xFCcher und eine Schriftrolle mit Hinweisen in diesen
-    R\xE4umlichkeiten"
+    R\xE4umlichkeiten."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,8 +210,9 @@ MonoBehaviour:
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
   options:
-  - {fileID: 152311551}
+  - {fileID: 8102646406652062157}
   - {fileID: 152311552}
+  - {fileID: 152311551}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
   triggerUnityEventOnShow: 0
@@ -222,7 +224,7 @@ MonoBehaviour:
   autoAddNextOnNext: 1
   autoAddPreviousOnNext: 1
   autoAddCloseOnNext: 1
---- !u!114 &152311551
+--- !u!114 &8102646406652062157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,12 +236,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionName: "Schlie\xDFen"
-  eventType: 1
+  optionName: Weiter
+  eventType: 3
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogMessage: {fileID: 0}
+  dialogMessage: {fileID: 5241504315447383941}
 --- !u!114 &152311552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +260,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 24343535}
+--- !u!114 &152311551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152311549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
 --- !u!1 &1075657450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e794e66c18283468dc8d8a59d041a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForHint: 300
+  timeForHint: 420
   hintMessage: {fileID: 6885623095930935046}
   executeUnityEventOnDone: 0
   unityEvent:
@@ -2014,6 +2034,7 @@ RectTransform:
   - {fileID: 4376738019772698968}
   - {fileID: 24343538}
   - {fileID: 152311554}
+  - {fileID: 8172568820957944555}
   m_Father: {fileID: 81391992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2184,6 +2205,108 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dialogMessage: {fileID: 0}
+--- !u!1 &4683015020973658655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8172568820957944555}
+  - component: {fileID: 5241504315447383941}
+  - component: {fileID: 6732203177773860004}
+  - component: {fileID: 1640912644530559801}
+  m_Layer: 0
+  m_Name: "Und wei\xDFes Gekritzel solltest du nicht mitz\xE4hlen!"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8172568820957944555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683015020973658655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4376738019254773335}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5241504315447383941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683015020973658655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d629938befcf5c74c994267833b0488f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignGlobalProperties: 1
+  dialogPropertiesTag: GlobalDialogProperties
+  dialogProperties: {fileID: 0}
+  text: "Und wei\xDFes Gekritzel solltest du nicht mitz\xE4hlen!"
+  nextOptionText: Weiter
+  backOptionText: "Zur\xFCck"
+  closeOptionText: "Schlie\xDFen"
+  options:
+  - {fileID: 6732203177773860004}
+  - {fileID: 1640912644530559801}
+  playSoundOnShow: 0
+  soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  autoAssignNext: 1
+  autoAddNext: 1
+  autoAddNextOnNext: 1
+  autoAddPreviousOnNext: 1
+  autoAddCloseOnNext: 1
+--- !u!114 &6732203177773860004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683015020973658655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Schlie\xDFen"
+  eventType: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 0}
+--- !u!114 &1640912644530559801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683015020973658655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5bb242a07ce34f8f06ba655aea4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionName: "Zur\xFCck"
+  eventType: 3
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogMessage: {fileID: 152311550}
 --- !u!1 &4758933865286135104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,7 +2351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e794e66c18283468dc8d8a59d041a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForHint: 300
+  timeForHint: 420
   hintMessage: {fileID: 6575878731341390509}
   executeUnityEventOnDone: 0
   unityEvent:
