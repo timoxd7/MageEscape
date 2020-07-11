@@ -3030,6 +3030,10 @@ MonoBehaviour:
   otherObjectToDestroy: {fileID: 0}
   playSound: 0
   soundSourcePlayer: {fileID: 0}
+  addUnityEvent: 0
+  unityEventAfterCollection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &178250773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3051,6 +3055,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3101,6 +3107,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3151,6 +3159,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &6779230598146577553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3164,11 +3174,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToActivate: {fileID: 500263196008839216}
-  keypadButtons: []
+  keypadButtons:
+  - {fileID: 1721716320254786410}
+  - {fileID: 6779230598146577547}
+  - {fileID: 6779230598146577544}
+  - {fileID: 6779230598146577541}
+  - {fileID: 6779230598146577538}
+  - {fileID: 6779230598146577535}
+  - {fileID: 6779230598146577532}
+  - {fileID: 6779230598146577529}
+  - {fileID: 6779230598146577526}
+  - {fileID: 6779230598146577523}
+  - {fileID: 6779230598146577520}
+  - {fileID: 6779230598146577517}
   numpadDisplayText: {fileID: 1207132138123592331}
   doorAnimator: {fileID: 500263194215899822}
   doorOpenTrigger: OpenLocker
   keyCode: 123456
+  unityEventOnDone: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &6779230598146577519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3219,6 +3245,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!114 &5073780420639440868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3308,6 +3336,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3358,6 +3388,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3408,6 +3440,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3458,6 +3492,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3508,6 +3544,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3558,6 +3596,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3608,6 +3648,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3658,6 +3700,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!65 &6779230598146577522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3708,6 +3752,8 @@ MonoBehaviour:
   detectionBehaviour: {fileID: 0}
   interactionOption: 4
   interactionBehaviour: {fileID: 0}
+  addNoRequiredItemInteraction: 0
+  noItemInteractionBehaviour: {fileID: 0}
 --- !u!1001 &6779230598407635581
 PrefabInstance:
   m_ObjectHideFlags: 0
