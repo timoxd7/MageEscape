@@ -589,7 +589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -56}
+  m_AnchoredPosition: {x: 0, y: 1526.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &197979070
@@ -8402,7 +8402,9 @@ MonoBehaviour:
     Activity Indicator by SSCMIKE GameDev
 
     Scene
-    Fusion by KinematicSoup'
+    Fusion by KinematicSoup
+
+    Pixel Cursors by ClayManStudio'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 417e46f1bc2f84cd8afaed924177961a, type: 2}
   m_sharedMaterial: {fileID: 1291143750183457749, guid: 417e46f1bc2f84cd8afaed924177961a,
@@ -8472,12 +8474,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1983904403}
-    characterCount: 549
+    characterCount: 580
     spriteCount: 0
-    spaceCount: 87
-    wordCount: 87
+    spaceCount: 91
+    wordCount: 91
     linkCount: 0
-    lineCount: 15
+    lineCount: 16
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
