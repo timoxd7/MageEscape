@@ -52,6 +52,7 @@ public class DialogMessage : MonoBehaviour
     private List<SelfDestruct> currentlyShownObjects;
     private bool currentShownState = false;
     private static List<DialogMessage> currentlyShownMessages;
+    private bool destroying = false;
 
 
     [ButtonMethod]
@@ -179,7 +180,8 @@ public class DialogMessage : MonoBehaviour
 
         if (dialogProperties == null || !dialogProperties.Validate())
         {
-            Debug.LogError("No or broken DialogProperties attached!", this);
+            if (!destroying)
+                Debug.LogError("No or broken DialogProperties attached!", this);
         } else
         {
             dialogProperties.player.ReleasePlayer();
@@ -208,9 +210,8 @@ public class DialogMessage : MonoBehaviour
         {
             if (currentObject != null)
             {
-                //Debug.Log("Destruct: ", currentObject);
                 currentObject.DestroyThis();
-            } else
+            } else if (!destroying)
                 Debug.LogError("Object already destroyed (?)!", this);
         }
 
@@ -230,8 +231,8 @@ public class DialogMessage : MonoBehaviour
 
     public void OnDestroy()
     {
-        if (currentShownState)
-            Hide();
+        destroying = true;
+        OnDisable();
     }
 
     private void GetProperties()
