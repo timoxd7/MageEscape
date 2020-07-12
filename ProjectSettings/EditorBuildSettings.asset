@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Production/MagicTower/MagicTower.unity
     guid: edfaf202c55ae2b4e8f70121c7337da5
+  - enabled: 1
+    path: Assets/Scenes/Production/Credits/Credits.unity
+    guid: 96a68aa3f0bc9544287b99f8e66fcc6f
   m_configObjects: {}

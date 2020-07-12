@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using MyBox;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogMessage : MonoBehaviour
 {
@@ -30,6 +32,12 @@ public class DialogMessage : MonoBehaviour
     [ConditionalField(nameof(playSoundOnShow))]
     public SoundSourcePlayer soundSourcePlayer;
 
+    [Header("Untiy Event")]
+    public bool triggerUnityEventOnShow = false;
+    [ConditionalField(nameof(triggerUnityEventOnShow))]
+    public UnityEvent unityEvent;
+
+
 #if UNITY_EDITOR
     [Header("Next Message Automation")]
     public bool autoAssignNext = true;
@@ -43,6 +51,7 @@ public class DialogMessage : MonoBehaviour
 
     private List<SelfDestruct> currentlyShownObjects;
     private bool currentShownState = false;
+    private static List<DialogMessage> currentlyShownMessages;
 
 
     [ButtonMethod]
@@ -74,6 +83,11 @@ public class DialogMessage : MonoBehaviour
         {
             Hide();
         }
+
+        if (currentlyShownMessages == null)
+            currentlyShownMessages = new List<DialogMessage>();
+
+        currentlyShownMessages.Add(this);
 
         GameObject textObject = Instantiate(dialogProperties.textPrefab, gameObject.transform);
         RectTransform textTransform = textObject.GetComponent<RectTransform>();
@@ -146,6 +160,9 @@ public class DialogMessage : MonoBehaviour
 
         if (playSoundOnShow && soundSourcePlayer != null)
             soundSourcePlayer.Play();
+
+        if (triggerUnityEventOnShow && unityEvent != null)
+            unityEvent.Invoke();
     }
 
     [ButtonMethod]
@@ -160,14 +177,21 @@ public class DialogMessage : MonoBehaviour
         if (autoAssignGlobalProperties)
             GetProperties();
 
-        if (dialogProperties == null || !dialogProperties.Validate())
-        {
-            Debug.LogError("No or broken DialogProperties attached!", this);
-            return;
-        }
+        if (dialogProperties != null && dialogProperties.Validate())
+            dialogProperties.player.ReleasePlayer();
 
         currentShownState = false;
-        dialogProperties.player.ReleasePlayer();
+
+        if (currentlyShownMessages.IsNullOrEmpty())
+        {
+            Debug.LogError("Message not in shown messages (?)", this);
+        } else if (currentlyShownMessages.Contains(this))
+        {
+            currentlyShownMessages.Remove(this);
+        } else
+        {
+            Debug.LogError("Message not in shown messages (?) (2)", this);
+        }
 
         if (currentlyShownObjects.IsNullOrEmpty())
         {
@@ -176,16 +200,15 @@ public class DialogMessage : MonoBehaviour
         }
 
         foreach (SelfDestruct currentObject in currentlyShownObjects)
-        {
             if (currentObject != null)
-            {
-                //Debug.Log("Destruct: ", currentObject);
                 currentObject.DestroyThis();
-            } else
-                Debug.LogError("Object already destroyed (?)!", this);
-        }
 
         currentlyShownObjects = null;
+    }
+
+    public static bool AnyMessageShown()
+    {
+        return !currentlyShownMessages.IsNullOrEmpty();
     }
 
     public void OnDisable()
@@ -196,8 +219,7 @@ public class DialogMessage : MonoBehaviour
 
     public void OnDestroy()
     {
-        if (currentShownState)
-            Hide();
+        OnDisable();
     }
 
     private void GetProperties()
@@ -217,7 +239,10 @@ public class DialogMessage : MonoBehaviour
         GameObject emptyObject = new GameObject();
         GameObject nextMessageObject = Instantiate(emptyObject, transform.parent);
         DestroyImmediate(emptyObject);
+
+        Undo.RecordObject(nextMessageObject, "Change Message Name");
         nextMessageObject.name = "NewNextMessage";
+        Undo.RecordObject(nextMessageObject, "Add Options");
         DialogMessage nextMessage = nextMessageObject.AddComponent<DialogMessage>();
         if (nextMessage.options.IsNullOrEmpty())
             nextMessage.options = new List<DialogOption>();
@@ -248,18 +273,21 @@ public class DialogMessage : MonoBehaviour
             nextMessage.options.Add(closeOption);
         }
 
+        Undo.RecordObject(nextMessage, "Autoassing Values");
         nextMessage.autoAssignNext = autoAssignNext;
         nextMessage.autoAddNext = autoAddNext;
         nextMessage.autoAddNextOnNext = autoAddNextOnNext;
         nextMessage.autoAddPreviousOnNext = autoAddPreviousOnNext;
         nextMessage.autoAddCloseOnNext = autoAddCloseOnNext;
 
-
-    // Add message to this next option
-    DialogOption[] possiblyNext = gameObject.GetComponents<DialogOption>();
+        
+        // Add message to this next option
+        DialogOption[] possiblyNext = gameObject.GetComponents<DialogOption>();
 
         if (autoAssignNext)
         {
+            Undo.RecordObject(this, "Add Next reference");
+
             bool nextOptionFound = false;
             if (!possiblyNext.IsNullOrEmpty())
             {
@@ -296,6 +324,7 @@ public class DialogMessage : MonoBehaviour
     [ExecuteInEditMode]
     public void ApplyTitleAsText()
     {
+        Undo.RecordObject(this, "Applying title as text");
         text = gameObject.name;
     }
 
@@ -303,6 +332,8 @@ public class DialogMessage : MonoBehaviour
     [ExecuteInEditMode]
     public void AddAllOptions()
     {
+        Undo.RecordObject(this, "Adding all Options");
+
         DialogOption[] foundOptions = gameObject.GetComponents<DialogOption>();
 
         int oldOptionsCount = options.Count;
@@ -318,7 +349,10 @@ public class DialogMessage : MonoBehaviour
     public void RemoveAllOptionReferences()
     {
         if (!options.IsNullOrEmpty())
+        {
+            Undo.RecordObject(this, "Removing all Option References");
             options.Clear();
+        }
     }
 
     [ButtonMethod]
@@ -331,6 +365,8 @@ public class DialogMessage : MonoBehaviour
 
         if (!optionsToDelete.IsNullOrEmpty())
         {
+            Undo.RecordObject(this, "Removing all Options");
+
             for (int i = 0; i < optionsToDelete.Length; i++)
             {
                 DestroyImmediate(optionsToDelete[i]);
@@ -342,6 +378,8 @@ public class DialogMessage : MonoBehaviour
     [ExecuteInEditMode]
     public void AddNextOption()
     {
+        Undo.RecordObject(this, "Autoadd next Option");
+
         DialogOption nextOption = gameObject.AddComponent<DialogOption>();
 
         nextOption.optionName = nextOptionText;
@@ -357,6 +395,8 @@ public class DialogMessage : MonoBehaviour
     [ExecuteInEditMode]
     public void AddCloseOption()
     {
+        Undo.RecordObject(this, "Autoadd close Option");
+
         DialogOption closeOption = gameObject.AddComponent<DialogOption>();
 
         closeOption.optionName = closeOptionText;

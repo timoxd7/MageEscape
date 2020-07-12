@@ -1,6 +1,7 @@
 ﻿using MyBox;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class NumpadController : MonoBehaviour
@@ -11,6 +12,10 @@ public class NumpadController : MonoBehaviour
     public Animator doorAnimator;
     public string doorOpenTrigger;
     public string keyCode;
+
+    public bool unityEventOnDone = false;
+    [ConditionalField(nameof(unityEventOnDone))]
+    public UnityEvent unityEvent;
 
     private string currentInput = "";
     private const int maxDigits = 6;
@@ -59,6 +64,9 @@ public class NumpadController : MonoBehaviour
                         opened = true;
                         keyToActivate.SetActive(true);
                         DeactivateButtons();
+
+                        if (unityEventOnDone && unityEvent != null)
+                            unityEvent.Invoke();
                     } else
                     {
                         currentInput = "";

@@ -8,6 +8,7 @@ public class KeyInsert : BaseInteraction
     public SoundSourcePlayer chestOpenSound;
     public Animator animatedKeyAnimator;
     public Animator openChestAnimator;
+    public Interactable interactable;
     public float waitAfterInsertion = 1.3f;
     public string keyRotationAnimationTrigger = "Unlock";
     public string chestOpenAnimationTrigger = "Open";
@@ -49,5 +50,9 @@ public class KeyInsert : BaseInteraction
         // Start Unlock animation and save start Time
         animatedKeyAnimator.SetTrigger(keyRotationAnimationTrigger);
         openTimer.Start();
+
+        // Disable Interactable
+        if (interactable != null)
+            interactable.enabled = false;
     }
 }

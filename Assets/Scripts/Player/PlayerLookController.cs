@@ -13,6 +13,7 @@ public class PlayerLookController : MonoBehaviour
     [Header("Sensitivity")]
     public float velocityModeSensitivity = 120f;
     public float motionModeSensitivity = 12f;
+    public float sensitivityMultiplyer = 1f;
 
     [Header("Settings")]
     public float maxUpPosition = -90;
@@ -41,11 +42,11 @@ public class PlayerLookController : MonoBehaviour
         if (currentLookMode == LookMode.Velocity)
         {
             // Apply current Speed to the Rotation of the Camera to its time-based current rotation
-            ApplyRotation(deltaLook * velocityModeSensitivity * Time.deltaTime);
+            ApplyRotation(deltaLook * velocityModeSensitivity * sensitivityMultiplyer * Time.deltaTime);
         } else if (currentLookMode == LookMode.Motion)
         {
             // Add all incremental Rotations since the last Frame
-            ApplyRotation(deltaLook * motionModeSensitivity);
+            ApplyRotation(deltaLook * motionModeSensitivity * sensitivityMultiplyer);
             // Reset all "consumed" rotation
             deltaLook.Set(0, 0);
         }
