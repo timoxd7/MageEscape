@@ -130,6 +130,10 @@ MonoBehaviour:
   - {fileID: 8503157262516638699}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   autoAssignNext: 1
   autoAddNext: 1
   autoAddNextOnNext: 1
@@ -319,7 +323,7 @@ MonoBehaviour:
   autoAssignGlobalProperties: 1
   dialogPropertiesTag: GlobalDialogProperties
   dialogProperties: {fileID: 0}
-  text: Aufgehangen, ob Mantel oder Umhang,
+  text: Aufgehangen, ob Mantel oder Umhang, wird dir das Ende verraten.
   nextOptionText: Weiter
   backOptionText: "Zur\xFCck"
   closeOptionText: "Schlie\xDFen"
@@ -329,6 +333,10 @@ MonoBehaviour:
   - {fileID: 4324025657638781709}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   autoAssignNext: 1
   autoAddNext: 1
   autoAddNextOnNext: 1
@@ -447,6 +455,10 @@ MonoBehaviour:
   - {fileID: 4287873485766488352}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   autoAssignNext: 1
   autoAddNext: 1
   autoAddNextOnNext: 1
@@ -563,6 +575,10 @@ MonoBehaviour:
   - {fileID: 2127865649351027183}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   autoAssignNext: 1
   autoAddNext: 1
   autoAddNextOnNext: 1
@@ -798,6 +814,10 @@ MonoBehaviour:
   - {fileID: 22159176082049641}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   autoAssignNext: 1
   autoAddNext: 1
   autoAddNextOnNext: 1
@@ -898,6 +918,10 @@ MonoBehaviour:
   - {fileID: 3727679744515036296}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   autoAssignNext: 1
   autoAddNext: 1
   autoAddNextOnNext: 1
@@ -1056,6 +1080,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: RiddleStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1115945514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,6 +1224,10 @@ MonoBehaviour:
   - {fileID: 7602594175874662775}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   autoAssignNext: 1
   autoAddNext: 1
   autoAddNextOnNext: 1
@@ -1725,8 +1764,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779230598146577553, guid: 04c52dc71c57d5b4085726a754d57ca5,
         type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779230598146577553, guid: 04c52dc71c57d5b4085726a754d57ca5,
+        type: 3}
       propertyPath: keyCode
       value: 1623
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779230598146577553, guid: 04c52dc71c57d5b4085726a754d57ca5,
+        type: 3}
+      propertyPath: unityEventOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779230598146577553, guid: 04c52dc71c57d5b4085726a754d57ca5,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RiddleDone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779230598146577553, guid: 04c52dc71c57d5b4085726a754d57ca5,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779230598146577553, guid: 04c52dc71c57d5b4085726a754d57ca5,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779230598146577553, guid: 04c52dc71c57d5b4085726a754d57ca5,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c52dc71c57d5b4085726a754d57ca5, type: 3}
