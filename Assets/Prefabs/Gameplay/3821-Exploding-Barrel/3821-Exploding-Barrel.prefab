@@ -319,8 +319,8 @@ GameObject:
   - component: {fileID: 2319384844835581827}
   - component: {fileID: 2333355940047946679}
   - component: {fileID: 2333355940047946678}
-  - component: {fileID: 2333355940047946676}
   - component: {fileID: 575687074}
+  - component: {fileID: 1142978142617542834}
   m_Layer: 8
   m_Name: HexTop_Coal 3 Interactable
   m_TagString: Untagged
@@ -423,24 +423,10 @@ MonoBehaviour:
   itemId: fire_torch
   detectionOption: 1
   detectionBehaviour: {fileID: 0}
-  interactionOption: 4
-  interactionBehaviour: {fileID: 0}
+  interactionOption: 3
+  interactionBehaviour: {fileID: 1142978142617542834}
   addNoRequiredItemInteraction: 1
   noItemInteractionBehaviour: {fileID: 575687074}
---- !u!114 &2333355940047946676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2333355940047946673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03cf20cda09535c4d9dc0a6c3ab5dc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 2334317590475636084}
-  triggerName: StartExplosion
 --- !u!114 &575687074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,6 +444,54 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8427393454467649580}
         m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1142978142617542834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333355940047946673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb174161331bb0479fd7f330e6c9e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2334317590475636084}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartExplosion
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetKeepActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4102298828163681723}
+        m_MethodName: Execute
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -625,6 +659,7 @@ GameObject:
   - component: {fileID: 2334317590475636084}
   - component: {fileID: 609087580}
   - component: {fileID: 609087581}
+  - component: {fileID: 4102298828163681723}
   m_Layer: 0
   m_Name: 3821-Exploding-Barrel
   m_TagString: Untagged
@@ -713,6 +748,36 @@ MonoBehaviour:
   playOnStart: 0
   loopPlay: 0
   continouslyUpdate: 1
+--- !u!114 &4102298828163681723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334317590475636086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38ada7363ce1cf48b56c1af973fbefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: ReleaseKeepActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyThisAfterExecution: 1
+  executeAtStart: 0
+  delay: 1
+  delayTime: 30
 --- !u!1 &2334317590918104327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1102,10 @@ MonoBehaviour:
   - {fileID: 8427393454467649582}
   playSoundOnShow: 0
   soundSourcePlayer: {fileID: 0}
+  triggerUnityEventOnShow: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   autoAssignNext: 1
   autoAddNext: 1
   autoAddNextOnNext: 1
