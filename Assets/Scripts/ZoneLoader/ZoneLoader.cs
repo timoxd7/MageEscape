@@ -9,9 +9,13 @@ public class ZoneLoader : MonoBehaviour
 
     private bool currentLoadState = false;
     private bool currentLoadStateSet = false;
+    private bool lastSetLoadState;
+    private int keepActivatedCount = 0;
 
     private void Start()
     {
+        lastSetLoadState = loadInOnGameStart;
+
         if (loadInOnGameStart)
         {
             Load(true);
@@ -23,13 +27,32 @@ public class ZoneLoader : MonoBehaviour
     [ButtonMethod]
     public void ActivateZone()
     {
+        lastSetLoadState = true;
         Load(true);
     }
 
     [ButtonMethod]
     public void DeactivateZone()
     {
-        Load(false);
+        lastSetLoadState = false;
+        
+        if (keepActivatedCount == 0)
+            Load(false);
+    }
+
+
+    public void SetKeepActivated()
+    {
+        keepActivatedCount++;
+    }
+
+    public void ReleaseKeepActivated()
+    {
+        if (keepActivatedCount > 0)
+            keepActivatedCount--;
+
+        if (keepActivatedCount == 0)
+            Load(lastSetLoadState);
     }
 
 
